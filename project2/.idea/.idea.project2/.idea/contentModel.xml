@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\COMP30019Project2\project2" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Scripts" t="Include">
+          <e p="Buoyancy" t="Include">
+            <e p="BoatPhysics.cs" t="Include" />
+            <e p="BoatPhysicsMath.cs" t="Include" />
+            <e p="DebugPhysics.cs" t="Include" />
+            <e p="ModifyBoatMesh.cs" t="Include" />
+            <e p="SlammingForceData.cs" t="Include" />
+            <e p="TriangleData.cs" t="Include" />
+          </e>
+          <e p="Camera" t="Include">
+            <e p="CameraLock.cs" t="Include" />
+            <e p="FlyingVehicle.cs" t="Include" />
+            <e p="RotatewithCamera.cs" t="Include" />
+          </e>
+          <e p="Ocean" t="Include">
+            <e p="EndlessWaterSquare.cs" t="Include" />
+            <e p="WaterController.cs" t="Include" />
+            <e p="WaterSquare.cs" t="Include" />
+            <e p="WavaTypes.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="project2.sln" t="IncludeFlat" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+    <e p="C:\Users\Haswe\.Rider2019.1\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Haswe\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_project2.958381882.00" t="ExcludeRecursive" />
+  </component>
+</project>
