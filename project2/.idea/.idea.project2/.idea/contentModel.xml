@@ -5,7 +5,7 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
-          <e p="Buoyancy" t="Include">
+          <e p="BoatPhysics" t="Include">
             <e p="BoatPhysics.cs" t="Include" />
             <e p="BoatPhysicsMath.cs" t="Include" />
             <e p="DebugPhysics.cs" t="Include" />
@@ -17,6 +17,10 @@
             <e p="CameraLock.cs" t="Include" />
             <e p="FlyingVehicle.cs" t="Include" />
             <e p="RotatewithCamera.cs" t="Include" />
+          </e>
+          <e p="Cnotrol" t="Include">
+            <e p="BoatController.cs" t="Include" />
+            <e p="BoatEngine.cs" t="Include" />
           </e>
           <e p="Ocean" t="Include">
             <e p="EndlessWaterSquare.cs" t="Include" />
