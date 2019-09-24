@@ -5,13 +5,16 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
-          <e p="BoatPhysics" t="Include">
-            <e p="BoatPhysics.cs" t="Include" />
-            <e p="BoatPhysicsMath.cs" t="Include" />
-            <e p="DebugPhysics.cs" t="Include" />
-            <e p="ModifyBoatMesh.cs" t="Include" />
-            <e p="SlammingForceData.cs" t="Include" />
-            <e p="TriangleData.cs" t="Include" />
+          <e p="Boat" t="Include">
+            <e p="AimmingController.cs" t="Include" />
+            <e p="BoatPhysics" t="Include">
+              <e p="BoatPhysics.cs" t="Include" />
+              <e p="BoatPhysicsMath.cs" t="Include" />
+              <e p="DebugPhysics.cs" t="Include" />
+              <e p="ModifyBoatMesh.cs" t="Include" />
+              <e p="SlammingForceData.cs" t="Include" />
+              <e p="TriangleData.cs" t="Include" />
+            </e>
           </e>
           <e p="Camera" t="Include">
             <e p="CameraLock.cs" t="Include" />
@@ -35,7 +38,7 @@
       <e p="project2.sln" t="IncludeFlat" />
       <e p="Temp\bin" t="ExcludeRecursive" />
     </e>
-    <e p="C:\Users\Haswe\.Rider2019.1\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Haswe\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_project2.958381882.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Haswe\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Haswe\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_project2.958381882.00" t="ExcludeRecursive" />
   </component>
 </project>

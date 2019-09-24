@@ -31,7 +31,7 @@ public class BoatPhysics : MonoBehaviour
 
     void Awake() 
     {
-        boatRB = this.GetComponent<Rigidbody>();
+        boatRB = GetComponent<Rigidbody>();
     }
 
 	void Start() 
