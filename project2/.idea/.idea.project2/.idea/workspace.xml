@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b2d4bbc9-bec5-44bf-b0ab-2d25e0975ad0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.project2/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.project2/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.project2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.project2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraLock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/CameraLock.cs" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Camera/CameraLock.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
+              <folding>
+                <marker date="1569337809750" expanded="false" signature="6:104" ph="..." />
+                <marker date="1569337809750" expanded="true" signature="145:1034" ph="{...}" />
+                <marker date="1569337809750" expanded="true" signature="405:583" ph="{...}" />
+                <marker date="1569337809750" expanded="true" signature="641:687" ph="{...}" />
+                <marker date="1569337809750" expanded="true" signature="718:1032" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Cnotrol/BoatEngine.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="53" column="79" selection-start-line="53" selection-start-column="71" selection-end-line="53" selection-end-column="79" />
+              <folding>
+                <marker date="1569336581193" expanded="false" signature="6:82" ph="..." />
+                <marker date="1569336581193" expanded="true" signature="124:2757" ph="{...}" />
+                <marker date="1569336581193" expanded="true" signature="686:797" ph="{...}" />
+                <marker date="1569336581193" expanded="true" signature="818:848" ph="{...}" />
+                <marker date="1569336581193" expanded="true" signature="872:910" ph="{...}" />
+                <marker date="1569336581193" expanded="true" signature="932:2174" ph="{...}" />
+                <marker date="1569336581193" expanded="true" signature="1003:1185" ph="{...}" />
+                <marker date="1569336581193" expanded="true" signature="1094:1175" ph="{...}" />
+                <marker date="1569336581193" expanded="true" signature="1198:1252" ph="{...}" />
+                <marker date="1569336581193" expanded="true" signature="1311:1707" ph="{...}" />
+                <marker date="1569336581193" expanded="true" signature="1488:1558" ph="{...}" />
+                <marker date="1569336581193" expanded="true" signature="1771:2168" ph="{...}" />
+                <marker date="1569336581193" expanded="true" signature="1948:2019" ph="{...}" />
+                <marker date="1569336581193" expanded="true" signature="2201:2755" ph="{...}" />
+                <marker date="1569336581193" expanded="true" signature="2536:2635" ph="{...}" />
+                <marker date="1569336581193" expanded="true" signature="2648:2749" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Cnotrol/BoatController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="18" column="30" lean-forward="true" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+              <folding>
+                <marker date="1569335476199" expanded="false" signature="6:44" ph="..." />
+                <marker date="1569335476199" expanded="true" signature="89:923" ph="{...}" />
+                <marker date="1569335476199" expanded="true" signature="207:278" ph="{...}" />
+                <marker date="1569335476199" expanded="true" signature="354:807" ph="{...}" />
+                <marker date="1569335476199" expanded="true" signature="369:622" ph="/* Calculate the distance of the Transform Object between the fixedupdate calls with ... */" />
+                <marker date="1569335476199" expanded="true" signature="839:921" ph="{...}" />
+                <marker date="1569335476199" expanded="true" signature="857:915" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Ocean/WaterController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="244">
+              <caret line="17" column="32" lean-forward="true" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+              <folding>
+                <marker date="1569328793118" expanded="false" signature="6:44" ph="..." />
+                <marker date="1569328793118" expanded="true" signature="113:1278" ph="{...}" />
+                <marker date="1569328793118" expanded="true" signature="457:493" ph="{...}" />
+                <marker date="1569328793118" expanded="true" signature="626:869" ph="{...}" />
+                <marker date="1569328793118" expanded="true" signature="654:789" ph="{...}" />
+                <marker date="1569328793118" expanded="true" signature="802:841" ph="{...}" />
+                <marker date="1569328793118" expanded="true" signature="875:1032" ph="/* Find the distance from a vertice to water ... */" />
+                <marker date="1569328793118" expanded="true" signature="1105:1276" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Camera/RotatewithCamera.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
+              <folding>
+                <marker date="1569324452484" expanded="false" signature="6:92" ph="..." />
+                <marker date="1569324452484" expanded="true" signature="139:1059" ph="{...}" />
+                <marker date="1569324452484" expanded="true" signature="348:369" ph="{...}" />
+                <marker date="1569324452484" expanded="true" signature="427:1057" ph="{...}" />
+                <marker date="1569324452484" expanded="true" signature="635:840" ph="{...}" />
+                <marker date="1569324452484" expanded="true" signature="853:1041" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Ocean/WaterSquare.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4296">
+              <caret line="185" column="1" selection-start-line="185" selection-start-column="1" selection-end-line="185" selection-end-column="1" />
+              <folding>
+                <marker date="1569327829762" expanded="true" signature="6:78" ph="..." />
+                <marker date="1569327829762" expanded="true" signature="190:5560" ph="{...}" />
+                <marker date="1569327829762" expanded="true" signature="523:641" ph="/* For the thread to update the water ... */" />
+                <marker date="1569327829762" expanded="true" signature="833:2105" ph="{...}" />
+                <marker date="1569327829762" expanded="true" signature="1559:1641" ph="/* Generate the sea ... */" />
+                <marker date="1569327829762" expanded="true" signature="2229:3453" ph="{...}" />
+                <marker date="1569327829762" expanded="true" signature="2348:3349" ph="{...}" />
+                <marker date="1569327829762" expanded="true" signature="2405:2504" ph="/* From local to global ... */" />
+                <marker date="1569327829762" expanded="true" signature="2585:2797" ph="/* Unnecessary because no rotation nor scale ... */" />
+                <marker date="1569327829762" expanded="true" signature="2821:2917" ph="{...}" />
+                <marker date="1569327829762" expanded="true" signature="3076:3305" ph="/* From global to local - not needed if we use the saved local x,z position ... */" />
+                <marker date="1569327829762" expanded="true" signature="3515:5558" ph="{...}" />
+                <marker date="1569327829762" expanded="true" signature="3648:3704" ph="/* Texturing ... */" />
+                <marker date="1569327829762" expanded="true" signature="3741:4652" ph="{...}" />
+                <marker date="1569327829762" expanded="true" signature="3828:4648" ph="{...}" />
+                <marker date="1569327829762" expanded="true" signature="4099:4233" ph="/* uvs.Add(new Vector2(x,z)); ... */" />
+                <marker date="1569327829762" expanded="true" signature="4259:4298" ph="{...}" />
+                <marker date="1569327829762" expanded="true" signature="4304:4387" ph="/* Each square consists of 2 triangles ... */" />
+                <marker date="1569327829762" expanded="true" signature="4819:4970" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Ocean/EndlessWaterSquare.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1248">
+              <caret line="58" selection-start-line="58" selection-end-line="58" />
+              <folding>
+                <marker date="1569327775607" expanded="false" signature="6:102" ph="..." />
+                <marker date="1569327775607" expanded="true" signature="199:7275" ph="{...}" />
+                <marker date="1569327775607" expanded="true" signature="625:772" ph="/* Stuff needed for the thread ... */" />
+                <marker date="1569327775607" expanded="true" signature="858:1064" ph="/* The position of the ocean has to be updated in the thread because it follows the boat ... */" />
+                <marker date="1569327775607" expanded="true" signature="1245:1569" ph="{...}" />
+                <marker date="1569327775607" expanded="true" signature="1588:2055" ph="{...}" />
+                <marker date="1569327775607" expanded="true" signature="1603:1886" ph="/* UpdateWaterNoThread(); ... */" />
+                <marker date="1569327775607" expanded="true" signature="2137:2566" ph="{...}" />
+                <marker date="1569327775607" expanded="true" signature="2482:2560" ph="{...}" />
+                <marker date="1569327775607" expanded="true" signature="2574:2688" ph="/* The loop that gives the updated vertices from the thread to the meshes ... */" />
+                <marker date="1569327775607" expanded="true" signature="2716:3727" ph="{...}" />
+                <marker date="1569327775607" expanded="true" signature="2740:3721" ph="{...}" />
+                <marker date="1569327775607" expanded="true" signature="2859:3587" ph="{...}" />
+                <marker date="1569327775607" expanded="true" signature="3090:3304" ph="{...}" />
+                <marker date="1569327775607" expanded="true" signature="3829:5119" ph="{...}" />
+                <marker date="1569327775607" expanded="true" signature="3994:5033" ph="{...}" />
+                <marker date="1569327775607" expanded="true" signature="4331:5023" ph="{...}" />
+                <marker date="1569327775607" expanded="true" signature="4463:4663" ph="/* Can't use transformpoint in a thread, so to find the global position of the vertex ... */" />
+                <marker date="1569327775607" expanded="true" signature="5251:5697" ph="{...}" />
+                <marker date="1569327775607" expanded="true" signature="5578:5691" ph="{...}" />
+                <marker date="1569327775607" expanded="true" signature="5777:6462" ph="{...}" />
+                <marker date="1569327775607" expanded="true" signature="5972:6456" ph="{...}" />
+                <marker date="1569327775607" expanded="true" signature="6027:6446" ph="{...}" />
+                <marker date="1569327775607" expanded="true" signature="6119:6185" ph="{...}" />
+                <marker date="1569327775607" expanded="true" signature="6586:7273" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>MeshFilter</find>
+      <find>boatMeshObj</find>
+      <find>boatObj</find>
+      <find>modify</find>
+      <find>meshFilter</find>
+      <find>DebugPhysics</find>
+      <find>thrustFromWaterJet</find>
+      <find>currentJetPower</find>
+      <find>maxPower</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ocean/EndlessWaterSquare.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Cnotrol/BoatController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ocean/WavaTypes.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ocean/WaterSquare.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Cnotrol/BoatEngine.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/CameraLock.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ocean/WaterController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/RotatewithCamera.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Scripts/CameraLock.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/FlyingVehicle.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Buoyancy/WaterController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ocean/EndlessWater.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ocean/WaterSquare.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ocean/WavaTypes.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Ocean/WaterController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Buoyancy/BoatPhysicsMath.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Buoyancy/ModifyBoatMesh.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Buoyancy/NewBehaviourScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Buoyancy/TriangleData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Buoyancy/BoatPhysics.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Cnotrol/NewBehaviourScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Cnotrol/BoatController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Cnotrol/BoatEngine.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraLock.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="112" />
+    <option name="y" value="84" />
+    <option name="width" value="1883" />
+    <option name="height" value="2177" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
+    <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="userSelectedPid" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="userSelectedPid" value="false" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b2d4bbc9-bec5-44bf-b0ab-2d25e0975ad0" name="Default Changelist" comment="" />
+      <created>1569324248062</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1569324248062</updated>
+      <workItem from="1569324252824" duration="35000" />
+      <workItem from="1569324666130" duration="14000" />
+      <workItem from="1569324752208" duration="488000" />
+      <workItem from="1569325362872" duration="11000" />
+      <workItem from="1569326428916" duration="2504000" />
+      <workItem from="1569329282947" duration="52000" />
+      <workItem from="1569329361240" duration="95000" />
+      <workItem from="1569329529390" duration="3304000" />
+      <workItem from="1569334852682" duration="3578000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="10081000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="62" y="-7" width="2139" height="1248" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" weight="0.52114064" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="NuGet" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Performance Profiler" order="8" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Unity" order="11" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
+      <window_info anchor="bottom" id="Unit Tests" order="13" />
+      <window_info anchor="bottom" id="Terminal" order="14" />
+      <window_info anchor="bottom" id="Event Log" order="15" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Errors In Solution" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Unit Tests Coverage" order="5" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" suspend="NONE" type="DotNet Exception Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Assets/Scenes/Scripts/CameraLock.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/CameraLock.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/FlyingVehicle.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Buoyancy/WaterController.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/RotatewithCamera.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Ocean/EndlessWater.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Ocean/WavaTypes.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
+          <folding>
+            <marker date="1569328610767" expanded="true" signature="6:44" ph="..." />
+            <marker date="1569328610767" expanded="true" signature="91:922" ph="{...}" />
+            <marker date="1569328610767" expanded="true" signature="330:920" ph="{...}" />
+            <marker date="1569328610767" expanded="true" signature="428:625" ph="/* Using only x or z will produce straight waves ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Buoyancy/NewBehaviourScript.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Buoyancy/BoatPhysics.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="912">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
+          <folding>
+            <element signature="e#0#78#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Buoyancy/ModifyBoatMesh.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="936">
+          <caret line="41" column="44" selection-start-line="41" selection-start-column="37" selection-end-line="41" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#78#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Buoyancy/BoatPhysicsMath.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4560">
+          <caret line="191" column="36" selection-start-line="191" selection-start-column="24" selection-end-line="191" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Camera/RotatewithCamera.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <marker date="1569324452484" expanded="false" signature="6:92" ph="..." />
+            <marker date="1569324452484" expanded="true" signature="139:1059" ph="{...}" />
+            <marker date="1569324452484" expanded="true" signature="348:369" ph="{...}" />
+            <marker date="1569324452484" expanded="true" signature="427:1057" ph="{...}" />
+            <marker date="1569324452484" expanded="true" signature="635:840" ph="{...}" />
+            <marker date="1569324452484" expanded="true" signature="853:1041" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Ocean/WaterSquare.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4296">
+          <caret line="185" column="1" selection-start-line="185" selection-start-column="1" selection-end-line="185" selection-end-column="1" />
+          <folding>
+            <marker date="1569327829762" expanded="true" signature="6:78" ph="..." />
+            <marker date="1569327829762" expanded="true" signature="190:5560" ph="{...}" />
+            <marker date="1569327829762" expanded="true" signature="523:641" ph="/* For the thread to update the water ... */" />
+            <marker date="1569327829762" expanded="true" signature="833:2105" ph="{...}" />
+            <marker date="1569327829762" expanded="true" signature="1559:1641" ph="/* Generate the sea ... */" />
+            <marker date="1569327829762" expanded="true" signature="2229:3453" ph="{...}" />
+            <marker date="1569327829762" expanded="true" signature="2348:3349" ph="{...}" />
+            <marker date="1569327829762" expanded="true" signature="2405:2504" ph="/* From local to global ... */" />
+            <marker date="1569327829762" expanded="true" signature="2585:2797" ph="/* Unnecessary because no rotation nor scale ... */" />
+            <marker date="1569327829762" expanded="true" signature="2821:2917" ph="{...}" />
+            <marker date="1569327829762" expanded="true" signature="3076:3305" ph="/* From global to local - not needed if we use the saved local x,z position ... */" />
+            <marker date="1569327829762" expanded="true" signature="3515:5558" ph="{...}" />
+            <marker date="1569327829762" expanded="true" signature="3648:3704" ph="/* Texturing ... */" />
+            <marker date="1569327829762" expanded="true" signature="3741:4652" ph="{...}" />
+            <marker date="1569327829762" expanded="true" signature="3828:4648" ph="{...}" />
+            <marker date="1569327829762" expanded="true" signature="4099:4233" ph="/* uvs.Add(new Vector2(x,z)); ... */" />
+            <marker date="1569327829762" expanded="true" signature="4259:4298" ph="{...}" />
+            <marker date="1569327829762" expanded="true" signature="4304:4387" ph="/* Each square consists of 2 triangles ... */" />
+            <marker date="1569327829762" expanded="true" signature="4819:4970" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Ocean/EndlessWaterSquare.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1248">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
+          <folding>
+            <marker date="1569327775607" expanded="false" signature="6:102" ph="..." />
+            <marker date="1569327775607" expanded="true" signature="199:7275" ph="{...}" />
+            <marker date="1569327775607" expanded="true" signature="625:772" ph="/* Stuff needed for the thread ... */" />
+            <marker date="1569327775607" expanded="true" signature="858:1064" ph="/* The position of the ocean has to be updated in the thread because it follows the boat ... */" />
+            <marker date="1569327775607" expanded="true" signature="1245:1569" ph="{...}" />
+            <marker date="1569327775607" expanded="true" signature="1588:2055" ph="{...}" />
+            <marker date="1569327775607" expanded="true" signature="1603:1886" ph="/* UpdateWaterNoThread(); ... */" />
+            <marker date="1569327775607" expanded="true" signature="2137:2566" ph="{...}" />
+            <marker date="1569327775607" expanded="true" signature="2482:2560" ph="{...}" />
+            <marker date="1569327775607" expanded="true" signature="2574:2688" ph="/* The loop that gives the updated vertices from the thread to the meshes ... */" />
+            <marker date="1569327775607" expanded="true" signature="2716:3727" ph="{...}" />
+            <marker date="1569327775607" expanded="true" signature="2740:3721" ph="{...}" />
+            <marker date="1569327775607" expanded="true" signature="2859:3587" ph="{...}" />
+            <marker date="1569327775607" expanded="true" signature="3090:3304" ph="{...}" />
+            <marker date="1569327775607" expanded="true" signature="3829:5119" ph="{...}" />
+            <marker date="1569327775607" expanded="true" signature="3994:5033" ph="{...}" />
+            <marker date="1569327775607" expanded="true" signature="4331:5023" ph="{...}" />
+            <marker date="1569327775607" expanded="true" signature="4463:4663" ph="/* Can't use transformpoint in a thread, so to find the global position of the vertex ... */" />
+            <marker date="1569327775607" expanded="true" signature="5251:5697" ph="{...}" />
+            <marker date="1569327775607" expanded="true" signature="5578:5691" ph="{...}" />
+            <marker date="1569327775607" expanded="true" signature="5777:6462" ph="{...}" />
+            <marker date="1569327775607" expanded="true" signature="5972:6456" ph="{...}" />
+            <marker date="1569327775607" expanded="true" signature="6027:6446" ph="{...}" />
+            <marker date="1569327775607" expanded="true" signature="6119:6185" ph="{...}" />
+            <marker date="1569327775607" expanded="true" signature="6586:7273" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Buoyancy/TriangleData.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="768">
+          <caret line="33" column="4" lean-forward="true" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Cnotrol/NewBehaviourScript.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" column="27" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Ocean/WaterController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="17" column="32" lean-forward="true" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+          <folding>
+            <marker date="1569328793118" expanded="false" signature="6:44" ph="..." />
+            <marker date="1569328793118" expanded="true" signature="113:1278" ph="{...}" />
+            <marker date="1569328793118" expanded="true" signature="457:493" ph="{...}" />
+            <marker date="1569328793118" expanded="true" signature="626:869" ph="{...}" />
+            <marker date="1569328793118" expanded="true" signature="654:789" ph="{...}" />
+            <marker date="1569328793118" expanded="true" signature="802:841" ph="{...}" />
+            <marker date="1569328793118" expanded="true" signature="875:1032" ph="/* Find the distance from a vertice to water ... */" />
+            <marker date="1569328793118" expanded="true" signature="1105:1276" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Cnotrol/BoatController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="18" column="30" lean-forward="true" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+          <folding>
+            <marker date="1569335476199" expanded="false" signature="6:44" ph="..." />
+            <marker date="1569335476199" expanded="true" signature="89:923" ph="{...}" />
+            <marker date="1569335476199" expanded="true" signature="207:278" ph="{...}" />
+            <marker date="1569335476199" expanded="true" signature="354:807" ph="{...}" />
+            <marker date="1569335476199" expanded="true" signature="369:622" ph="/* Calculate the distance of the Transform Object between the fixedupdate calls with ... */" />
+            <marker date="1569335476199" expanded="true" signature="839:921" ph="{...}" />
+            <marker date="1569335476199" expanded="true" signature="857:915" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Cnotrol/BoatEngine.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="53" column="79" selection-start-line="53" selection-start-column="71" selection-end-line="53" selection-end-column="79" />
+          <folding>
+            <marker date="1569336581193" expanded="false" signature="6:82" ph="..." />
+            <marker date="1569336581193" expanded="true" signature="124:2757" ph="{...}" />
+            <marker date="1569336581193" expanded="true" signature="686:797" ph="{...}" />
+            <marker date="1569336581193" expanded="true" signature="818:848" ph="{...}" />
+            <marker date="1569336581193" expanded="true" signature="872:910" ph="{...}" />
+            <marker date="1569336581193" expanded="true" signature="932:2174" ph="{...}" />
+            <marker date="1569336581193" expanded="true" signature="1003:1185" ph="{...}" />
+            <marker date="1569336581193" expanded="true" signature="1094:1175" ph="{...}" />
+            <marker date="1569336581193" expanded="true" signature="1198:1252" ph="{...}" />
+            <marker date="1569336581193" expanded="true" signature="1311:1707" ph="{...}" />
+            <marker date="1569336581193" expanded="true" signature="1488:1558" ph="{...}" />
+            <marker date="1569336581193" expanded="true" signature="1771:2168" ph="{...}" />
+            <marker date="1569336581193" expanded="true" signature="1948:2019" ph="{...}" />
+            <marker date="1569336581193" expanded="true" signature="2201:2755" ph="{...}" />
+            <marker date="1569336581193" expanded="true" signature="2536:2635" ph="{...}" />
+            <marker date="1569336581193" expanded="true" signature="2648:2749" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Camera/CameraLock.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
+          <folding>
+            <marker date="1569337809750" expanded="false" signature="6:104" ph="..." />
+            <marker date="1569337809750" expanded="true" signature="145:1034" ph="{...}" />
+            <marker date="1569337809750" expanded="true" signature="405:583" ph="{...}" />
+            <marker date="1569337809750" expanded="true" signature="641:687" ph="{...}" />
+            <marker date="1569337809750" expanded="true" signature="718:1032" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
