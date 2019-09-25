@@ -58,6 +58,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Cnotrol/BoatController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Cnotrol/BoatEngine.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/CameraLock.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Camera/RotatewithCamera.cs" />
       </list>
     </option>
   </component>
@@ -120,6 +121,7 @@
       <workItem from="1569329529390" duration="3304000" />
       <workItem from="1569334852682" duration="3578000" />
       <workItem from="1569392909988" duration="1195000" />
+      <workItem from="1569410414679" duration="10907000" />
     </task>
     <servers />
   </component>
@@ -133,7 +135,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
