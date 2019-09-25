@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641252, b: 0.5748167, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -120,12 +120,50 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &15455836 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1880934727428964533, guid: 3051d3879aa97e549b87ffd404a394b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 106929137}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &15455840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 15455836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 543be5e7780c44b0aab07d38edba5464, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 1159291381315971474, guid: b1007cbe46b614c38934d610b9596b6d, type: 3}
+  barrel: {fileID: 15455836}
+  aimingObject: {fileID: 2082521730}
+  speed: 100
 --- !u!1 &36084809 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5623369526437108338, guid: 3051d3879aa97e549b87ffd404a394b0,
     type: 3}
   m_PrefabInstance: {fileID: 106929137}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &36084810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 36084809}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 543be5e7780c44b0aab07d38edba5464, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 1159291381315971474, guid: b1007cbe46b614c38934d610b9596b6d, type: 3}
+  barrel: {fileID: 908552950}
+  aimingObject: {fileID: 0}
+  speed: 40
 --- !u!4 &36084813 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8669817490682718305, guid: 3051d3879aa97e549b87ffd404a394b0,
@@ -202,6 +240,22 @@ MonoBehaviour:
   forceToAdd: {x: 0, y: 0, z: 0}
   waterJetRotationSpeed: 0.1
   WaterJetRotation_Y: 0
+--- !u!114 &36084818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 36084809}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 543be5e7780c44b0aab07d38edba5464, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 1159291381315971474, guid: b1007cbe46b614c38934d610b9596b6d, type: 3}
+  barrel: {fileID: 890365041}
+  aimingObject: {fileID: 0}
+  speed: 40
 --- !u!1001 &106929137
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -564,6 +618,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 14
   m_CollisionDetection: 0
+--- !u!1 &674844866 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5743796870827613419, guid: 3051d3879aa97e549b87ffd404a394b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 106929137}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &674844870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 674844866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 543be5e7780c44b0aab07d38edba5464, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 1159291381315971474, guid: b1007cbe46b614c38934d610b9596b6d, type: 3}
+  barrel: {fileID: 674844866}
+  aimingObject: {fileID: 2082521730}
+  speed: 100
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -699,6 +775,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 14
   m_CollisionDetection: 0
+--- !u!1 &908552950 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8418346068090779471, guid: 3051d3879aa97e549b87ffd404a394b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 106929137}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &908552954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 908552950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 543be5e7780c44b0aab07d38edba5464, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 1159291381315971474, guid: b1007cbe46b614c38934d610b9596b6d, type: 3}
+  barrel: {fileID: 908552950}
+  aimingObject: {fileID: 2082521730}
+  speed: 100
 --- !u!1 &914885446
 GameObject:
   m_ObjectHideFlags: 0
@@ -931,6 +1029,28 @@ MonoBehaviour:
   Target: {fileID: 36084813}
   Player: {fileID: 0}
   height: 15
+--- !u!1 &1188285885 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8898001465493304932, guid: 3051d3879aa97e549b87ffd404a394b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 106929137}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1188285889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188285885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 543be5e7780c44b0aab07d38edba5464, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 1159291381315971474, guid: b1007cbe46b614c38934d610b9596b6d, type: 3}
+  barrel: {fileID: 1188285885}
+  aimingObject: {fileID: 2082521730}
+  speed: 100
 --- !u!1 &1309575976
 GameObject:
   m_ObjectHideFlags: 0
