@@ -20,7 +20,7 @@ public class ProjectileShooter : MonoBehaviour
             GameObject projectile = Instantiate(prefab);
             projectile.transform.position = transform.position + new Vector3(0, 0, 0);
             projectile.transform.eulerAngles = transform.eulerAngles + new Vector3(0, 90, 0);
-            Vector3 aimingDirection = (aimingObject.transform.position - barrel.transform.position).normalized;
+            Vector3 aimingDirection = (aimingObject.transform.position - barrel.transform.position).normalized + new Vector3(0, 0.5f, 0);
             Rigidbody rb = projectile.GetComponent<Rigidbody>();
             rb.velocity = aimingDirection * speed;
         }
