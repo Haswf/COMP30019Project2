@@ -8,7 +8,7 @@ public class AimingController : MonoBehaviour
     void Update()
     {
         Vector2 mousePos = Input.mousePosition;
-        Vector3 mousePosWorld = Camera.main.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, 100));
+        Vector3 mousePosWorld = Camera.main.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, 1000));
         transform.position = new Vector3(mousePosWorld.x, 0, mousePosWorld.z);
     }
 }

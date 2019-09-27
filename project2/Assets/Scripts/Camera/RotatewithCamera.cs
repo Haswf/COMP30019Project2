@@ -2,41 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using System.Linq;
 
 public class RotatewithCamera : MonoBehaviour
 {
     public bool front_fire;
-    public Camera camera;
-    private float cameraY;
-    private float currentX;
-    private float currentZ;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    
+    // The aiming object
+    public GameObject aiming;
 
     // Update is called once per frame
-    void Update()
-    {
-        float cameraAgnle_Y = camera.transform.rotation.eulerAngles.y;
-        currentX = transform.rotation.eulerAngles.x;
-        currentZ = transform.rotation.eulerAngles.z;
+    void Update() {
+        // Rotate the barbette to the direction of aiming object
+        transform.LookAt(aiming.transform);
+        // Ratate the barbette in x axis so it's parallel to the ship
+        transform.rotation *= Quaternion.Euler(-90, 0, 0);
+        
+        // Rotate the back barbette in z axis for 180 degree
         if (!front_fire)
         {
-            cameraY = cameraAgnle_Y + 180;
-            Quaternion rotation = Quaternion.Euler(currentX, cameraY, currentZ);
-
-                transform.rotation = rotation;
-            
+            transform.rotation *= Quaternion.Euler(0, 0, 180);
         }
-        else
-        {
-            cameraY = (cameraAgnle_Y+360) ;
-            Quaternion rotation = Quaternion.Euler(currentX, cameraY, currentZ);
-            transform.rotation = rotation;
-        }
-
-        
     }
 }
