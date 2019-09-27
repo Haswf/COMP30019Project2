@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using System.Linq;
 
 public class RotatewithCamera : MonoBehaviour
 {
@@ -46,8 +47,6 @@ public class RotatewithCamera : MonoBehaviour
             transform.rotation = rotation;
 
         }
-
-        
     }
     
     float RangeOfAngle(float angle, float minRange, float maxRange) {

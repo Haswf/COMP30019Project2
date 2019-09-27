@@ -8,7 +8,7 @@ public class CameraLock : MonoBehaviour
     public Transform Target, Player;
     float mouseX,  mouseY;
 
-    public float height = 50.0f;
+    public float height;
     private const float Y_ANGLE_MAX = 100.0f;
     private const float Y_ANGLE_MIN = 0.0f;
     // Start is called before the first frame update
