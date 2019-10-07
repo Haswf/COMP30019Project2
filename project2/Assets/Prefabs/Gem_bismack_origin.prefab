@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 2861123677874408794}
   - component: {fileID: 5936923243137085633}
   m_Layer: 0
-  m_Name: Gem_bismack
+  m_Name: Gem_bismack_origin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
