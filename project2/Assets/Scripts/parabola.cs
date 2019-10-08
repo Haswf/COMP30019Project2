@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class parabola : MonoBehaviour
 {    
-    public Rigidbody Prefab;
+    public GameObject Prefab;
     public GameObject aimObject;
     public GameObject shootObject;
 
@@ -18,20 +18,23 @@ public class parabola : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    void LaunchProjectile()
-    {
-        Vector3 Vo = CalculateVeolocity(aimObject.transform.position, shootObject.transform.position, 1f);
+        void LaunchProjectile()
+        {
+            Vector3 Vo = CalculateVeolocity(aimObject.transform.position, shootObject.transform.position, 1f);
 //        transform.rotation = Quaternion.LookRotation(Vo);
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            Rigidbody obj = Instantiate(Prefab, shootObject.transform.position, Quaternion.identity);
-            obj.velocity = Vo;
+            if (Input.GetMouseButtonDown(0))
+            {
+                GameObject proj = Instantiate(Prefab);
+                proj.transform.position = transform.position + new Vector3(0, 0, 0);
+                proj.transform.eulerAngles = transform.eulerAngles + new Vector3(0, 90, 0);
+                Rigidbody obj = proj.GetComponent<Rigidbody>(); 
+                obj.velocity = Vo;
+            }
         }
     }
+
+    
 
     Vector3 CalculateVeolocity(Vector3 target, Vector3 origin, float time)
     {
