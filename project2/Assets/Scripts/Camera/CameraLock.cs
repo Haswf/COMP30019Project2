@@ -2,15 +2,22 @@
 using System.Collections.Generic;
 using System.Net.Sockets;
 using UnityEngine;
+using UnityEngine.UIElements;
+using Cursor = UnityEngine.Cursor;
 
 public class CameraLock : MonoBehaviour
 {
-    public Transform Target, Player;
-    float mouseX,  mouseY;
-
-    public float height;
-    private const float Y_ANGLE_MAX = 100.0f;
-    private const float Y_ANGLE_MIN = 0.0f;
+    public GameObject target;
+    
+    public float distance = 10.0f;
+    private const float CameraYAngleMax = 100.0f;
+    private const float CameraYAngleMin = 10.0f;
+    private const float MinDistance = 15;
+    private const float MaxDistance = 50;
+    private float mouseX, mouseY;
+    
+    // How fast the camera distance change
+    private float scale = 2;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,17 +29,22 @@ public class CameraLock : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        transform.LookAt(Target);
-    }
-
-    private void LateUpdate()
-    {
+    {   
+        // Make the camera look at target
+        transform.LookAt(target.transform);
+        // Read mouse input
         mouseX += Input.GetAxis("Mouse X");
-        mouseY -= Input.GetAxis("Mouse Y");
-        mouseY = Mathf.Clamp(mouseY, Y_ANGLE_MIN, Y_ANGLE_MAX);
-        
-        transform.rotation = Quaternion.Euler(mouseY, mouseX, 0);
-        transform.position = Target.position - transform.forward * height;
+        mouseY += Input.GetAxis("Mouse Y");
+        // Change camera distance from scroll input
+        distance -= Input.mouseScrollDelta.y * scale;
+        distance = Mathf.Clamp(distance, MinDistance, MaxDistance);
+        // Clamp camera rotation with respect to Y axis
+        mouseY = Mathf.Clamp(mouseY, CameraYAngleMin, CameraYAngleMax);
+        // Camera transform
+        Transform cameraTransform;
+        // Apply change to camera rotation.
+        (cameraTransform = transform).rotation = Quaternion.Euler(mouseY, mouseX, 0);
+        // Apply change to camera position.
+        cameraTransform.position = target.transform.position - cameraTransform.forward * distance;
     }
 }
