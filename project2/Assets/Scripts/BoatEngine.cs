@@ -32,7 +32,6 @@ public class BoatEngine : MonoBehaviour
     void Start()
     {
         boatRB = GetComponent<Rigidbody>();
-
         boatController = GetComponent<BoatController>();
     }
 
@@ -40,6 +39,14 @@ public class BoatEngine : MonoBehaviour
     void Update()
     {
         UserInput();
+//        if (this.transform.eulerAngles.z < -5)
+//        {
+//            transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, -5);
+//        }
+//        else if (this.transform.eulerAngles.z > 5)
+//        {
+//            transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, 5);
+//        }
     }
 
     void FixedUpdate()

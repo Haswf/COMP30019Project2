@@ -359,6 +359,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8669817490682718305, guid: 3051d3879aa97e549b87ffd404a394b0,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 25.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8669817490682718305, guid: 3051d3879aa97e549b87ffd404a394b0,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 25.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8669817490682718305, guid: 3051d3879aa97e549b87ffd404a394b0,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 25.1
+      objectReference: {fileID: 0}
     - target: {fileID: 5566694333029223982, guid: 3051d3879aa97e549b87ffd404a394b0,
         type: 3}
       propertyPath: camera
@@ -379,6 +394,34 @@ PrefabInstance:
       propertyPath: camera
       value: 
       objectReference: {fileID: 2121255500}
+    - target: {fileID: 1522927666, guid: 3051d3879aa97e549b87ffd404a394b0, type: 3}
+      propertyPath: m_Constraints
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 1522927666, guid: 3051d3879aa97e549b87ffd404a394b0, type: 3}
+      propertyPath: m_Mass
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 1143658532, guid: 3051d3879aa97e549b87ffd404a394b0, type: 3}
+      propertyPath: buoyancyThreshold
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1143658532, guid: 3051d3879aa97e549b87ffd404a394b0, type: 3}
+      propertyPath: downForce
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1309575977, guid: 3051d3879aa97e549b87ffd404a394b0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2074251593, guid: 3051d3879aa97e549b87ffd404a394b0, type: 3}
+      propertyPath: maxPower
+      value: 3001
+      objectReference: {fileID: 0}
+    - target: {fileID: 2074251593, guid: 3051d3879aa97e549b87ffd404a394b0, type: 3}
+      propertyPath: powerFactor
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3051d3879aa97e549b87ffd404a394b0, type: 3}
 --- !u!1 &1881430203
@@ -577,7 +620,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 2074251586}
-  distance: 20
+  distance: 1000
 --- !u!20 &2121255500
 Camera:
   m_ObjectHideFlags: 0
