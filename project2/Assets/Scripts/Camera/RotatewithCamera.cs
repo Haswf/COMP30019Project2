@@ -13,6 +13,8 @@ public class RotatewithCamera : MonoBehaviour
     private float currentZ;
     private float maxAngle = 140;
     private float minAngle = -140;
+    private float maxAngleFront = 320;
+    private float minAngleFront = 40;
 
     private float rote;
     // Start is called before the first frame update
@@ -31,9 +33,9 @@ public class RotatewithCamera : MonoBehaviour
         if (!front_fire)
         {    
             // for the fire on the back pont
-            cameraY = cameraAgnle_Y + 180;
+            cameraY = cameraAgnle_Y;
             //give range to avoid penetration model
-            Quaternion rotation = Quaternion.Euler(currentX - 90, RangeOfAngle(cameraY, minAngle, maxAngle), currentZ);
+            Quaternion rotation = Quaternion.Euler(currentX - 90, Mathf.Clamp(cameraY,minAngleFront,maxAngleFront), currentZ);
 
                 transform.rotation = rotation;
             
