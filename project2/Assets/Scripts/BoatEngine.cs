@@ -20,7 +20,7 @@ public class BoatEngine : MonoBehaviour
     public Vector3 forceToAdd;
     public float waterJetRotationSpeed = 0.5f;
 
-
+    private bool onSinking = false;
     private float thrustFromWaterJet = 0f;
 
     private Rigidbody boatRB;
@@ -37,14 +37,19 @@ public class BoatEngine : MonoBehaviour
     }
 
 
-    void Update()
+    public void Update()
     {
-        UserInput();
+      
+        if (onSinking) { }
+        else
+        {
+            UserInput();
+        }
     }
 
     void FixedUpdate()
     {
-        UpdateWaterJet();
+      UpdateWaterJet();
     }
 
     void UserInput()
@@ -103,5 +108,9 @@ public class BoatEngine : MonoBehaviour
         
         boatRB.AddForceAtPosition(forceToAdd, waterJetTransform.position);
 
+    }
+    public void SetOnSinking(bool boolean)
+    {
+        onSinking = boolean;
     }
 }

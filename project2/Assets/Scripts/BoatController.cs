@@ -6,7 +6,7 @@ public class BoatController : MonoBehaviour
     //Speed calculations
     private float currentSpeed;
     private Vector3 lastPosition;
-	
+    private bool onSinking = false;
     void FixedUpdate()
     {
         CalculateSpeed();
