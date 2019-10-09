@@ -219,12 +219,12 @@ Rigidbody:
   m_GameObject: {fileID: 5623369526437108338}
   serializedVersion: 2
   m_Mass: 1000
-  m_Drag: 0
-  m_AngularDrag: 0
+  m_Drag: 0.5
+  m_AngularDrag: 0.5
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!65 &36084810
 BoxCollider:
@@ -239,6 +239,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.37160087, y: 0.2674701, z: 2.5144813}
   m_Center: {x: 0, y: 0.12690966, z: 0}
+--- !u!114 &1143658532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5623369526437108338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d95b8f88d7bf42c4fa77abaa5b74bdc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waterLevel: 0
+  buoyancyThreshold: 2
+  waterDensity: 1
+  downForce: 4
+  boatRigidBody: {fileID: 0}
 --- !u!114 &8141426802245183143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -268,7 +285,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &1143658532
+--- !u!114 &2074251593
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -277,14 +294,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 5623369526437108338}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d95b8f88d7bf42c4fa77abaa5b74bdc6, type: 3}
+  m_Script: {fileID: 11500000, guid: e116d8780e5609a4e9757e91393fea11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waterLevel: 0
-  buoyancyThreshold: 2
-  waterDensity: 1
-  downForce: 4
-  boatRigidBody: {fileID: 0}
+  waterJetTransform: {fileID: 1309575977}
+  powerFactor: 5
+  maxPower: 100
+  currentJetPower: 0
+  forceToAdd: {x: 0, y: 0, z: 0}
+  waterJetRotationSpeed: 0.5
+  WaterJetRotation_Y: 0
+--- !u!114 &2074251594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5623369526437108338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48c185b25eda8944d8b98a65eb6ae5a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!54 &1915729973
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -325,7 +356,7 @@ PrefabInstance:
     - target: {fileID: 1292419893047541577, guid: c85d2e7710220fe45a81d511d0976380,
         type: 3}
       propertyPath: m_Name
-      value: Bismack
+      value: Gem_bismack Variant
       objectReference: {fileID: 0}
     - target: {fileID: 1292419893047541577, guid: c85d2e7710220fe45a81d511d0976380,
         type: 3}
@@ -492,11 +523,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.x
       value: -90.00001
       objectReference: {fileID: 0}
-    - target: {fileID: 5936923243137085633, guid: c85d2e7710220fe45a81d511d0976380,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4978391202800288957, guid: c85d2e7710220fe45a81d511d0976380,
         type: 3}
       propertyPath: m_Name
@@ -518,7 +544,8 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5936923243137085633, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
 --- !u!1 &5623369526437108338 stripped
 GameObject:
