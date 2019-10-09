@@ -6,11 +6,8 @@ using System.Linq;
 
 public class RotatewithCamera : MonoBehaviour
 {
-    public bool front_fire;
     public Camera camera;
-    private float cameraY;
-    private float currentX;
-    private float currentZ;
+    public Base[] barrels;
     private float maxAngle = 140;
     private float minAngle = -140;
     private float maxAngleFront = 320;
@@ -25,32 +22,35 @@ public class RotatewithCamera : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {    
-        // the angle which camera rotates
-        float cameraAgnle_Y = camera.transform.rotation.eulerAngles.y;
-        currentX = transform.parent.rotation.eulerAngles.x;
-        currentZ = transform.parent.rotation.eulerAngles.z;
-        if (!front_fire)
-        {    
-            // for the fire on the back pont
-            cameraY = cameraAgnle_Y;
-            //give range to avoid penetration model
-            Quaternion rotation = Quaternion.Euler(currentX - 90, Mathf.Clamp(cameraY,minAngleFront,maxAngleFront), currentZ);
-
-                transform.rotation = rotation;
-            
-        }
-        else
-        {     
-            // for the fire on the front pont
-            cameraY = (cameraAgnle_Y);
-            //give range to avoid penetration model
-            Quaternion rotation = Quaternion.Euler(currentX - 90,  RangeOfAngle(cameraY, minAngle, maxAngle), currentZ);
-            transform.rotation = rotation;
-
+    {
+        Vector3 rotation = transform.rotation.eulerAngles;
+        for (int i=0; i < barrels.Length; i++)
+        {
+            barrels[i].barrel.transform.rotation = CalculateRotation(
+                new Vector3(
+                    transform.rotation.eulerAngles.x, 
+                    camera.transform.rotation.eulerAngles.y,
+                    transform.rotation.eulerAngles.z), 
+                barrels[i].isFront);
         }
     }
-    
+
+    private Quaternion CalculateRotation(Vector3 rotation, bool isFront) {
+        if (!isFront)
+        {
+            // for the fire on the back pont
+            //give range to avoid penetration model
+            return Quaternion.Euler(rotation.x - 90, Mathf.Clamp(rotation.y, minAngleFront, maxAngleFront), rotation.z);
+        }
+        else
+        {
+            // for the fire on the front pont
+            //give range to avoid penetration model
+            return Quaternion.Euler(rotation.x - 90, RangeOfAngle(rotation.y, minAngle, maxAngle), rotation.z);
+        }
+
+    }
+
     float RangeOfAngle(float angle, float minRange, float maxRange) {
         
         //for the angle which is greater than 180 degrees or smaller than negative 180 degrees
@@ -76,6 +76,13 @@ public class RotatewithCamera : MonoBehaviour
  
         // Aim is, convert angles to -180 until 180.
         return Mathf.Clamp(angle, minRange, maxRange);
-        
     }
+}
+
+[System.Serializable]
+public struct Base
+{
+    public string name;
+    public GameObject barrel;
+    public bool isFront;
 }
