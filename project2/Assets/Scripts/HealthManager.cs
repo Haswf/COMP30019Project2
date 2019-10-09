@@ -5,13 +5,15 @@ using UnityEngine.Events;
 
 public class HealthManager : MonoBehaviour
 {
-    public int health; 
+    public int maxHealth;
+    public int health;
 
     public UnityEvent OnSinkingStart; // UnityEvent to trigger sinking animation 
 
     // Start is called before the first frame update
     void Start()
     {
+        health = maxHealth;
     }
     
     public void TakeDamage(int damage)

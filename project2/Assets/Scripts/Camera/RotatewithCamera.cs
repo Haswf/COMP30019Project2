@@ -6,6 +6,7 @@ using System.Linq;
 
 public class RotatewithCamera : MonoBehaviour
 {
+    public GameObject aimming;
     public Camera camera;
     public Base[] barrels;
     private float maxAngle = 140;
@@ -23,15 +24,11 @@ public class RotatewithCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 rotation = transform.rotation.eulerAngles;
+        Vector3 target = transform.rotation.eulerAngles;
         for (int i=0; i < barrels.Length; i++)
         {
-            barrels[i].barrel.transform.rotation = CalculateRotation(
-                new Vector3(
-                    transform.rotation.eulerAngles.x, 
-                    camera.transform.rotation.eulerAngles.y,
-                    transform.rotation.eulerAngles.z), 
-                barrels[i].isFront);
+            barrels[i].barrel.transform.LookAt(aimming.transform);
+            barrels[i].barrel.transform.rotation *= Quaternion.Euler(-90, 0, 0);
         }
     }
 
