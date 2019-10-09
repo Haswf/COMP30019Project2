@@ -6,7 +6,7 @@ public class ProjectileShooter : MonoBehaviour
 {
 
     public GameObject prefab;
-    public GameObject barrel;
+    public Barrel[] barrels;
     public GameObject aimingObject;
     public float time;
 
@@ -14,16 +14,32 @@ public class ProjectileShooter : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {    
-        Vector3 Vo = CalculateVeolocity(aimingObject.transform.position, barrel.transform.position, time);
-        if(Input.GetMouseButtonDown(0))
+    {
+        for(int i =0;i < barrels.Length; i++)
         {
-            GameObject projectile = Instantiate(prefab);
-            projectile.transform.position = transform.position + new Vector3(0, 0, 0);
-            projectile.transform.eulerAngles = transform.eulerAngles + new Vector3(0, 90, 0);
-            Rigidbody rb = projectile.GetComponent<Rigidbody>();
-            rb.velocity = Vo;
+            Vector3 Vo = CalculateVeolocity(aimingObject.transform.position, barrels[i].barrel.transform.position, time);
+            if (Input.GetMouseButtonDown(0))
+            {
+                GameObject projectile = Instantiate(prefab);
+                ShellController sc = projectile.GetComponent<ShellController>();
+                sc.ShipID = this.GetInstanceID();
+                print("Projectile created: " + GetInstanceID());
+                projectile.transform.position = transform.position + new Vector3(0, 0, 0);
+                projectile.transform.eulerAngles = transform.eulerAngles + new Vector3(0, 90, 0);
+                Rigidbody rb = projectile.GetComponent<Rigidbody>();
+                rb.velocity = Vo;
+            }
+
         }
+        //Vector3 Vo = CalculateVeolocity(aimingObject.transform.position, barrel.transform.position, time);
+        //if(Input.GetMouseButtonDown(0))
+        //{
+        //    GameObject projectile = Instantiate(prefab);
+        //    projectile.transform.position = transform.position + new Vector3(0, 0, 0);
+        //    projectile.transform.eulerAngles = transform.eulerAngles + new Vector3(0, 90, 0);
+        //    Rigidbody rb = projectile.GetComponent<Rigidbody>();
+        //    rb.velocity = Vo;
+        //}
     }
     
     Vector3 CalculateVeolocity(Vector3 target, Vector3 origin, float time)
@@ -46,4 +62,12 @@ public class ProjectileShooter : MonoBehaviour
 
         return result;
     }
+}
+
+[System.Serializable]
+public struct Barrel
+{
+    public string name;
+    public GameObject barrel;
+    public bool isFront;
 }

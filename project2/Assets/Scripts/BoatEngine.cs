@@ -103,7 +103,7 @@ public class BoatEngine : MonoBehaviour
 
     void UpdateWaterJet()
     {
-        print(boatController.CurrentSpeed);
+        //print(boatController.CurrentSpeed);
 
         forceToAdd = waterJetTransform.forward * currentJetPower;
         forceToAdd.y = 0;
