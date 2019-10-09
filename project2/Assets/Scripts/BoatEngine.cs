@@ -32,19 +32,30 @@ public class BoatEngine : MonoBehaviour
     void Start()
     {
         boatRB = GetComponent<Rigidbody>();
-
         boatController = GetComponent<BoatController>();
     }
 
 
     public void Update()
     {
+<<<<<<< HEAD
       
         if (onSinking) { }
         else
         {
             UserInput();
         }
+=======
+        UserInput();
+//        if (this.transform.eulerAngles.z < -5)
+//        {
+//            transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, -5);
+//        }
+//        else if (this.transform.eulerAngles.z > 5)
+//        {
+//            transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, 5);
+//        }
+>>>>>>> 6d772bd7137ca066370f8a3aecf797fe39fdb52b
     }
 
     void FixedUpdate()
