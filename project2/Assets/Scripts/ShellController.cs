@@ -27,8 +27,9 @@ public class ShellController : MonoBehaviour
     public void OnCollisionEnter(Collision col)
     {
         if (col.gameObject.CompareTag("Enemy"))
-        {    
+        {
             // deduct health of battleship
+            //print("explore");
             col.gameObject.GetComponent<HealthManager>().TakeDamage(Damage);
             Explode();
         }

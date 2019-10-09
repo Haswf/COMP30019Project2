@@ -47,6 +47,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gem_bismack Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 1292419893047541577, guid: c85d2e7710220fe45a81d511d0976380,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 2861123677874408794, guid: c85d2e7710220fe45a81d511d0976380,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -116,6 +121,10 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 25.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2082521732, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
+      propertyPath: scale
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
