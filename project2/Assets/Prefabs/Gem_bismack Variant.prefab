@@ -46,33 +46,6 @@ MonoBehaviour:
   - name: front 2
     barrel: {fileID: 4450236926743463522}
     isFront: 1
---- !u!114 &4890815468916290183
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5623369526437108338}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf9796561986c6b499207c1070ca2d1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  aimming: {fileID: 6910107056617138105}
-  camera: {fileID: 0}
-  barrels:
-  - name: base _end_2
-    barrel: {fileID: 6213224496809192682}
-    isFront: 0
-  - name: base _end_1
-    barrel: {fileID: 251322227749814495}
-    isFront: 0
-  - name: front 1
-    barrel: {fileID: 8892472446224523766}
-    isFront: 1
-  - name: front 2
-    barrel: {fileID: 4450236926743463522}
-    isFront: 1
 --- !u!114 &1354473570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,17 +89,29 @@ PrefabInstance:
       propertyPath: health
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1522927666, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
+      propertyPath: m_Drag
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1522927666, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2074251594, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
       propertyPath: waterJetTransform
       value: 
       objectReference: {fileID: 6910107055847894546}
     - target: {fileID: 2074251594, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
       propertyPath: powerFactor
-      value: 20
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 2074251594, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
       propertyPath: maxPower
-      value: 1000
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2074251594, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
+      propertyPath: waterJetRotationSpeed
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2861123677874408794, guid: c85d2e7710220fe45a81d511d0976380,
         type: 3}
@@ -186,17 +171,17 @@ PrefabInstance:
     - target: {fileID: 2861123677874408794, guid: c85d2e7710220fe45a81d511d0976380,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 25.1
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 2861123677874408794, guid: c85d2e7710220fe45a81d511d0976380,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 25.1
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 2861123677874408794, guid: c85d2e7710220fe45a81d511d0976380,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 25.1
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6672436881105708516, guid: c85d2e7710220fe45a81d511d0976380,
         type: 3}

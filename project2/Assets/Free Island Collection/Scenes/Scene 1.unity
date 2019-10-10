@@ -229,7 +229,7 @@ GameObject:
   - component: {fileID: 1018409034}
   - component: {fileID: 1018409033}
   - component: {fileID: 1018409032}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -365,8 +365,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4890815468916290183, guid: 3051d3879aa97e549b87ffd404a394b0,
-        type: 3}
+    - target: {fileID: 2074251595, guid: 3051d3879aa97e549b87ffd404a394b0, type: 3}
       propertyPath: camera
       value: 
       objectReference: {fileID: 2121255500}
@@ -517,6 +516,10 @@ PrefabInstance:
       propertyPath: disablePixelLights
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 780611a67e8e941a2b3aa96e5915a793, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 780611a67e8e941a2b3aa96e5915a793, type: 3}
 --- !u!1 &2121255496
@@ -568,8 +571,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 2074251586}
-  distance: 1000
-  scale: 0.5
+  minCameraDistance: 500
+  maxCameraDistance: 1000
+  scale: 100
 --- !u!20 &2121255500
 Camera:
   m_ObjectHideFlags: 0

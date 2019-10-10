@@ -8,12 +8,13 @@ using Cursor = UnityEngine.Cursor;
 public class CameraLock : MonoBehaviour
 {
     public GameObject target;
+    public float minCameraDistance = 15;
+    public float maxCameraDistance = 50;
     
-    public float distance = 10.0f;
+    private float distance = 10.0f;
     private const float CameraYAngleMax = 100.0f;
     private const float CameraYAngleMin = 10.0f;
-    private const float MinDistance = 15;
-    private const float MaxDistance = 50;
+
     private float mouseX, mouseY;
     
     // How fast the camera distance change
@@ -37,7 +38,7 @@ public class CameraLock : MonoBehaviour
         mouseY += Input.GetAxis("Mouse Y");
         // Change camera distance from scroll input
         distance -= Input.mouseScrollDelta.y * scale;
-        distance = Mathf.Clamp(distance, MinDistance, MaxDistance);
+        distance = Mathf.Clamp(distance, minCameraDistance, maxCameraDistance);
         // Clamp camera rotation with respect to Y axis
         mouseY = Mathf.Clamp(mouseY, CameraYAngleMin, CameraYAngleMax);
         // Camera transform
