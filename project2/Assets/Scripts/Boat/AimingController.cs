@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class AimingController : MonoBehaviour
 {   
@@ -12,19 +13,21 @@ public class AimingController : MonoBehaviour
     // Update is called once per frame
     private void Start()
     {
-        transform.position = new Vector3(20, 0, 0);
+        transform.localPosition = new Vector3(20, 0, 0);
     }
     void Update()
     {
-        float mouseX = Input.GetAxis("Mouse X");
-        float mouseY = Input.GetAxis("Mouse Y");
+        if (!Input.GetMouseButton(1))
+        {
+            float mouseX = Input.GetAxis("Mouse X");
+            float mouseY = Input.GetAxis("Mouse Y");
 
-        // mouse left and right to rotate the aiming object
-        transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles + new Vector3(0, mouseX, 0));
+            // mouse left and right to rotate the aiming object
+            transform.localRotation = Quaternion.Euler(transform.localRotation.eulerAngles + new Vector3(0, mouseX, 0));
 
-        // mouse up and down to control how far aiming object is.
-        distance = Mathf.Clamp(distance+scale*mouseY, minDistance, maxDistance);
-        transform.position = transform.forward * distance;
-
+            // mouse up and down to control how far aiming object is.
+            distance = Mathf.Clamp(distance+scale*mouseY, minDistance, maxDistance);
+            transform.localPosition = transform.forward * distance;
+        }
     }
 }

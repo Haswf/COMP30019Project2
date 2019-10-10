@@ -120,6 +120,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb854a93d318f7146a60b4ee8f7e4cd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minDistance: 50
+  maxDistance: 200
+  scale: 10
 --- !u!1 &710564900088596945
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,8 +231,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf9796561986c6b499207c1070ca2d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  front_fire: 0
+  aimming: {fileID: 0}
   camera: {fileID: 0}
+  barrels: []
 --- !u!1 &1292419893047541577
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,7 +246,6 @@ GameObject:
   - component: {fileID: 1522927666}
   - component: {fileID: 36084810}
   - component: {fileID: 1143658532}
-  - component: {fileID: 2074251593}
   - component: {fileID: 2074251594}
   - component: {fileID: 8141426802245183143}
   m_Layer: 0
@@ -319,25 +322,6 @@ MonoBehaviour:
   waterDensity: 1
   downForce: 4
   boatRigidBody: {fileID: 0}
---- !u!114 &2074251593
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1292419893047541577}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e116d8780e5609a4e9757e91393fea11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waterJetTransform: {fileID: 1309575977}
-  powerFactor: 5
-  maxPower: 100
-  currentJetPower: 0
-  forceToAdd: {x: 0, y: 0, z: 0}
-  waterJetRotationSpeed: 0.5
-  WaterJetRotation_Y: 0
 --- !u!114 &2074251594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -350,6 +334,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48c185b25eda8944d8b98a65eb6ae5a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waterJetTransform: {fileID: 0}
+  powerFactor: 0
+  maxPower: 0
+  currentJetPower: 0
+  forceToAdd: {x: 0, y: 0, z: 0}
+  waterJetRotationSpeed: 0.5
+  WaterJetRotation_Y: 0
 --- !u!114 &8141426802245183143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -362,6 +353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87475d4a400c2574195269db5880860d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 0
   health: 41700
   OnSinkingStart:
     m_PersistentCalls:
@@ -564,8 +556,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf9796561986c6b499207c1070ca2d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  front_fire: 1
+  aimming: {fileID: 0}
   camera: {fileID: 0}
+  barrels: []
 --- !u!1 &2637329210977768287
 GameObject:
   m_ObjectHideFlags: 0
@@ -983,8 +976,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf9796561986c6b499207c1070ca2d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  front_fire: 0
+  aimming: {fileID: 0}
   camera: {fileID: 0}
+  barrels: []
 --- !u!1 &7072845120410461017
 GameObject:
   m_ObjectHideFlags: 0
@@ -1093,5 +1087,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf9796561986c6b499207c1070ca2d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  front_fire: 1
+  aimming: {fileID: 0}
   camera: {fileID: 0}
+  barrels: []

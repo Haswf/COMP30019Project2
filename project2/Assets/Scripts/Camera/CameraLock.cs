@@ -17,7 +17,7 @@ public class CameraLock : MonoBehaviour
     private float mouseX, mouseY;
     
     // How fast the camera distance change
-    private float scale = 2;
+    public float scale = 0.5f;
     // Start is called before the first frame update
     void Start()
     {
