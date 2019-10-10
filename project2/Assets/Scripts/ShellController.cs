@@ -9,7 +9,8 @@ public class ShellController : MonoBehaviour
     // Explosion effect after collision
     public GameObject explosionEffect;
     // How many damage should this shell produce
-    public int Damage; 
+    public int Damage;
+    public int ShipID;
 
     // Start is called before the first frame update
     void Start()
@@ -25,9 +26,10 @@ public class ShellController : MonoBehaviour
 
     public void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.CompareTag("Battleship"))
-        {    
+        if (col.gameObject.CompareTag("Enemy"))
+        {
             // deduct health of battleship
+            //print("explore");
             col.gameObject.GetComponent<HealthManager>().TakeDamage(Damage);
             Explode();
         }
