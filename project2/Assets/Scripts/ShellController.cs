@@ -7,30 +7,49 @@ public class ShellController : MonoBehaviour
 
 {    
     // Explosion effect after collision
-    public GameObject explosionEffect;
-    // How many damage should this shell produce
-    public int Damage;
-    public int ShipID;
+    public GameObject explosionPrefab;
+    public GameObject splashPrefab;
+    public float EffectScale;
 
+    public int waterLevel;
+    // How many damage should this shell produce
+    public int damage;
+
+    public int shipID;
     // Start is called before the first frame update
     void Start()
     {
-        
+        EffectScale = 10;
+        waterLevel = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        HitWater();
+    }
+
+
+    public void HitWater()
+    {
+        if (transform.position.y < 0)
+        {
+            GameObject splash = Instantiate(splashPrefab, transform.position, transform.rotation);
+            splash.transform.localScale = new Vector3(EffectScale, EffectScale, EffectScale);
+            Destroy(gameObject);
+        }
     }
 
     public void OnCollisionEnter(Collision col)
-    {
-        if (col.gameObject.CompareTag("Enemy"))
+    {    
+        // Avoid shell from collision with its launcher
+        if (col.gameObject.GetInstanceID() != shipID)
         {
-            // deduct health of battleship
-            //print("explore");
-            col.gameObject.GetComponent<HealthManager>().TakeDamage(Damage);
+            if (col.gameObject.CompareTag("Battleship"))
+            {
+                // deduct health of battleship
+                col.gameObject.GetComponent<HealthManager>().TakeDamage(damage);
+            }
             Explode();
         }
     }
@@ -38,8 +57,9 @@ public class ShellController : MonoBehaviour
     public void Explode()
     {    
         // Instantiate explosion effect at collision point
-        Instantiate(explosionEffect, transform.position, transform.rotation);
+        GameObject explosion = Instantiate(explosionPrefab, transform.position, transform.rotation);
         // Destroy the shell after explosion
+        explosion.transform.localScale = new Vector3(EffectScale, EffectScale ,EffectScale);
         Destroy(gameObject);
     }
 }
