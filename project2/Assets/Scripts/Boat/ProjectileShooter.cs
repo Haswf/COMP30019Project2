@@ -24,7 +24,7 @@ public class ProjectileShooter : MonoBehaviour
                 ShellController sc = projectile.GetComponent<ShellController>();
                 sc.ShipID = this.GetInstanceID();
                 print("Projectile created: " + GetInstanceID());
-                projectile.transform.position = transform.position + new Vector3(0, 0, 0);
+                projectile.transform.position = barrels[i].barrel.transform.position + new Vector3(0, 0, 0);
                 projectile.transform.eulerAngles = transform.eulerAngles + new Vector3(0, 90, 0);
                 Rigidbody rb = projectile.GetComponent<Rigidbody>();
                 rb.velocity = Vo;
