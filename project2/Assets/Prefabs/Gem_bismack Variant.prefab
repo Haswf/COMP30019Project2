@@ -205,6 +205,7 @@ MonoBehaviour:
     cannon: {fileID: 0}
     loaded: 0
     loadingTimeLeft: 0
+  shellCamera: {fileID: 0}
   shellSpeed: 1000
   loadingTime: 5
   explosionScale: 10

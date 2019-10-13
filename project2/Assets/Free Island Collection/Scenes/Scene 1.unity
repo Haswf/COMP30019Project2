@@ -736,30 +736,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8669817490682718305, guid: 3051d3879aa97e549b87ffd404a394b0,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 8669817490682718305, guid: 3051d3879aa97e549b87ffd404a394b0,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 8669817490682718305, guid: 3051d3879aa97e549b87ffd404a394b0,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 2074251587, guid: 3051d3879aa97e549b87ffd404a394b0, type: 3}
       propertyPath: shellCamera
       value: 
       objectReference: {fileID: 1239368470}
-    m_RemovedComponents:
-    - {fileID: 5398797070230408526, guid: 3051d3879aa97e549b87ffd404a394b0, type: 3}
-    - {fileID: 1654001992359149519, guid: 3051d3879aa97e549b87ffd404a394b0, type: 3}
-    - {fileID: 3749215478927272445, guid: 3051d3879aa97e549b87ffd404a394b0, type: 3}
-    - {fileID: 5791119459455162451, guid: 3051d3879aa97e549b87ffd404a394b0, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3051d3879aa97e549b87ffd404a394b0, type: 3}
 --- !u!1 &1803949912
 GameObject:
