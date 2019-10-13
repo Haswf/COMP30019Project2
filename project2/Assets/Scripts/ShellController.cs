@@ -32,7 +32,7 @@ public class ShellController : MonoBehaviour
 
     public void HitWater()
     {
-        if (transform.position.y < 0)
+        if (transform.position.y < waterLevel)
         {
             GameObject splash = Instantiate(splashPrefab, transform.position, transform.rotation);
             splash.transform.localScale = new Vector3(EffectScale, EffectScale, EffectScale);
