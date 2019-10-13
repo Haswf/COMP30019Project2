@@ -11,7 +11,8 @@ public class GunController : MonoBehaviour
     public BarrelType[] guns;
     private GameObject _target;
 
-   
+    public Camera shellCamera;
+    private ShellFollower follower;
     public float shellSpeed;
     public float loadingTime;
     public float explosionScale = 10;
@@ -26,6 +27,7 @@ public class GunController : MonoBehaviour
     // Start is called before the first frame update
     public void Start()
     {
+        follower = shellCamera.GetComponent<ShellFollower>();
         _target = transform.Find("Target").gameObject;
         instantiateOffset = new Vector3(0, -0.5f, 0);
         for (int i = 0; i < guns.Length; i++)
@@ -57,11 +59,15 @@ public class GunController : MonoBehaviour
     }
 
     // Calculate time taken for shell to hit target
-    private float CalculateFlyingTime(Vector3 gunPosition, Vector3 targetPosition)
-    {
+    private float CalculateFlyingTime(Vector3 gunPosition, Vector3 targetPosition) {
         return new Vector2(gunPosition.x - targetPosition.x, gunPosition.z - targetPosition.z).magnitude / shellSpeed;
     }
-    
+
+    public void ActivateCamera(GameObject toFollow)
+    {
+        follower.GetComponent<ShellFollower>().target = toFollow;
+    }
+
     private Quaternion CalculateRotation(Vector3 rotation, bool isFront) {
         if (!isFront)
         {
@@ -78,6 +84,7 @@ public class GunController : MonoBehaviour
 
     }
     
+
     float RangeOfAngle(float angle, float minRange, float maxRange) {
         
         //for the angle which is greater than 180 degrees or smaller than negative 180 degrees
@@ -126,7 +133,8 @@ public class GunController : MonoBehaviour
         Rigidbody rb = shell.GetComponent<Rigidbody>();
         rb.velocity = CalculateVelocity(targetPosition,
             cannonPosition,
-            CalculateFlyingTime(cannonPosition, targetPosition));;
+            CalculateFlyingTime(cannonPosition, targetPosition));
+        ActivateCamera(shell);
     }
 
     void CreateExplosion(Transform cannonTransform)

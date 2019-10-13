@@ -43,7 +43,7 @@ public class ShellController : MonoBehaviour
     public void OnCollisionEnter(Collision col)
     {    
         // Avoid shell from collision with its launcher
-        if (col.gameObject.GetInstanceID() != shipID)
+        if (col.gameObject.GetInstanceID() != shipID && !col.gameObject.GetComponent<ShellController>())
         {
             if (col.gameObject.CompareTag("Battleship"))
             {
