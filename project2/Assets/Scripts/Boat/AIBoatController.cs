@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Runtime.InteropServices;
 
-public class BoatController : MonoBehaviour
+public class AIBoatController : MonoBehaviour
 {
     //Drags
     public Transform waterJetTransform;
@@ -28,47 +28,49 @@ public class BoatController : MonoBehaviour
 
     public float WaterJetRotation_Y = 0f;
 
-    BoatController boatController;
+    AIBoatController aiboatController;
+    AIController aIController;
     void Start()
     {
         boatRB = GetComponent<Rigidbody>();
-        boatController = GetComponent<BoatController>();
+        aiboatController = GetComponent<AIBoatController>();
+        aIController = GetComponent<AIController>();
     }
 
 
     void Update()
     {
         UserInput();
-//        if (this.transform.eulerAngles.z < -5)
-//        {
-//            transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, -5);
-//        }
-//        else if (this.transform.eulerAngles.z > 5)
-//        {
-//            transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, 5);
-//        }
+        //        if (this.transform.eulerAngles.z < -5)
+        //        {
+        //            transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, -5);
+        //        }
+        //        else if (this.transform.eulerAngles.z > 5)
+        //        {
+        //            transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, 5);
+        //        }
     }
 
     void UserInput()
     {
         //Forward / reverse
-        if (Input.GetKey(KeyCode.W))
+        if (aIController.GetInputMovement() == 'W')
         {
-            if (boatController.CurrentSpeed < 50f && currentJetPower < maxPower)
+            if (aiboatController.CurrentSpeed < 50f && currentJetPower < maxPower)
             {
                 currentJetPower += 1f * powerFactor;
             }
         }
-        else if (Input.GetKey(KeyCode.S))
+        else if (aIController.GetInputMovement() == 'S')
         {
-            if (boatController.CurrentSpeed < 50f && currentJetPower > -maxPower * 0.5)
+            if (aiboatController.CurrentSpeed < 50f && currentJetPower > -maxPower * 0.5)
             {
                 currentJetPower -= 1f * powerFactor;
             }
         }
 
         //Steer left
-        if (Input.GetKey(KeyCode.A))
+        if (aIController.GetInputRotation() == 'D')
         {
             WaterJetRotation_Y = waterJetTransform.localEulerAngles.y + waterJetRotationSpeed;
 
@@ -82,7 +84,7 @@ public class BoatController : MonoBehaviour
         }
 
         //Steer right
-        else if (Input.GetKey(KeyCode.D))
+        else if (aIController.GetInputRotation() == 'A')
         {
             WaterJetRotation_Y = waterJetTransform.localEulerAngles.y - waterJetRotationSpeed;
 
@@ -102,13 +104,13 @@ public class BoatController : MonoBehaviour
 
         forceToAdd = waterJetTransform.forward * currentJetPower;
         forceToAdd.y = 0;
-        
+
         boatRB.AddForceAtPosition(forceToAdd, waterJetTransform.position);
 
     }
-    
+
     void FixedUpdate()
-    {    
+    {
         UpdateWaterJet();
         CalculateSpeed();
         //Debug.Log(currentSpeed);
@@ -125,7 +127,7 @@ public class BoatController : MonoBehaviour
         //Save the position for the next update
         lastPosition = transform.position;
     }
-	
+
     public float CurrentSpeed
     {
         get
@@ -140,5 +142,13 @@ public class BoatController : MonoBehaviour
             }
 
         }
+    }
+    public float GetCurrentSpeed()
+    {
+        return currentSpeed;
+    }
+    public void SetWaterJetLocalRotationToZero()
+    {
+        waterJetTransform.localRotation = Quaternion.Euler(0,0,0);
     }
 }
