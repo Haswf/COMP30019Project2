@@ -32,7 +32,7 @@ public class ShellController : MonoBehaviour
 
     public void HitWater()
     {
-        if (transform.position.y < 0)
+        if (transform.position.y < waterLevel)
         {
             GameObject splash = Instantiate(splashPrefab, transform.position, transform.rotation);
             splash.transform.localScale = new Vector3(EffectScale, EffectScale, EffectScale);
@@ -43,7 +43,7 @@ public class ShellController : MonoBehaviour
     public void OnCollisionEnter(Collision col)
     {    
         // Avoid shell from collision with its launcher
-        if (col.gameObject.GetInstanceID() != shipID)
+        if (col.gameObject.GetInstanceID() != shipID && !col.gameObject.GetComponent<ShellController>())
         {
             if (col.gameObject.CompareTag("Battleship"))
             {

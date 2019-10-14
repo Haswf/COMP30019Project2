@@ -20,7 +20,7 @@
         {
             float4 color : Color;
             float2 uv_MainTex;
-//            float2 uv_BumpMap;
+            float2 uv_BumpMap;
             float3 viewDir;
         };
         
@@ -33,8 +33,8 @@
         void surf (Input IN, inout SurfaceOutput o)
         {
             IN.color = _ColorTinr;
-            o.Albedo = tex2D (_MainTex, IN.uv_MainTex).rrb * IN.color;
-//            o.Normal = UnpackNormal(tex2D(_BumpMap, IN.uv_BumpMap));
+            o.Albedo = tex2D (_MainTex, IN.uv_MainTex).rgb * IN.color;
+            o.Normal = UnpackNormal(tex2D(_BumpMap, IN.uv_BumpMap));
             half rim = 1.0 - saturate(dot(normalize(IN.viewDir), o.Normal));
             o.Emission = _RimColour.rgb * pow(rim, _RimPower);
         }
