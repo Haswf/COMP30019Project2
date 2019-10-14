@@ -242,45 +242,7 @@ PrefabInstance:
     - target: {fileID: 1292419893047541577, guid: c85d2e7710220fe45a81d511d0976380,
         type: 3}
       propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
-    - target: {fileID: 8141426802245183143, guid: c85d2e7710220fe45a81d511d0976380,
-        type: 3}
-      propertyPath: maxHealth
-      value: 41700
-      objectReference: {fileID: 0}
-    - target: {fileID: 8141426802245183143, guid: c85d2e7710220fe45a81d511d0976380,
-        type: 3}
-      propertyPath: health
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1143658532, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
-      propertyPath: downForce
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 1522927666, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
-      propertyPath: m_Drag
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1522927666, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
-      propertyPath: m_AngularDrag
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2074251594, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
-      propertyPath: waterJetTransform
-      value: 
-      objectReference: {fileID: 1154004538}
-    - target: {fileID: 2074251594, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
-      propertyPath: powerFactor
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 2074251594, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
-      propertyPath: maxPower
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 2074251594, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
-      propertyPath: waterJetRotationSpeed
-      value: 2
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 2861123677874408794, guid: c85d2e7710220fe45a81d511d0976380,
         type: 3}
@@ -357,6 +319,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gem_bismack_barbette_1B
       objectReference: {fileID: 0}
+    - target: {fileID: 8141426802245183143, guid: c85d2e7710220fe45a81d511d0976380,
+        type: 3}
+      propertyPath: maxHealth
+      value: 41700
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141426802245183143, guid: c85d2e7710220fe45a81d511d0976380,
+        type: 3}
+      propertyPath: health
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7072845120410461017, guid: c85d2e7710220fe45a81d511d0976380,
         type: 3}
       propertyPath: m_Name
@@ -366,6 +338,34 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Gem_bismack_barbette_2B
+      objectReference: {fileID: 0}
+    - target: {fileID: 1143658532, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
+      propertyPath: downForce
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1522927666, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
+      propertyPath: m_Drag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1522927666, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2074251594, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
+      propertyPath: waterJetTransform
+      value: 
+      objectReference: {fileID: 1154004538}
+    - target: {fileID: 2074251594, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
+      propertyPath: powerFactor
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 2074251594, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
+      propertyPath: maxPower
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2074251594, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
+      propertyPath: waterJetRotationSpeed
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2633982713750357197, guid: c85d2e7710220fe45a81d511d0976380,
         type: 3}
@@ -392,7 +392,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: cannon
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7773848873699527878, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
+    - {fileID: 1515954496175712373, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
+    - {fileID: 5265151951102778100, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
+    - {fileID: 1133659946128784744, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
 --- !u!1 &5623369526437108338 stripped
 GameObject:
