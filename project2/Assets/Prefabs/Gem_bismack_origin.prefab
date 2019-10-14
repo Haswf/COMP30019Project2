@@ -270,9 +270,14 @@ Transform:
   - {fileID: 2082521731}
   - {fileID: 2149910140346598444}
   - {fileID: 5347104380505942761}
+<<<<<<< HEAD
+  - {fileID: 8935098861128026704}
+  - {fileID: 2351702555317906260}
+=======
   - {fileID: 935318168540254590}
   - {fileID: 5315660738137221865}
   - {fileID: 3956370702412212071}
+>>>>>>> 6d772bd7137ca066370f8a3aecf797fe39fdb52b
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -302,6 +307,16 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
+<<<<<<< HEAD
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!1 &4978391202800288957
+=======
   serializedVersion: 2
   m_Size: {x: 0.37160087, y: 0.2674701, z: 2.5144813}
   m_Center: {x: 0, y: 0.12690966, z: 0}
@@ -637,6 +652,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!1 &3113773929746797172
+>>>>>>> 6d772bd7137ca066370f8a3aecf797fe39fdb52b
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -790,6 +806,9 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+<<<<<<< HEAD
+--- !u!1 &7383238056635479943
+=======
 --- !u!1 &4978391202800288957
 GameObject:
   m_ObjectHideFlags: 0
@@ -869,6 +888,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!1 &6672436881105708516
+>>>>>>> 6d772bd7137ca066370f8a3aecf797fe39fdb52b
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

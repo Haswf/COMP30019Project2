@@ -5,11 +5,11 @@ using UnityEngine.Events;
 
 public class HealthManager : MonoBehaviour
 {
-    public int maxHealth;
-    public int health;
+    public float maxHealth;
+    public float health;
 
     public UnityEvent OnSinkingStart; // UnityEvent to trigger sinking animation 
-
+    private bool trigger = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,10 +24,13 @@ public class HealthManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (health <= 0)
+        health -= Time.deltaTime;
+        if (health <= 120 && trigger)
         {
             // trigger sinking animation if health < 0
+            
             OnSinkingStart.Invoke();
+            trigger = false;
         }
     }
 }

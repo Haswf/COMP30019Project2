@@ -27,6 +27,7 @@ public class BoatController : MonoBehaviour
     private Rigidbody boatRB;
 
     public float WaterJetRotation_Y = 0f;
+    private bool onSinking = false;
 
     BoatController boatController;
 
@@ -37,18 +38,19 @@ public class BoatController : MonoBehaviour
     }
 
 
-    void Update()
+    private void FixedUpdate()
     {
         UserInput();
-//        if (this.transform.eulerAngles.z < -5)
-//        {
-//            transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, -5);
-//        }
-//        else if (this.transform.eulerAngles.z > 5)
-//        {
-//            transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, 5);
-//        }
+
     }
+    //        if (this.transform.eulerAngles.z < -5)
+    //        {
+    //            transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, -5);
+    //        }
+    //        else if (this.transform.eulerAngles.z > 5)
+    //        {
+    //            transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, 5);
+    //        }
 
     void UserInput()
     {
