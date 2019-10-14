@@ -3,67 +3,86 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraControl : MonoBehaviour
-{
-    public Camera BattleShipCamere;
-
+{    
+    public Camera BattleShipCamera;
     public Camera ShellFollowingCamera;
     public Camera AimingCamera;
+    public GameObject playerBoat;
+
     private ShellFollower _follower;
-    private string CurrantCamera;    // Start is called before the first frame update
+    private BarrelType[] _guns;
+    private int _gunIndex;
+
+    private GameObject _target;
+    // Start is called before the first frame update
     void Start()
-    {
-        CurrantCamera =  "BattleShipCamera";
-        BattleShipCamere.enabled = true;
-        ShellFollowingCamera.enabled = false;
-        AimingCamera.enabled = false;
+    {    
+        SwitchToBattleshipCamera();
+        _target = playerBoat.transform.Find("Target").gameObject;
+        _guns = playerBoat.GetComponent<GunController>().guns;
         _follower = ShellFollowingCamera.GetComponent<ShellFollower>();
+        AimingCamera.transform.position = _guns[_gunIndex].gun.transform.position + new Vector3(0, 5, 0);
+        //AimingCamera.transform.SetParent(_guns[gunIndex].gun.transform);
+    }
+
+    public void SwitchToAimingCamera()
+    {
+        AimingCamera.enabled = true;
+        BattleShipCamera.enabled = false;
+        ShellFollowingCamera.enabled = false;
+    }
+
+    public void SwitchToBattleshipCamera()
+    {
+        BattleShipCamera.enabled = true;
+        AimingCamera.enabled = false;
+        ShellFollowingCamera.enabled = false;
+    }
+
+    public void SwitchToFollowingCamera()
+    {
+        ShellFollowingCamera.enabled = true;
+        BattleShipCamera.enabled = false;
+        AimingCamera.enabled = false;
+    }
+
+    public void SwitchBetweenGuns()
+    {
+        AimingCamera.transform.parent = null;
+        _gunIndex++;
+        if (_gunIndex >= _guns.Length)
+        {
+            _gunIndex = 0;
+        }
+        AimingCamera.transform.position = _guns[_gunIndex].gun.transform.position + new Vector3(0, 5, 0);
     }
 
     // Update is called once per frame
     void Update()
-    {
-        if (CurrantCamera.CompareTo("BattleShipCamera") == 0)
+    {    
+        AimingCamera.transform.LookAt(_target.transform);
+        if (Input.GetKeyDown(KeyCode.Z))
         {
-            if (Input.GetKeyDown(KeyCode.F) && _follower.target)
-            {
-                BattleShipCamere.enabled = !BattleShipCamere.enabled;
-                AimingCamera.enabled = false;
-                ShellFollowingCamera.enabled = !ShellFollowingCamera.enabled;
-            }
-            else if (Input.GetKeyDown(KeyCode.C))
-            {
-                CurrantCamera = "AimingCamera";
-                BattleShipCamere.enabled = false;
-                AimingCamera.enabled = true;
-                ShellFollowingCamera.enabled = false;
-            }
-            if (_follower.target == null)
-            {
-                BattleShipCamere.enabled = true;
-                AimingCamera.enabled = false;
-                ShellFollowingCamera.enabled = false;
-            }
+            SwitchToBattleshipCamera();
         }
-        else if (CurrantCamera.CompareTo("AimingCamera") == 0)
+
+        else if (Input.GetKeyDown(KeyCode.X) && _follower.target)
         {
-            if (Input.GetKeyDown(KeyCode.F) && _follower.target)
+            SwitchToFollowingCamera();
+        }
+
+        else if (Input.GetKeyDown(KeyCode.C))
+        {
+            SwitchToAimingCamera();
+        }
+
+        if (AimingCamera.enabled)
+        {    
+            // update the position of camera if the ship is moving
+            AimingCamera.transform.position = _guns[_gunIndex].gun.transform.position + new Vector3(0, 5, 0);
+            if (Input.GetKeyDown(KeyCode.C))
             {
-                BattleShipCamere.enabled = false;
-                AimingCamera.enabled = !AimingCamera.enabled;
-                ShellFollowingCamera.enabled = !ShellFollowingCamera.enabled;
-            }
-            else if (Input.GetKeyDown(KeyCode.C))
-            {
-                CurrantCamera = "BattleShipCamera";
-                BattleShipCamere.enabled = true;
-                AimingCamera.enabled = false;
-                ShellFollowingCamera.enabled = false;
-            }
-            if (_follower.target == null)
-            {
-                BattleShipCamere.enabled = false;
-                AimingCamera.enabled = true;
-                ShellFollowingCamera.enabled = false;
+                SwitchBetweenGuns();
             }
         }
     }

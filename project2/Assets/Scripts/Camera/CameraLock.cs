@@ -10,7 +10,8 @@ public class CameraLock : MonoBehaviour
     public GameObject target;
     public float minCameraDistance = 15;
     public float maxCameraDistance = 50;
-    
+
+    private Camera _battleshipCamera;
     private float distance = 10.0f;
     private const float CameraYAngleMax = 100.0f;
     private const float CameraYAngleMin = 10.0f;
@@ -22,6 +23,7 @@ public class CameraLock : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _battleshipCamera = GetComponent<Camera>();
         // make cursor invisible
         Cursor.visible = false;
         // lock cursor at the center of the screen
@@ -30,22 +32,26 @@ public class CameraLock : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {   
-        // Make the camera look at target
-        transform.LookAt(target.transform);
-        // Read mouse input
-        mouseX += Input.GetAxis("Mouse X");
-        mouseY += Input.GetAxis("Mouse Y");
-        // Change camera distance from scroll input
-        distance -= Input.mouseScrollDelta.y * scale;
-        distance = Mathf.Clamp(distance, minCameraDistance, maxCameraDistance);
-        // Clamp camera rotation with respect to Y axis
-        mouseY = Mathf.Clamp(mouseY, CameraYAngleMin, CameraYAngleMax);
-        // Camera transform
-        Transform cameraTransform;
-        // Apply change to camera rotation.
-        (cameraTransform = transform).rotation = Quaternion.Euler(mouseY, mouseX, 0);
-        // Apply change to camera position.
-        cameraTransform.position = target.transform.position - cameraTransform.forward * distance;
+    {    
+        // Change camera if and only if it is enabled
+        if (_battleshipCamera.enabled)
+        {
+            // Make the camera look at target
+            transform.LookAt(target.transform);
+            // Read mouse input
+            mouseX += Input.GetAxis("Mouse X");
+            mouseY += Input.GetAxis("Mouse Y");
+            // Change camera distance from scroll input
+            distance -= Input.mouseScrollDelta.y * scale;
+            distance = Mathf.Clamp(distance, minCameraDistance, maxCameraDistance);
+            // Clamp camera rotation with respect to Y axis
+            mouseY = Mathf.Clamp(mouseY, CameraYAngleMin, CameraYAngleMax);
+            // Camera transform
+            Transform cameraTransform;
+            // Apply change to camera rotation.
+            (cameraTransform = transform).rotation = Quaternion.Euler(mouseY, mouseX, 0);
+            // Apply change to camera position.
+            cameraTransform.position = target.transform.position - cameraTransform.forward * distance;
+        }
     }
 }

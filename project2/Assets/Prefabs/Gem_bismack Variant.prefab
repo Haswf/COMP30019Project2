@@ -73,7 +73,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb854a93d318f7146a60b4ee8f7e4cd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minDistance: 50
+  minDistance: 20
   maxDistance: 200
   scale: 10
 --- !u!82 &2074251596
@@ -186,7 +186,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shellPrefab: {fileID: 2897201891711995604, guid: 2253a4c4c3c652940ae500191a02732d,
     type: 3}
-  explosionPrefab: {fileID: 1025285306637258, guid: d8f0099df63275647a8bcf646df1ca00,
+  explosionPrefab: {fileID: 1828176872806910, guid: 64891a0eb28db934898420d80ca07cb3,
     type: 3}
   guns:
   - gun: {fileID: 251322227749814495}
@@ -227,6 +227,28 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 8f45d99fe3c248a4fbff01ef7829f746, type: 3}
   - {fileID: 8300000, guid: 251798a0bf2b2974d84f82812458840c, type: 3}
   - {fileID: 8300000, guid: 733567c2de0014a41b3506980544f847, type: 3}
+--- !u!114 &1411479929498117771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5623369526437108338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34905cbfa16a819458f7c235d8a3b865, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionEffect1: {fileID: 1344314377593938, guid: 9e03786a9517b604d8e930182607a128,
+    type: 3}
+  explosionEffect2: {fileID: 1956197547661106, guid: f293a2dcc753a4a489fefe7f8f312d69,
+    type: 3}
+  explosionEffect3: {fileID: 1337198075554910, guid: 25c7aa9ad705fe143a4d71c1c8deb7d4,
+    type: 3}
+  explosionEffect4: {fileID: 1828176872806910, guid: 64891a0eb28db934898420d80ca07cb3,
+    type: 3}
+  explosionEffect5: {fileID: 1947871717301538, guid: a990e3ac1318b834488c784d851f42a9,
+    type: 3}
 --- !u!1001 &6910107056954762555
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -244,48 +266,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
-    - target: {fileID: 8141426802245183143, guid: c85d2e7710220fe45a81d511d0976380,
-        type: 3}
-      propertyPath: maxHealth
-      value: 41700
-      objectReference: {fileID: 0}
-    - target: {fileID: 8141426802245183143, guid: c85d2e7710220fe45a81d511d0976380,
-        type: 3}
-      propertyPath: health
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1143658532, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
-      propertyPath: downForce
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 1522927666, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
-      propertyPath: m_Drag
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1522927666, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
-      propertyPath: m_AngularDrag
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2074251594, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
-      propertyPath: waterJetTransform
-      value: 
-      objectReference: {fileID: 1154004538}
-    - target: {fileID: 2074251594, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
-      propertyPath: powerFactor
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 2074251594, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
-      propertyPath: maxPower
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 2074251594, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
-      propertyPath: waterJetRotationSpeed
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 2861123677874408794, guid: c85d2e7710220fe45a81d511d0976380,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -4482
       objectReference: {fileID: 0}
     - target: {fileID: 2861123677874408794, guid: c85d2e7710220fe45a81d511d0976380,
         type: 3}
@@ -295,7 +279,7 @@ PrefabInstance:
     - target: {fileID: 2861123677874408794, guid: c85d2e7710220fe45a81d511d0976380,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -455
       objectReference: {fileID: 0}
     - target: {fileID: 2861123677874408794, guid: c85d2e7710220fe45a81d511d0976380,
         type: 3}
@@ -357,6 +341,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gem_bismack_barbette_1B
       objectReference: {fileID: 0}
+    - target: {fileID: 8141426802245183143, guid: c85d2e7710220fe45a81d511d0976380,
+        type: 3}
+      propertyPath: maxHealth
+      value: 41700
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141426802245183143, guid: c85d2e7710220fe45a81d511d0976380,
+        type: 3}
+      propertyPath: health
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141426802245183143, guid: c85d2e7710220fe45a81d511d0976380,
+        type: 3}
+      propertyPath: OnSinkingStart.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1411479929498117771}
+    - target: {fileID: 8141426802245183143, guid: c85d2e7710220fe45a81d511d0976380,
+        type: 3}
+      propertyPath: OnSinkingStart.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Sink
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141426802245183143, guid: c85d2e7710220fe45a81d511d0976380,
+        type: 3}
+      propertyPath: OnSinkingStart.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7072845120410461017, guid: c85d2e7710220fe45a81d511d0976380,
         type: 3}
       propertyPath: m_Name
@@ -366,6 +375,34 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Gem_bismack_barbette_2B
+      objectReference: {fileID: 0}
+    - target: {fileID: 1143658532, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
+      propertyPath: downForce
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1522927666, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
+      propertyPath: m_Drag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1522927666, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2074251594, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
+      propertyPath: waterJetTransform
+      value: 
+      objectReference: {fileID: 1154004538}
+    - target: {fileID: 2074251594, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
+      propertyPath: powerFactor
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 2074251594, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
+      propertyPath: maxPower
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2074251594, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
+      propertyPath: waterJetRotationSpeed
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2633982713750357197, guid: c85d2e7710220fe45a81d511d0976380,
         type: 3}

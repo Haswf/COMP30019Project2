@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 6413482606956012611}
   - component: {fileID: 3113241895552111995}
   - component: {fileID: 3877210972450565349}
-  - component: {fileID: 7773848873699527878}
   m_Layer: 0
   m_Name: Gem_bismack_barbette_01
   m_TagString: Untagged
@@ -96,19 +95,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 14
   m_CollisionDetection: 0
---- !u!114 &7773848873699527878
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 710564900088596945}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf9796561986c6b499207c1070ca2d1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  aimming: {fileID: 0}
 --- !u!1 &1292419893047541577
 GameObject:
   m_ObjectHideFlags: 0
@@ -333,7 +319,6 @@ GameObject:
   - component: {fileID: 6813075371314941924}
   - component: {fileID: 1300771260143261509}
   - component: {fileID: 1915729973}
-  - component: {fileID: 1133659946128784744}
   m_Layer: 0
   m_Name: Gem_bismack_barbette_04
   m_TagString: Untagged
@@ -417,19 +402,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 14
   m_CollisionDetection: 0
---- !u!114 &1133659946128784744
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2633982713750357197}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf9796561986c6b499207c1070ca2d1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  aimming: {fileID: 0}
 --- !u!1 &2637329210977768287
 GameObject:
   m_ObjectHideFlags: 0
@@ -751,7 +723,6 @@ GameObject:
   - component: {fileID: 948243946414090460}
   - component: {fileID: 244310297731414988}
   - component: {fileID: 6512947560152614716}
-  - component: {fileID: 1515954496175712373}
   m_Layer: 0
   m_Name: Gem_bismack_barbette_02
   m_TagString: Untagged
@@ -835,19 +806,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 14
   m_CollisionDetection: 0
---- !u!114 &1515954496175712373
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6672436881105708516}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf9796561986c6b499207c1070ca2d1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  aimming: {fileID: 0}
 --- !u!1 &7072845120410461017
 GameObject:
   m_ObjectHideFlags: 0
@@ -860,7 +818,6 @@ GameObject:
   - component: {fileID: 4934809632492455365}
   - component: {fileID: 443352646320683701}
   - component: {fileID: 750980284}
-  - component: {fileID: 5265151951102778100}
   m_Layer: 0
   m_Name: Gem_bismack_barbette_03
   m_TagString: Untagged
@@ -944,16 +901,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 14
   m_CollisionDetection: 0
---- !u!114 &5265151951102778100
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7072845120410461017}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf9796561986c6b499207c1070ca2d1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  aimming: {fileID: 0}
