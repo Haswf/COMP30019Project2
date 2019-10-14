@@ -264,7 +264,11 @@ PrefabInstance:
     - target: {fileID: 1292419893047541577, guid: c85d2e7710220fe45a81d511d0976380,
         type: 3}
       propertyPath: m_TagString
+<<<<<<< HEAD
       value: Untagged
+=======
+      value: Player
+>>>>>>> 17362c434e087bff2f011327a36a9d6db77624d1
       objectReference: {fileID: 0}
     - target: {fileID: 2861123677874408794, guid: c85d2e7710220fe45a81d511d0976380,
         type: 3}
@@ -351,6 +355,7 @@ PrefabInstance:
       propertyPath: health
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 8141426802245183143, guid: c85d2e7710220fe45a81d511d0976380,
         type: 3}
       propertyPath: OnSinkingStart.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -366,6 +371,8 @@ PrefabInstance:
       propertyPath: OnSinkingStart.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+=======
+>>>>>>> 17362c434e087bff2f011327a36a9d6db77624d1
     - target: {fileID: 7072845120410461017, guid: c85d2e7710220fe45a81d511d0976380,
         type: 3}
       propertyPath: m_Name
@@ -429,7 +436,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: cannon
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7773848873699527878, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
+    - {fileID: 1515954496175712373, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
+    - {fileID: 5265151951102778100, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
+    - {fileID: 1133659946128784744, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
 --- !u!1 &5623369526437108338 stripped
 GameObject:
