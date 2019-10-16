@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections;
 using System.Runtime.InteropServices;
 
@@ -25,8 +26,9 @@ public class BoatController : MonoBehaviour
     private float thrustFromWaterJet = 0f;
 
     private Rigidbody boatRB;
-
+    
     public float WaterJetRotation_Y = 0f;
+    
 
     BoatController boatController;
     void Start()
@@ -69,7 +71,10 @@ public class BoatController : MonoBehaviour
 
         //Steer left
         if (Input.GetKey(KeyCode.A))
-        {
+        {     
+            GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+            GetComponent<Rigidbody>().constraints =
+                RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
             WaterJetRotation_Y = waterJetTransform.localEulerAngles.y + waterJetRotationSpeed;
 
             if (WaterJetRotation_Y > 10f && WaterJetRotation_Y < 290f)
@@ -77,13 +82,25 @@ public class BoatController : MonoBehaviour
                 WaterJetRotation_Y = 10f;
             }
 
+            
             Vector3 newRotation = new Vector3(0f, WaterJetRotation_Y, 0f);
             waterJetTransform.localEulerAngles = newRotation;
+            
         }
 
-        //Steer right
-        else if (Input.GetKey(KeyCode.D))
+        if (Input.GetKeyUp(KeyCode.A))
         {
+            GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
+            WaterJetRotation_Y = 0;
+        }
+        
+
+        //Steer right
+        if (Input.GetKey(KeyCode.D))
+        {    
+            GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+            GetComponent<Rigidbody>().constraints =
+                RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
             WaterJetRotation_Y = waterJetTransform.localEulerAngles.y - waterJetRotationSpeed;
 
             if (WaterJetRotation_Y < 350f && WaterJetRotation_Y > 110f)
@@ -91,8 +108,15 @@ public class BoatController : MonoBehaviour
                 WaterJetRotation_Y = 350f;
             }
 
+
             Vector3 newRotation = new Vector3(0f, WaterJetRotation_Y, 0f);
             waterJetTransform.localEulerAngles = newRotation;
+        }
+
+        if (Input.GetKeyUp(KeyCode.D))
+        {
+            GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotation;
+            WaterJetRotation_Y = 0;
         }
     }
 
@@ -141,4 +165,5 @@ public class BoatController : MonoBehaviour
 
         }
     }
+    
 }
