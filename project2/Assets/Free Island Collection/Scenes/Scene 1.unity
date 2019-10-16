@@ -738,11 +738,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gem_bismack Variant
       objectReference: {fileID: 0}
-    - target: {fileID: 5623369526437108338, guid: 3051d3879aa97e549b87ffd404a394b0,
-        type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
     - target: {fileID: 8669817490682718305, guid: 3051d3879aa97e549b87ffd404a394b0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1017,6 +1012,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2074251587, guid: 3051d3879aa97e549b87ffd404a394b0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3393894751179522972, guid: 3051d3879aa97e549b87ffd404a394b0,
         type: 3}
       propertyPath: OnSinkingStart.m_PersistentCalls.m_Calls.Array.size
@@ -1038,10 +1037,6 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2074251596, guid: 3051d3879aa97e549b87ffd404a394b0, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2074251587, guid: 3051d3879aa97e549b87ffd404a394b0, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
@@ -1397,5 +1392,10 @@ PrefabInstance:
       propertyPath: boat
       value: 
       objectReference: {fileID: 2074251586}
+    - target: {fileID: 1970494806527419811, guid: b6c0f1ddb719c5a49b6620b5503b9ea4,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6c0f1ddb719c5a49b6620b5503b9ea4, type: 3}
