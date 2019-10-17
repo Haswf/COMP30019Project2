@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 984039097}
-  m_IndirectSpecularColor: {r: 0.2532956, g: 0.21699746, b: 0.23319985, a: 1}
+  m_IndirectSpecularColor: {r: 0.25329724, g: 0.21699798, b: 0.23320034, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -717,11 +717,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gem_bismack Variant
       objectReference: {fileID: 0}
-    - target: {fileID: 5623369526437108338, guid: 3051d3879aa97e549b87ffd404a394b0,
-        type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
     - target: {fileID: 8669817490682718305, guid: 3051d3879aa97e549b87ffd404a394b0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1376,5 +1371,10 @@ PrefabInstance:
       propertyPath: boat
       value: 
       objectReference: {fileID: 2074251586}
+    - target: {fileID: 1970494806527419811, guid: b6c0f1ddb719c5a49b6620b5503b9ea4,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6c0f1ddb719c5a49b6620b5503b9ea4, type: 3}
