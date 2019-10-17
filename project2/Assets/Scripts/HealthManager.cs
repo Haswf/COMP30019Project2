@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class HealthManager : MonoBehaviour
 {
@@ -28,6 +29,9 @@ public class HealthManager : MonoBehaviour
         {
             // trigger sinking animation if health < 0
             OnSinkingStart.Invoke();
+
+            //game over
+            SceneManager.LoadScene(2);
         }
     }
 }
