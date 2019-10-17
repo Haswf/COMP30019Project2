@@ -323,8 +323,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ImageSelection: {fileID: 2128648030}
   ItemList:
-  - {fileID: 21300000, guid: c55801717ae3c49929878c1528ecf30f, type: 3}
-  - {fileID: 21300000, guid: 304a0b8559ea248d98c44e4415038346, type: 3}
+  - {fileID: 21300000, guid: ee805f1e3a702440396590bdd9ed63ec, type: 3}
+  - {fileID: 21300000, guid: 53eccad6b9aa44b788a076083b56802b, type: 3}
 --- !u!1 &42284320
 GameObject:
   m_ObjectHideFlags: 0
@@ -9369,7 +9369,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 30, y: 176}
-  m_SizeDelta: {x: 400, y: 400}
+  m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2128648030
 MonoBehaviour:
@@ -9391,7 +9391,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: c55801717ae3c49929878c1528ecf30f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ee805f1e3a702440396590bdd9ed63ec, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
