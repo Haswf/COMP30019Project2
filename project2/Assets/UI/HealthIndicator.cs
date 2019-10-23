@@ -5,19 +5,21 @@ using UnityEngine.UI;
 
 public class HealthIndicator : MonoBehaviour
 {    
-    public GameObject boat;
-    private Text healthText;
-    private HealthManager healthMGR;
+    private GameObject _player;
+    private HealthManager _healthManager;
+
+    private SimpleHealthBar _healthBar;
     // Start is called before the first frame update
     void Start()
     {
-        healthMGR = boat.GetComponent<HealthManager>();
-        healthText = this.GetComponent<Text>();
+        _player = transform.parent.parent.GetComponent<BoatAccessor>().player;
+        _healthManager = _player.GetComponent<HealthManager>();
+        _healthBar = GetComponent<SimpleHealthBar>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        healthText.text = string.Concat("Health: ", healthMGR.health, '/', healthMGR.maxHealth);
+        _healthBar.UpdateBar(_healthManager.health, _healthManager.maxHealth);
     }
 }

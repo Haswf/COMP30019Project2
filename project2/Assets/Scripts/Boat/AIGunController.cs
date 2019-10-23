@@ -37,6 +37,11 @@ public class AIGunController : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
+        if (UnityEngine.Random.Range(0, 100) > 50)
+        {
+            return;
+        }
+
         for (int i = 0; i < guns.Length; i++)
         {
             // Make gun looks at target
@@ -124,7 +129,6 @@ public class AIGunController : MonoBehaviour
         // Position of shooting cannon
         Vector3 cannonPosition = gun.cannon.transform.position;
         // Position of current target
-        _target = GameObject.Find("Gem_bismack Variant");
         Vector3 targetPosition = _target.transform.position + new Vector3(0, 5,0);
 
         // Create a projectile at the end of cannon

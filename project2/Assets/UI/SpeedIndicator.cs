@@ -6,24 +6,22 @@ using UnityEngine.UI;
 
 public class SpeedIndicator : MonoBehaviour
 {
-    public GameObject boat;
-
-    private Rigidbody boatRB;
-
-    private Text displayText;
-
-    private BoatController bc;
+    private GameObject _playerBoat;
+    private Rigidbody _boatRigidbody;
+    private Text _textToDisplay;
+    private BoatController _boatController;
     // Start is called before the first frame update
     void Start()
     {
-        boatRB = GetComponent<Rigidbody>();
-        displayText = GetComponent<Text>();
-        bc = boat.GetComponent<BoatController>();
+        _playerBoat = transform.parent.GetComponent<BoatAccessor>().player;
+        _boatRigidbody = GetComponent<Rigidbody>();
+        _textToDisplay = GetComponent<Text>();
+        _boatController = _playerBoat.GetComponent<BoatController>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        displayText.text = String.Concat("Speed: ", Math.Round(bc.CurrentSpeed, 2));
+        _textToDisplay.text = String.Concat("Speed: ", Math.Round(_boatController.CurrentSpeed, 2));
     }
 }

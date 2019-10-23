@@ -5,16 +5,17 @@ using UnityEngine;
 
 public class MoveCrossHair : MonoBehaviour
 {
-    public GameObject playerBoat;
-    private Transform _target;
+    private GameObject playerBoat;
+    private Transform target;
 
     private RectTransform rect;
 
     // Start is called before the first frame update
     void Start()
     {
+        playerBoat = transform.parent.GetComponent<BoatAccessor>().player;
         rect = GetComponent<RectTransform>();
-        _target = playerBoat.transform.Find("Target").gameObject.GetComponent<Transform>();
+        target = playerBoat.transform.Find("Target").gameObject.GetComponent<Transform>();
     }
 
     // Update is called once per frame
@@ -28,8 +29,8 @@ public class MoveCrossHair : MonoBehaviour
             if (cameras[i].enabled)
             {    
                 // Move the crosshair according current camera
-                rect.transform.position = new Vector3(cameras[i].WorldToScreenPoint(_target.position).x, 
-                    cameras[i].WorldToScreenPoint(_target.position).y,
+                rect.transform.position = new Vector3(cameras[i].WorldToScreenPoint(target.position).x, 
+                    cameras[i].WorldToScreenPoint(target.position).y,
                     0);
                 break;
             }

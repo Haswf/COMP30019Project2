@@ -11,7 +11,6 @@ public class MapGenerator : MonoBehaviour
     public float MapMinZ = -1000;
     public float MapMaxZ = 1000;
     public GameObject[] IslandPrefab;
-    public GameObject IslandHolder;
     
     public int time;
     public int IslandCount = 5;
@@ -33,15 +32,11 @@ public class MapGenerator : MonoBehaviour
             // Determine the scale of each island
             float scale = Random.Range(0.5f, 1.5f);
             // Choose rotation of the island
-            //Vector3 rotation = new Vector3(0, Random.Range(0, 180), 0);
-            // Position of island
-            Vector3 position = new Vector3(x, -50, z);
-            
             GameObject island = Instantiate(prefab, Vector3.one, Quaternion.identity);
             island.transform.SetParent(transform);
             // Change the scale of the island
             island.transform.localScale = Vector3.one * scale;
-            island.transform.position = position;
+            island.transform.position = new Vector3(x, -50, z);
         }
     }
     
