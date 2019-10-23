@@ -22,7 +22,7 @@ public class AIGunController : MonoBehaviour
     private const float MinAngleBack = -140;
     private const float MaxAngleFront = 320;
     private const float MinAngleFront = 40;
-
+    private float firingDistance = 2000;
     // Start is called before the first frame update
     public void Start()
     {
@@ -46,10 +46,13 @@ public class AIGunController : MonoBehaviour
             guns[i].gun.transform.rotation *= Quaternion.Euler(-90, 0, 0);
             // update loading time
             guns[i] = UpdateLoadingTime(guns[i]);
+
+            _target = GameObject.Find("Gem_bismack Variant");
+            float dist = Vector3.Distance(_target.transform.position, transform.position);
             // Shot if the gun has been loaded and left key of mouse was pressed
-            if (guns[i].loaded)
+            if (guns[i].loaded && dist < firingDistance)
             {
-                FireShell(guns[i]);
+                FireShell(guns[i], _target);
                 CreateExplosion(guns[i].cannon.transform);
                 // reset loading time
                 guns[i].loadingTimeLeft = loadingTime;
@@ -119,12 +122,12 @@ public class AIGunController : MonoBehaviour
     }
 
 
-    void FireShell(BarrelType gun)
+    void FireShell(BarrelType gun, GameObject _target)
     {
         // Position of shooting cannon
         Vector3 cannonPosition = gun.cannon.transform.position;
         // Position of current target
-        _target = GameObject.Find("Gem_bismack Variant");
+
         Vector3 targetPosition = _target.transform.position + new Vector3(0, 5,0);
 
         // Create a projectile at the end of cannon

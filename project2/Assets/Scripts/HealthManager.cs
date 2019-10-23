@@ -34,4 +34,12 @@ public class HealthManager : MonoBehaviour
             SceneManager.LoadScene(2);
         }
     }
+    public int getMaxHealth()
+    {
+        return maxHealth;
+    }
+    public int getHealth()
+    {
+        return health;
+    }
 }
