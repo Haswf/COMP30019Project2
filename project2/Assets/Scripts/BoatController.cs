@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 public class BoatController : MonoBehaviour
 {
     //Drags
-    public Transform waterJetTransform;
+    private Transform waterJetTransform;
 
     //How fast should the engine accelerate?
     public float powerFactor;
@@ -33,6 +33,7 @@ public class BoatController : MonoBehaviour
     BoatController boatController;
     void Start()
     {
+        waterJetTransform = transform.Find("WaterJet").gameObject.transform;
         boatRB = GetComponent<Rigidbody>();
         boatController = GetComponent<BoatController>();
     }
@@ -41,14 +42,6 @@ public class BoatController : MonoBehaviour
     void Update()
     {
         UserInput();
-//        if (this.transform.eulerAngles.z < -5)
-//        {
-//            transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, -5);
-//        }
-//        else if (this.transform.eulerAngles.z > 5)
-//        {
-//            transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, 5);
-//        }
     }
 
     void UserInput()
