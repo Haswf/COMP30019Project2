@@ -24,6 +24,6 @@ public class SpeedIndicator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        displayText.text = String.Concat("Speed: ", bc.CurrentSpeed);
+        displayText.text = String.Concat("Speed: ", Math.Round(bc.CurrentSpeed, 2));
     }
 }
