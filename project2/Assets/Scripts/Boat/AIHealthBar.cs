@@ -21,8 +21,19 @@ public class AIHealthBar : MonoBehaviour
         foreGround.fillAmount = 1.0f * healthManager.getHealth() / healthManager.getMaxHealth();
     }
     private void LateUpdate()
-    {
-        transform.LookAt(Camera.main.transform);
+    {    
+        // Create an array of all camera on the scene
+        Camera[] cameras = new Camera[Camera.allCamerasCount]; 
+        Camera.GetAllCameras(cameras);
+        
+        for (int i=0; i<cameras.Length; i++){
+            if (cameras[i].enabled)
+            {    
+                // Move the crosshair according current camera
+                transform.LookAt(cameras[i].transform);
+                break;
+            }
+        }
         transform.Rotate(0, 180, 0);
     }
 }

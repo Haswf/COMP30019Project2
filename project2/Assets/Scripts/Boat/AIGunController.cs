@@ -10,7 +10,7 @@ public class AIGunController : MonoBehaviour
     public GameObject explosionPrefab;
     public BarrelType[] guns;
     private GameObject _target;
-    
+    private HealthManager healthManager;
     public float shellSpeed;
     public float loadingTime;
     public float explosionScale = 10;
@@ -25,6 +25,7 @@ public class AIGunController : MonoBehaviour
     // Start is called before the first frame update
     public void Start()
     {
+        healthManager = transform.GetComponent<HealthManager>();
         instantiateOffset = new Vector3(0, -0.5f, 0);
         for (int i = 0; i < guns.Length; i++)
         {
@@ -50,7 +51,7 @@ public class AIGunController : MonoBehaviour
             
             float dist = Vector3.Distance(_target.transform.position, transform.position);
             // Shot if the gun has been loaded and left key of mouse was pressed
-            if (guns[i].loaded && dist < firingDistance)
+            if (guns[i].loaded && dist < firingDistance && healthManager.getIsAlive())
             {
                 FireShell(guns[i], _target);
                 CreateExplosion(guns[i].cannon.transform);

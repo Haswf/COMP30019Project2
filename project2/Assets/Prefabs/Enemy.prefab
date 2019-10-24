@@ -1038,8 +1038,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87475d4a400c2574195269db5880860d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 6000
+  maxHealth: 20000
   health: 0
+  isAlive: 1
   OnSinkingStart:
     m_PersistentCalls:
       m_Calls:
@@ -1056,6 +1057,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  timer: -1
 --- !u!82 &245954386
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1221,8 +1223,6 @@ MonoBehaviour:
     cannon: {fileID: 0}
     loaded: 0
     loadingTimeLeft: 0
-  _target: {fileID: 0}
-  shellCamera: {fileID: 0}
   shellSpeed: 2000
   loadingTime: 2
   explosionScale: 10
@@ -1234,7 +1234,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7544571739377265072}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 34905cbfa16a819458f7c235d8a3b865, type: 3}
   m_Name: 
