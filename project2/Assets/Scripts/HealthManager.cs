@@ -8,7 +8,7 @@ public class HealthManager : MonoBehaviour
 {
     public int maxHealth;
     public int health;
-
+    private bool isAlive = true;
     public UnityEvent OnSinkingStart; // UnityEvent to trigger sinking animation 
 
     // Start is called before the first frame update
@@ -16,30 +16,44 @@ public class HealthManager : MonoBehaviour
     {
         health = maxHealth;
     }
-    
+
     public void TakeDamage(int damage)
     {
-        health -= damage;
+        if (isAlive)
+        {
+            if (health - damage > 0)
+            {
+                health -= damage;
+            }
+            else
+            {
+                health = 0;
+                isAlive = false;
+            }
+        }
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (health <= 0)
+        if (!isAlive)
         {
             // trigger sinking animation if health < 0
             OnSinkingStart.Invoke();
-
-            //game over
             SceneManager.LoadScene(2);
         }
     }
-    public int getMaxHealth()
+    public bool getIsAlive()
     {
-        return maxHealth;
+        return isAlive;
     }
     public int getHealth()
     {
         return health;
+    }
+    public int getMaxHealth()
+    {
+        return maxHealth;
     }
 }

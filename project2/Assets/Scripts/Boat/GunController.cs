@@ -8,6 +8,7 @@ public class GunController : MonoBehaviour
     
     public GameObject shellPrefab;
     public GameObject explosionPrefab;
+    private HealthManager healthManager;
     public BarrelType[] guns;
     private GameObject _target;
 
@@ -30,6 +31,7 @@ public class GunController : MonoBehaviour
         follower = shellCamera.GetComponent<ShellFollower>();
         _target = transform.Find("Target").gameObject;
         instantiateOffset = new Vector3(0, -0.5f, 0);
+        healthManager = transform.GetComponent<HealthManager>();
         for (int i = 0; i < guns.Length; i++)
         {
             guns[i].cannon = guns[i].gun.transform.GetChild(0).gameObject;
@@ -48,7 +50,7 @@ public class GunController : MonoBehaviour
             // update loading time
             guns[i] = UpdateLoadingTime(guns[i]); 
             // Shot if the gun has been loaded and left key of mouse was pressed
-            if (guns[i].loaded && Input.GetKey(KeyCode.Mouse0))
+            if (guns[i].loaded && Input.GetKey(KeyCode.Mouse0) && healthManager.getIsAlive())
             {
                 FireShell(guns[i]);
                 CreateExplosion(guns[i].cannon.transform);

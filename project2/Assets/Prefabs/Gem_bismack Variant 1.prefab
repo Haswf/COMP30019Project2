@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1154004537
+--- !u!1 &307761924
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,38 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1154004538}
-  m_Layer: 0
-  m_Name: WaterJet
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1154004538
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1154004537}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1.039}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8669817490682718305}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1969607472
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1969607473}
-  - component: {fileID: 1969607474}
+  - component: {fileID: 307761925}
+  - component: {fileID: 307761926}
   m_Layer: 0
   m_Name: Target
   m_TagString: Untagged
@@ -47,27 +17,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1969607473
+--- !u!4 &307761925
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1969607472}
+  m_GameObject: {fileID: 307761924}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 8669817490682718305}
+  m_Father: {fileID: 1724456961412338671}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1969607474
+--- !u!114 &307761926
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1969607472}
+  m_GameObject: {fileID: 307761924}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cb854a93d318f7146a60b4ee8f7e4cd8, type: 3}
@@ -76,13 +46,43 @@ MonoBehaviour:
   minDistance: 50
   maxDistance: 200
   scale: 10
---- !u!82 &2074251596
+--- !u!1 &603289101
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 603289102}
+  m_Layer: 0
+  m_Name: WaterJet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &603289102
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603289101}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -1.039}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1724456961412338671}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &480203128
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5623369526437108338}
+  m_GameObject: {fileID: 2429086858089095676}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -172,13 +172,13 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &2074251587
+--- !u!114 &480203127
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5623369526437108338}
+  m_GameObject: {fileID: 2429086858089095676}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 543be5e7780c44b0aab07d38edba5464, type: 3}
@@ -189,19 +189,19 @@ MonoBehaviour:
   explosionPrefab: {fileID: 1025285306637258, guid: d8f0099df63275647a8bcf646df1ca00,
     type: 3}
   guns:
-  - gun: {fileID: 251322227749814495}
+  - gun: {fileID: 7837109249690975057}
     cannon: {fileID: 0}
     loaded: 0
     loadingTimeLeft: 0
-  - gun: {fileID: 8892472446224523766}
+  - gun: {fileID: 1501820706057050744}
     cannon: {fileID: 0}
     loaded: 0
     loadingTimeLeft: 0
-  - gun: {fileID: 6213224496809192682}
+  - gun: {fileID: 4145052906495874916}
     cannon: {fileID: 0}
     loaded: 0
     loadingTimeLeft: 0
-  - gun: {fileID: 4450236926743463522}
+  - gun: {fileID: 5944060477421977068}
     cannon: {fileID: 0}
     loaded: 0
     loadingTimeLeft: 0
@@ -210,13 +210,13 @@ MonoBehaviour:
   loadingTime: 5
   explosionScale: 10
   instantiateOffset: {x: 0, y: 0, z: 0}
---- !u!114 &2074251597
+--- !u!114 &480203129
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5623369526437108338}
+  m_GameObject: {fileID: 2429086858089095676}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f81b5a7891af48b4fa3ff03edf7ac4e6, type: 3}
@@ -227,27 +227,54 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 8f45d99fe3c248a4fbff01ef7829f746, type: 3}
   - {fileID: 8300000, guid: 251798a0bf2b2974d84f82812458840c, type: 3}
   - {fileID: 8300000, guid: 733567c2de0014a41b3506980544f847, type: 3}
---- !u!1001 &6910107056954762555
+--- !u!114 &2074251596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2429086858089095676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34905cbfa16a819458f7c235d8a3b865, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionEffect1: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664,
+    type: 3}
+  explosionEffect2: {fileID: 1947871717301538, guid: a990e3ac1318b834488c784d851f42a9,
+    type: 3}
+  explosionEffect3: {fileID: 1828176872806910, guid: 64891a0eb28db934898420d80ca07cb3,
+    type: 3}
+  explosionEffect4: {fileID: 1337198075554910, guid: 25c7aa9ad705fe143a4d71c1c8deb7d4,
+    type: 3}
+  explosionEffect5: {fileID: 1956197547661106, guid: f293a2dcc753a4a489fefe7f8f312d69,
+    type: 3}
+--- !u!1001 &3484168365869063861
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1292419893047541577, guid: c85d2e7710220fe45a81d511d0976380,
+    - target: {fileID: 7072845120410461017, guid: c85d2e7710220fe45a81d511d0976380,
         type: 3}
       propertyPath: m_Name
-      value: Gem_bismack Variant
+      value: Gem_bismack_barbette_2F
       objectReference: {fileID: 0}
-    - target: {fileID: 1292419893047541577, guid: c85d2e7710220fe45a81d511d0976380,
+    - target: {fileID: 6672436881105708516, guid: c85d2e7710220fe45a81d511d0976380,
         type: 3}
-      propertyPath: m_TagString
-      value: Player
+      propertyPath: m_Name
+      value: Gem_bismack_barbette_1B
+      objectReference: {fileID: 0}
+    - target: {fileID: 2633982713750357197, guid: c85d2e7710220fe45a81d511d0976380,
+        type: 3}
+      propertyPath: m_Name
+      value: Gem_bismack_barbette_1F
       objectReference: {fileID: 0}
     - target: {fileID: 2861123677874408794, guid: c85d2e7710220fe45a81d511d0976380,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4482
+      value: -3200
       objectReference: {fileID: 0}
     - target: {fileID: 2861123677874408794, guid: c85d2e7710220fe45a81d511d0976380,
         type: 3}
@@ -257,7 +284,7 @@ PrefabInstance:
     - target: {fileID: 2861123677874408794, guid: c85d2e7710220fe45a81d511d0976380,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -455
+      value: -465
       objectReference: {fileID: 0}
     - target: {fileID: 2861123677874408794, guid: c85d2e7710220fe45a81d511d0976380,
         type: 3}
@@ -267,7 +294,7 @@ PrefabInstance:
     - target: {fileID: 2861123677874408794, guid: c85d2e7710220fe45a81d511d0976380,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 2861123677874408794, guid: c85d2e7710220fe45a81d511d0976380,
         type: 3}
@@ -277,7 +304,7 @@ PrefabInstance:
     - target: {fileID: 2861123677874408794, guid: c85d2e7710220fe45a81d511d0976380,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 2861123677874408794, guid: c85d2e7710220fe45a81d511d0976380,
         type: 3}
@@ -292,7 +319,7 @@ PrefabInstance:
     - target: {fileID: 2861123677874408794, guid: c85d2e7710220fe45a81d511d0976380,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 2861123677874408794, guid: c85d2e7710220fe45a81d511d0976380,
         type: 3}
@@ -314,34 +341,53 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 100
       objectReference: {fileID: 0}
-    - target: {fileID: 6672436881105708516, guid: c85d2e7710220fe45a81d511d0976380,
+    - target: {fileID: 1292419893047541577, guid: c85d2e7710220fe45a81d511d0976380,
         type: 3}
       propertyPath: m_Name
-      value: Gem_bismack_barbette_1B
+      value: Gem_bismack Variant
       objectReference: {fileID: 0}
-    - target: {fileID: 8141426802245183143, guid: c85d2e7710220fe45a81d511d0976380,
+    - target: {fileID: 1292419893047541577, guid: c85d2e7710220fe45a81d511d0976380,
         type: 3}
-      propertyPath: maxHealth
-      value: 41700
-      objectReference: {fileID: 0}
-    - target: {fileID: 8141426802245183143, guid: c85d2e7710220fe45a81d511d0976380,
-        type: 3}
-      propertyPath: health
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7072845120410461017, guid: c85d2e7710220fe45a81d511d0976380,
-        type: 3}
-      propertyPath: m_Name
-      value: Gem_bismack_barbette_2F
+      propertyPath: m_TagString
+      value: Battleship
       objectReference: {fileID: 0}
     - target: {fileID: 710564900088596945, guid: c85d2e7710220fe45a81d511d0976380,
         type: 3}
       propertyPath: m_Name
       value: Gem_bismack_barbette_2B
       objectReference: {fileID: 0}
+    - target: {fileID: 8141426802245183143, guid: c85d2e7710220fe45a81d511d0976380,
+        type: 3}
+      propertyPath: OnSinkingStart.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2074251596}
+    - target: {fileID: 8141426802245183143, guid: c85d2e7710220fe45a81d511d0976380,
+        type: 3}
+      propertyPath: OnSinkingStart.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Sink
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141426802245183143, guid: c85d2e7710220fe45a81d511d0976380,
+        type: 3}
+      propertyPath: OnSinkingStart.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141426802245183143, guid: c85d2e7710220fe45a81d511d0976380,
+        type: 3}
+      propertyPath: maxHealth
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8141426802245183143, guid: c85d2e7710220fe45a81d511d0976380,
+        type: 3}
+      propertyPath: health
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1143658532, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
       propertyPath: downForce
       value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1522927666, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
+      propertyPath: m_Mass
+      value: 100000
       objectReference: {fileID: 0}
     - target: {fileID: 1522927666, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
       propertyPath: m_Drag
@@ -356,25 +402,20 @@ PrefabInstance:
       value: 112
       objectReference: {fileID: 0}
     - target: {fileID: 2074251594, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
-      propertyPath: waterJetTransform
-      value: 
-      objectReference: {fileID: 1154004538}
+      propertyPath: maxPower
+      value: 100000
+      objectReference: {fileID: 0}
     - target: {fileID: 2074251594, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
       propertyPath: powerFactor
-      value: 200
+      value: 20000
       objectReference: {fileID: 0}
     - target: {fileID: 2074251594, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
-      propertyPath: maxPower
-      value: 1000
-      objectReference: {fileID: 0}
+      propertyPath: waterJetTransform
+      value: 
+      objectReference: {fileID: 603289102}
     - target: {fileID: 2074251594, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
       propertyPath: waterJetRotationSpeed
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2633982713750357197, guid: c85d2e7710220fe45a81d511d0976380,
-        type: 3}
-      propertyPath: m_Name
-      value: Gem_bismack_barbette_1F
       objectReference: {fileID: 0}
     - target: {fileID: 1447248578768882044, guid: c85d2e7710220fe45a81d511d0976380,
         type: 3}
@@ -398,39 +439,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
---- !u!1 &5623369526437108338 stripped
+--- !u!1 &2429086858089095676 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1292419893047541577, guid: c85d2e7710220fe45a81d511d0976380,
     type: 3}
-  m_PrefabInstance: {fileID: 6910107056954762555}
+  m_PrefabInstance: {fileID: 3484168365869063861}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &8669817490682718305 stripped
+--- !u!4 &1724456961412338671 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2861123677874408794, guid: c85d2e7710220fe45a81d511d0976380,
     type: 3}
-  m_PrefabInstance: {fileID: 6910107056954762555}
+  m_PrefabInstance: {fileID: 3484168365869063861}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &8892472446224523766 stripped
+--- !u!1 &1501820706057050744 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2633982713750357197, guid: c85d2e7710220fe45a81d511d0976380,
     type: 3}
-  m_PrefabInstance: {fileID: 6910107056954762555}
+  m_PrefabInstance: {fileID: 3484168365869063861}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &6213224496809192682 stripped
+--- !u!1 &4145052906495874916 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 710564900088596945, guid: c85d2e7710220fe45a81d511d0976380,
     type: 3}
-  m_PrefabInstance: {fileID: 6910107056954762555}
+  m_PrefabInstance: {fileID: 3484168365869063861}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &251322227749814495 stripped
+--- !u!1 &7837109249690975057 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6672436881105708516, guid: c85d2e7710220fe45a81d511d0976380,
     type: 3}
-  m_PrefabInstance: {fileID: 6910107056954762555}
+  m_PrefabInstance: {fileID: 3484168365869063861}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &4450236926743463522 stripped
+--- !u!1 &5944060477421977068 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7072845120410461017, guid: c85d2e7710220fe45a81d511d0976380,
     type: 3}
-  m_PrefabInstance: {fileID: 6910107056954762555}
+  m_PrefabInstance: {fileID: 3484168365869063861}
   m_PrefabAsset: {fileID: 0}
