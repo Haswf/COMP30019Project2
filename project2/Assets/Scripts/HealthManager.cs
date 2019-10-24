@@ -42,4 +42,9 @@ public class HealthManager : MonoBehaviour
     {
         return health;
     }
+
+    public void setMaxHealth(int newMax)
+    {
+        maxHealth = newMax;
+    }
 }

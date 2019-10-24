@@ -227,6 +227,33 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 8f45d99fe3c248a4fbff01ef7829f746, type: 3}
   - {fileID: 8300000, guid: 251798a0bf2b2974d84f82812458840c, type: 3}
   - {fileID: 8300000, guid: 733567c2de0014a41b3506980544f847, type: 3}
+--- !u!114 &3022279852569334018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5623369526437108338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41a61ae89c92b9243b6143e0c4023c63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3047591195500051391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5623369526437108338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70e67ef8b2ae96644bc180fd2330c21f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  yourHealth: 0
+  yourShellSpeed: 0
+  yourloadingTime: 0
 --- !u!1001 &6910107056954762555
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -234,20 +261,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6672436881105708516, guid: c85d2e7710220fe45a81d511d0976380,
+        type: 3}
+      propertyPath: m_Name
+      value: Gem_bismack_barbette_1B
+      objectReference: {fileID: 0}
+    - target: {fileID: 7072845120410461017, guid: c85d2e7710220fe45a81d511d0976380,
+        type: 3}
+      propertyPath: m_Name
+      value: Gem_bismack_barbette_2F
+      objectReference: {fileID: 0}
     - target: {fileID: 1292419893047541577, guid: c85d2e7710220fe45a81d511d0976380,
         type: 3}
       propertyPath: m_Name
       value: Gem_bismack Variant
       objectReference: {fileID: 0}
-    - target: {fileID: 1292419893047541577, guid: c85d2e7710220fe45a81d511d0976380,
+    - target: {fileID: 710564900088596945, guid: c85d2e7710220fe45a81d511d0976380,
         type: 3}
-      propertyPath: m_TagString
-      value: Player
+      propertyPath: m_Name
+      value: Gem_bismack_barbette_2B
       objectReference: {fileID: 0}
     - target: {fileID: 2861123677874408794, guid: c85d2e7710220fe45a81d511d0976380,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4482
+      value: -3200
       objectReference: {fileID: 0}
     - target: {fileID: 2861123677874408794, guid: c85d2e7710220fe45a81d511d0976380,
         type: 3}
@@ -257,7 +294,7 @@ PrefabInstance:
     - target: {fileID: 2861123677874408794, guid: c85d2e7710220fe45a81d511d0976380,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -455
+      value: -465
       objectReference: {fileID: 0}
     - target: {fileID: 2861123677874408794, guid: c85d2e7710220fe45a81d511d0976380,
         type: 3}
@@ -267,7 +304,7 @@ PrefabInstance:
     - target: {fileID: 2861123677874408794, guid: c85d2e7710220fe45a81d511d0976380,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 2861123677874408794, guid: c85d2e7710220fe45a81d511d0976380,
         type: 3}
@@ -277,7 +314,7 @@ PrefabInstance:
     - target: {fileID: 2861123677874408794, guid: c85d2e7710220fe45a81d511d0976380,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 2861123677874408794, guid: c85d2e7710220fe45a81d511d0976380,
         type: 3}
@@ -292,7 +329,7 @@ PrefabInstance:
     - target: {fileID: 2861123677874408794, guid: c85d2e7710220fe45a81d511d0976380,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 2861123677874408794, guid: c85d2e7710220fe45a81d511d0976380,
         type: 3}
@@ -314,11 +351,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 100
       objectReference: {fileID: 0}
-    - target: {fileID: 6672436881105708516, guid: c85d2e7710220fe45a81d511d0976380,
-        type: 3}
-      propertyPath: m_Name
-      value: Gem_bismack_barbette_1B
-      objectReference: {fileID: 0}
     - target: {fileID: 8141426802245183143, guid: c85d2e7710220fe45a81d511d0976380,
         type: 3}
       propertyPath: maxHealth
@@ -329,19 +361,13 @@ PrefabInstance:
       propertyPath: health
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7072845120410461017, guid: c85d2e7710220fe45a81d511d0976380,
-        type: 3}
-      propertyPath: m_Name
-      value: Gem_bismack_barbette_2F
-      objectReference: {fileID: 0}
-    - target: {fileID: 710564900088596945, guid: c85d2e7710220fe45a81d511d0976380,
-        type: 3}
-      propertyPath: m_Name
-      value: Gem_bismack_barbette_2B
-      objectReference: {fileID: 0}
     - target: {fileID: 1143658532, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
       propertyPath: downForce
       value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1522927666, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
+      propertyPath: m_Mass
+      value: 100000
       objectReference: {fileID: 0}
     - target: {fileID: 1522927666, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
       propertyPath: m_Drag
@@ -361,11 +387,11 @@ PrefabInstance:
       objectReference: {fileID: 1154004538}
     - target: {fileID: 2074251594, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
       propertyPath: powerFactor
-      value: 200
+      value: 20000
       objectReference: {fileID: 0}
     - target: {fileID: 2074251594, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
       propertyPath: maxPower
-      value: 1000
+      value: 100000
       objectReference: {fileID: 0}
     - target: {fileID: 2074251594, guid: c85d2e7710220fe45a81d511d0976380, type: 3}
       propertyPath: waterJetRotationSpeed

@@ -6,7 +6,7 @@ public class Experience : MonoBehaviour
 {
     private int level = 1;
     private int Exp;
-    private int skillPoints;
+    private int skillPoints = 0;
     private int maxExp = 50;
     
     // Start is called before the first frame update
@@ -17,12 +17,14 @@ public class Experience : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {    
+        //level up
         if (getExp() > getMaxExp())
         {
             setExp(getExp()-getMaxExp());
             setMaxExp(getMaxExp()+100);
             setLevel(getlevel()+1);
+            setSkillPoints(getSkillPoints()+1);
         }
     }
 
@@ -64,5 +66,10 @@ public class Experience : MonoBehaviour
     public int getSkillPoints()
     {
         return skillPoints;
+    }
+
+    public void setSkillPoints(int newPoints)
+    {
+        skillPoints = newPoints;
     }
 }

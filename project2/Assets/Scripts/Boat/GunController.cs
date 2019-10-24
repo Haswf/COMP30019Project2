@@ -178,6 +178,26 @@ public class GunController : MonoBehaviour
         
         return bal;
     }
+
+    public float getShellSpeed()
+    {
+        return shellSpeed;
+    }
+
+    public void setShellSpeed(float newSpeed)
+    {
+        shellSpeed = newSpeed;
+    }
+
+    public float getLoadingTime()
+    {
+        return loadingTime;
+    }
+
+    public void setLoadingTime(float newTime)
+    {
+        loadingTime = newTime;
+    }
 }
 
 
