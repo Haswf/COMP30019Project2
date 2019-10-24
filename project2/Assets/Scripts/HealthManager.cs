@@ -8,8 +8,9 @@ public class HealthManager : MonoBehaviour
 {
     public int maxHealth;
     public int health;
-    private bool isAlive = true;
+    public bool isAlive = true;
     public UnityEvent OnSinkingStart; // UnityEvent to trigger sinking animation 
+    public float timer = -1;
 
     // Start is called before the first frame update
     void Start()
@@ -38,10 +39,17 @@ public class HealthManager : MonoBehaviour
     void Update()
     {
         if (!isAlive)
-        {
-            // trigger sinking animation if health < 0
+        {  // trigger sinking animation if health < 0
             OnSinkingStart.Invoke();
-            SceneManager.LoadScene(2);
+            if (timer < 0)
+            {
+              
+                timer = 0;
+            }
+            else if(timer >= 10){
+                SceneManager.LoadScene(2);
+            }
+            timer += Time.deltaTime;
         }
     }
     public bool getIsAlive()
