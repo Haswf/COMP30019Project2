@@ -9,9 +9,8 @@ public class AIGunController : MonoBehaviour
     public GameObject shellPrefab;
     public GameObject explosionPrefab;
     public BarrelType[] guns;
-    public GameObject _target;
-
-    public Camera shellCamera;
+    private GameObject _target;
+    
     public float shellSpeed;
     public float loadingTime;
     public float explosionScale = 10;
@@ -40,6 +39,7 @@ public class AIGunController : MonoBehaviour
         for (int i = 0; i < guns.Length; i++)
         {
             // Make gun looks at target
+            _target = GameObject.Find("Gem_bismack Variant");
             guns[i].gun.transform.LookAt(_target.transform);
             Debug.Log("target.transform = " + _target.transform.position);
             // Rotate gun by 90 degrees with respect to x axis to fix model rotation
@@ -47,7 +47,7 @@ public class AIGunController : MonoBehaviour
             // update loading time
             guns[i] = UpdateLoadingTime(guns[i]);
 
-            _target = GameObject.Find("Gem_bismack Variant");
+            
             float dist = Vector3.Distance(_target.transform.position, transform.position);
             // Shot if the gun has been loaded and left key of mouse was pressed
             if (guns[i].loaded && dist < firingDistance)

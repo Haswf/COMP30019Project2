@@ -22,16 +22,16 @@ public class SinkEvent : MonoBehaviour
     }
     public void  Sink()
     {
-
+        GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
         InvokeRepeating("Explode", 0.5f, 2.0f);
-        InvokeRepeating("BoatSinking", 0.5f, 0.01f);
+        InvokeRepeating("BoatSinking", 0.5f, 0.1f);
         
     }
 
     private void Explode()
     {
         Vector3 pos;
-        pos = transform.position + new Vector3(Random.Range(-2f,2f), Random.Range(0f , 4.0f), Random.Range(-11.0f, 11.0f));
+        pos = transform.position + new Vector3(Random.Range(-transform.localScale.x / 10, transform.localScale.x / 10), Random.Range(10f, transform.localScale.y / 5), Random.Range(-transform.localScale.z, transform.localScale.z));
         Instantiate(explosionEffect[Random.Range(0, 4)], pos, transform.rotation);
     }
 
