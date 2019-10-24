@@ -299,6 +299,24 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1963615774}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &729653817 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1970494807717046697, guid: b6c0f1ddb719c5a49b6620b5503b9ea4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1970494806348092316}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &729653818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 729653817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cf56e7131a554102a395b82fd0d4f2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &901482166
 GameObject:
   m_ObjectHideFlags: 0
@@ -1202,7 +1220,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Press W to speed up the boat
+  m_Text: Long Press W to speed up the boat
 --- !u!222 &1994986454
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1601,6 +1619,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1970494807717046692, guid: b6c0f1ddb719c5a49b6620b5503b9ea4,
+        type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6c0f1ddb719c5a49b6620b5503b9ea4, type: 3}
