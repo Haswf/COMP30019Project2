@@ -1224,9 +1224,10 @@ MonoBehaviour:
     loaded: 0
     loadingTimeLeft: 0
   shellSpeed: 2000
-  loadingTime: 2
+  loadingTime: 5
   explosionScale: 10
   instantiateOffset: {x: 0, y: 0, z: 0}
+  spread: 100
 --- !u!114 &578907104
 MonoBehaviour:
   m_ObjectHideFlags: 0

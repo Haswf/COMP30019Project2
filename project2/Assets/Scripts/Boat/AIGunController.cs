@@ -15,12 +15,8 @@ public class AIGunController : MonoBehaviour
     public float loadingTime;
     public float explosionScale = 10;
     public Vector3 instantiateOffset;
-
+    public int spread;
     private float _timeToTarget;
-    private const float MaxAngleBack = 140;
-    private const float MinAngleBack = -140;
-    private const float MaxAngleFront = 320;
-    private const float MinAngleFront = 40;
     private float firingDistance = 2000;
     // Start is called before the first frame update
     public void Start()
@@ -66,70 +62,18 @@ public class AIGunController : MonoBehaviour
     {
         return new Vector2(gunPosition.x - targetPosition.x, gunPosition.z - targetPosition.z).magnitude / shellSpeed;
     }
-
-    private Quaternion CalculateRotation(Vector3 rotation, bool isFront)
-    {
-        if (!isFront)
-        {
-            // for the fire on the back pont
-            //give range to avoid penetration model
-            return Quaternion.Euler(rotation.x - 90, Mathf.Clamp(rotation.y, MinAngleFront, MaxAngleFront), rotation.z);
-        }
-        else
-        {
-            // for the fire on the front pont
-            //give range to avoid penetration model
-            return Quaternion.Euler(rotation.x - 90, RangeOfAngle(rotation.y, MinAngleBack, MaxAngleBack), rotation.z);
-        }
-
-    }
-
-
-    float RangeOfAngle(float angle, float minRange, float maxRange)
-    {
-
-        //for the angle which is greater than 180 degrees or smaller than negative 180 degrees
-        if (angle > 180)
-        {
-            angle -= 360;
-        }
-        else if (angle < -180)
-        {
-            angle += 360;
-        }
-
-        //for the minimum range of angle which is greater than 180 degrees or smaller than negative 180 degrees
-        if (minRange > 180)
-        {
-            minRange -= 360;
-        }
-        else if (minRange < -180)
-        {
-            minRange += 360;
-        }
-
-        //for the maximum range of angle which is greater than 180 degrees or smaller than negative 180 degrees
-        if (maxRange > 180)
-        {
-            maxRange -= 360;
-        }
-        else if (maxRange < -180)
-        {
-            maxRange += 360;
-        }
-
-        // Aim is, convert angles to -180 until 180.
-        return Mathf.Clamp(angle, minRange, maxRange);
-    }
-
-
+    
     void FireShell(BarrelType gun, GameObject _target)
     {
         // Position of shooting cannon
         Vector3 cannonPosition = gun.cannon.transform.position;
         // Position of current target
 
-        Vector3 targetPosition = _target.transform.position + new Vector3(0, 5,0);
+        Vector3 targetPosition = _target.transform.position + new Vector3(0, 5, 0);
+        // Add a random offset to target to simulate air drag.
+        targetPosition += new Vector3(UnityEngine.Random.Range(-spread, spread), 0, UnityEngine.Random.Range(-spread, spread));
+
+        
 
         // Create a projectile at the end of cannon
         GameObject shell = Instantiate(shellPrefab);
