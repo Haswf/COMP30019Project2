@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class SpeedIndicator : MonoBehaviour
 {
-    public GameObject boat;
+    private GameObject _player;
 
     private Rigidbody boatRB;
 
@@ -18,7 +18,8 @@ public class SpeedIndicator : MonoBehaviour
     {
         boatRB = GetComponent<Rigidbody>();
         displayText = GetComponent<Text>();
-        bc = boat.GetComponent<BoatController>();
+        _player = transform.parent.GetComponent<BoatAccessor>().player;
+        bc = _player.GetComponent<BoatController>();
     }
 
     // Update is called once per frame

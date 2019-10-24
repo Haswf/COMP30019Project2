@@ -7,24 +7,20 @@ using UnityEngine.UI;
 
 public class LoadingTimeIndicator : MonoBehaviour
 {
-    public GameObject crossHair;
-    private Text _loadingTimerText;
-    public GameObject playerBoat;
-    private Transform _transform;
+    public GameObject _playerBoat;
     private GunController _gunController;
+    private SimpleHealthBar _loadingBar;
     // Start is called before the first frame update
     void Start()
     {
-        _transform = GetComponent<Transform>();
-        _loadingTimerText = GetComponent<Text>();
-        _gunController = playerBoat.GetComponent<GunController>();
-        _transform.SetParent(crossHair.transform);
+        _playerBoat = transform.parent.parent.GetComponent<BoatAccessor>().player;
+        _gunController = _playerBoat.GetComponent<GunController>();
+        _loadingBar = GetComponent<SimpleHealthBar>();
     }
 
     // Update is called once per frame
     void Update()
-    {    
-        _loadingTimerText.text = _gunController.guns[0].loadingTimeLeft.ToString("F");
-        _transform.localPosition = new Vector3(0, -10, 0);
+    {
+        _loadingBar.UpdateBar(_gunController.guns[0].loadingTimeLeft, _gunController.loadingTime);
     }
 }

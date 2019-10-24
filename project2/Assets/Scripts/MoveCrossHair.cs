@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class MoveCrossHair : MonoBehaviour
 {
-    public GameObject playerBoat;
+    private GameObject _playerBoat;
     private Transform _target;
 
     private RectTransform rect;
@@ -14,7 +14,8 @@ public class MoveCrossHair : MonoBehaviour
     void Start()
     {
         rect = GetComponent<RectTransform>();
-        _target = playerBoat.transform.Find("Target").gameObject.GetComponent<Transform>();
+        _playerBoat = transform.parent.GetComponent<BoatAccessor>().player;
+        _target = _playerBoat.transform.Find("Target").gameObject.GetComponent<Transform>();
     }
 
     // Update is called once per frame
