@@ -66,13 +66,10 @@ public class TutorialIndicator : MonoBehaviour
             }
             if (Input.GetKey(KeyCode.Z))
             {
-                tutorialText.text = "Well done! Press X to change again";
-            }
-            if (Input.GetKey(KeyCode.X))
-            {
                 tutorialText.text = "Well done! Now you know how to switch perspectives.\n Try left click your mouse";
                 step = 3;
             }
+           
 
         }
 
@@ -80,13 +77,19 @@ public class TutorialIndicator : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.Mouse0))
             {
-                tutorialText.text = "Well done! Now you know how to shoot";
+                tutorialText.text = "Well done! Now you know how to shoot.Try to press X";
+               //step = 4;
+            }
+            if (Input.GetKey(KeyCode.X))
+            {
+                tutorialText.text = "Well done! Now you know how to follow the bullets。\n Try left click your mouse";
                 step = 4;
             }
+
         }
         if (step == 4)
         {
-            tutorialText.text = "Tutorial finished!\n Right click your mouse ,go back to Mainmenu and Enjoy the game";
+            tutorialText.text = "Tutorial finished!\n Right click your mouse ,go back to MainMenu and Enjoy the game";
             step = 5;
         }
         if (step == 5)
