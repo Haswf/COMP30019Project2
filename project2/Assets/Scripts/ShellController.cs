@@ -15,7 +15,7 @@ public class ShellController : MonoBehaviour
     // How many damage should this shell produce
     public int damage;
 
-    public int shipID;
+    public GameObject FiringBoat;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,12 +43,13 @@ public class ShellController : MonoBehaviour
     public void OnCollisionEnter(Collision col)
     {    
         // Avoid shell from collision with its launcher
-        if (col.gameObject.GetInstanceID() != shipID && !col.gameObject.GetComponent<ShellController>())
+        if (col.gameObject != FiringBoat && !col.gameObject.GetComponent<ShellController>())
         {
             if (col.gameObject.CompareTag("Battleship"))
             {
                 // deduct health of battleship
                 col.gameObject.GetComponent<HealthManager>().TakeDamage(damage);
+                FiringBoat.GetComponent<Experience>().increaseExp(damage/10);
             }
             Explode();
         }

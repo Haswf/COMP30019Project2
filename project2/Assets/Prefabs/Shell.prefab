@@ -68,8 +68,8 @@ MonoBehaviour:
     type: 3}
   EffectScale: 10
   waterLevel: 0
-  damage: 1000
-  shipID: 0
+  damage: 100
+  FiringBoat: {fileID: 0}
 --- !u!136 &3510701133880077823
 CapsuleCollider:
   m_ObjectHideFlags: 0
