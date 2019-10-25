@@ -4,34 +4,28 @@ using System.Runtime.InteropServices;
 
 public class AIBoatController : MonoBehaviour
 {
-    //Drags
-    public Transform waterJetTransform;
-
     //How fast should the engine accelerate?
-    public float powerFactor;
+    private float powerFactor = Settings.EnemyPowerFactor;
 
     //What's the boat's maximum engine power?
-    public float maxPower;
+    private float maxPower = Settings.EnemyMaxPower;
 
     //The boat's current engine power is public for debugging
-    public float currentJetPower;
-
-
-    public Vector3 forceToAdd;
-    public float waterJetRotationSpeed = 0.5f;
-
+    private float currentJetPower;
+    private Transform waterJetTransform;
+    private Vector3 forceToAdd;
+    private float waterJetRotationSpeed = 0.5f;
     private float currentSpeed;
     private Vector3 lastPosition;
     private float thrustFromWaterJet = 0f;
-
     private Rigidbody boatRB;
-
-    public float WaterJetRotation_Y = 0f;
+    private float WaterJetRotation_Y;
 
     AIBoatController aiboatController;
     AIController aIController;
     void Start()
     {
+        waterJetTransform = transform.Find("WaterJet").gameObject.transform;
         boatRB = GetComponent<Rigidbody>();
         aiboatController = GetComponent<AIBoatController>();
         aIController = GetComponent<AIController>();
@@ -41,14 +35,6 @@ public class AIBoatController : MonoBehaviour
     void Update()
     {
         UserInput();
-        //        if (this.transform.eulerAngles.z < -5)
-        //        {
-        //            transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, -5);
-        //        }
-        //        else if (this.transform.eulerAngles.z > 5)
-        //        {
-        //            transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, 5);
-        //        }
     }
 
     void UserInput()

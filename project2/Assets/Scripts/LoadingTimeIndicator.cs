@@ -21,6 +21,6 @@ public class LoadingTimeIndicator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _loadingBar.UpdateBar(_gunController.guns[0].loadingTimeLeft, _gunController.loadingTime);
+        _loadingBar.UpdateBar(_gunController.guns[0].loadingTimeLeft, Settings.PlayerLoadingTime);
     }
 }

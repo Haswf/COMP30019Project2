@@ -20,6 +20,6 @@ public class HealthIndicator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _healthBar.UpdateBar(_healthManager.health, _healthManager.maxHealth);
+        _healthBar.UpdateBar(_healthManager.getHealth(), _healthManager.getMaxHealth());
     }
 }

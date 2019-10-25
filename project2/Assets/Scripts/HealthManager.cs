@@ -5,12 +5,12 @@ using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class HealthManager : MonoBehaviour
-{
-    public int maxHealth;
-    public int health;
-    private bool isAlive = true;
+{    
     public UnityEvent OnSinkingStart; // UnityEvent to trigger sinking animation 
-    public float timer = -1;
+    public int maxHealth;
+    private int health;
+    private bool isAlive = true;
+    private float timer = -1;
     private float deltaTime = 0;
     private int trigger = 0;
     // Start is called before the first frame update

@@ -22,22 +22,4 @@ public class AudioManager : MonoBehaviour
     {
         //ChangeEngineSound();
     }
-
-    void ChangeEngineSound()
-    {
-        if (boatController.CurrentSpeed < boatController.maxPower * 1/3)
-        {
-            _audioData.Stop();
-            _audioData.clip = engineSounds[0];
-            _audioData.Play();
-        }
-        else if (boatController.CurrentSpeed > boatController.maxPower * 1 / 3)
-        {
-            _audioData.clip = engineSounds[1];
-        }
-        else if (boatController.CurrentSpeed > boatController.maxPower * 2 / 3)
-        {
-            _audioData.clip = engineSounds[2];
-        }
-    }
 }

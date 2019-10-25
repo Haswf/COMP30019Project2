@@ -4,52 +4,38 @@ using System.Collections;
 using System.Runtime.InteropServices;
 
 public class BoatController : MonoBehaviour
-{
-    //Drags
-    public Transform waterJetTransform;
-
-    //How fast should the engine accelerate?
-    public float powerFactor;
-
-    //What's the boat's maximum engine power?
-    public float maxPower;
-
+{    
     //The boat's current engine power is public for debugging
     public float currentJetPower;
 
-
-    public Vector3 forceToAdd;
-    public float waterJetRotationSpeed = 0.5f;
-
+    //Drags    
+    private Transform waterJetTransform;
+    //How fast should the engine accelerate?
+    private float powerFactor = Settings.PlayerPowerFactor;
+    //What's the boat's maximum engine power?
+    private float maxPower = Settings.PlayerMaxPower;
+    private float _maxSpeed = Settings.PlayerMaxSpeed;
+    private Vector3 forceToAdd;
+    private float waterJetRotationSpeed = 0.5f;
     private float currentSpeed;
     private Vector3 lastPosition;
     private float thrustFromWaterJet = 0f;
-
     private Rigidbody boatRB;
-    
-    public float WaterJetRotation_Y = 0f;
+    private float WaterJetRotation_Y;
     
 
-    BoatController boatController;
     void Start()
     {
         boatRB = GetComponent<Rigidbody>();
-        boatController = GetComponent<BoatController>();
+        waterJetTransform = transform.Find("WaterJet").gameObject.transform;
     }
 
 
     void Update()
     {
         UserInput();
-//        if (this.transform.eulerAngles.z < -5)
-//        {
-//            transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, -5);
-//        }
-//        else if (this.transform.eulerAngles.z > 5)
-//        {
-//            transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, 5);
-//        }
     }
+
 
     void UserInput()
     {

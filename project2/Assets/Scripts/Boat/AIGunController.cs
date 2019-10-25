@@ -10,18 +10,18 @@ public class AIGunController : MonoBehaviour
     public GameObject explosionPrefab;
     public BarrelType[] guns;
     private GameObject _target;
-    private HealthManager healthManager;
-    public float shellSpeed;
-    public float loadingTime;
+    private HealthManager _healthManager;
+    private float shellSpeed = Settings.EnemyShellSpeed;
+    private float loadingTime= Settings.EnemyLoadingTime;
+    private int spread = Settings.EnemyOffset;
+    
     public float explosionScale = 10;
     public Vector3 instantiateOffset;
-    public int spread;
-    private float _timeToTarget;
     private float firingDistance = 2000;
     // Start is called before the first frame update
     public void Start()
     {
-        healthManager = transform.GetComponent<HealthManager>();
+        _healthManager = transform.GetComponent<HealthManager>();
         instantiateOffset = new Vector3(0, -0.5f, 0);
         for (int i = 0; i < guns.Length; i++)
         {
@@ -47,7 +47,7 @@ public class AIGunController : MonoBehaviour
             
             float dist = Vector3.Distance(_target.transform.position, transform.position);
             // Shot if the gun has been loaded and left key of mouse was pressed
-            if (guns[i].loaded && dist < firingDistance && healthManager.getIsAlive())
+            if (guns[i].loaded && dist < firingDistance && _healthManager.getIsAlive())
             {
                 FireShell(guns[i], _target);
                 CreateExplosion(guns[i].cannon.transform);
@@ -77,6 +77,7 @@ public class AIGunController : MonoBehaviour
 
         // Create a projectile at the end of cannon
         GameObject shell = Instantiate(shellPrefab);
+        shell.GetComponent<ShellController>().damage = Settings.EnemyDamage;
         shell.transform.SetParent(gun.cannon.transform);
         shell.transform.localPosition = instantiateOffset;
         shell.transform.localRotation = Quaternion.Euler(new Vector3(0, 90, 0));

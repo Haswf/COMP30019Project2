@@ -618,7 +618,7 @@ GameObject:
   - component: {fileID: 3393894751179522972}
   - component: {fileID: 2074251596}
   - component: {fileID: 2074251587}
-  - component: {fileID: 2074251597}
+  - component: {fileID: 776398280}
   m_Layer: 0
   m_Name: Gem_bismack Variant
   m_TagString: Battleship
@@ -693,7 +693,7 @@ MonoBehaviour:
   waterLevel: 0
   buoyancyThreshold: 2
   waterDensity: 1
-  downForce: 30
+  downForce: 50
   boatRigidBody: {fileID: 0}
 --- !u!114 &6910107056558568561
 MonoBehaviour:
@@ -707,13 +707,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48c185b25eda8944d8b98a65eb6ae5a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waterJetTransform: {fileID: 1154004538}
-  powerFactor: 20000
-  maxPower: 100000
   currentJetPower: 0
-  forceToAdd: {x: 0, y: 0, z: 0}
-  waterJetRotationSpeed: 2
-  WaterJetRotation_Y: 0
 --- !u!114 &3393894751179522972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -726,18 +720,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87475d4a400c2574195269db5880860d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 41700
-  health: 0
-  isAlive: 1
   OnSinkingStart:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
+      - m_Target: {fileID: 776398280}
+        m_MethodName: Sink
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -745,7 +736,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  timer: -1
+  maxHealth: 100000
 --- !u!82 &2074251596
 AudioSource:
   m_ObjectHideFlags: 0
@@ -875,13 +866,7 @@ MonoBehaviour:
     cannon: {fileID: 0}
     loaded: 0
     loadingTimeLeft: 0
-  spread: 100
-  shellCamera: {fileID: 0}
-  shellSpeed: 1000
-  loadingTime: 5
-  explosionScale: 10
-  instantiateOffset: {x: 0, y: 0, z: 0}
---- !u!114 &2074251597
+--- !u!114 &776398280
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -890,14 +875,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 5623369526437108338}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f81b5a7891af48b4fa3ff03edf7ac4e6, type: 3}
+  m_Script: {fileID: 11500000, guid: 34905cbfa16a819458f7c235d8a3b865, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  generalQuarter: {fileID: 8300000, guid: b0380b57774bb404a81b85b1eed83249, type: 3}
-  engineSounds:
-  - {fileID: 8300000, guid: 8f45d99fe3c248a4fbff01ef7829f746, type: 3}
-  - {fileID: 8300000, guid: 251798a0bf2b2974d84f82812458840c, type: 3}
-  - {fileID: 8300000, guid: 733567c2de0014a41b3506980544f847, type: 3}
+  explosionEffect1: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664,
+    type: 3}
+  explosionEffect2: {fileID: 1947871717301538, guid: a990e3ac1318b834488c784d851f42a9,
+    type: 3}
+  explosionEffect3: {fileID: 1828176872806910, guid: 64891a0eb28db934898420d80ca07cb3,
+    type: 3}
+  explosionEffect4: {fileID: 1337198075554910, guid: 25c7aa9ad705fe143a4d71c1c8deb7d4,
+    type: 3}
+  explosionEffect5: {fileID: 1956197547661106, guid: f293a2dcc753a4a489fefe7f8f312d69,
+    type: 3}
 --- !u!1 &6213224496809192682
 GameObject:
   m_ObjectHideFlags: 0
@@ -1070,6 +1060,18 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &1305680066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8260674502319578628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a305ee82139a25d40a9421047fe05fe9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8892472446224523766
 GameObject:
   m_ObjectHideFlags: 0
@@ -1311,6 +1313,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9649d3ec49f124b459d40e40b247c9fa, type: 3}
+--- !u!1 &8260674502319578628 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5765309729072268392, guid: 9649d3ec49f124b459d40e40b247c9fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 2495470378576927340}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8172413320477928028 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6038077556515123248, guid: 9649d3ec49f124b459d40e40b247c9fa,

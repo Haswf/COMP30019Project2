@@ -10,25 +10,24 @@ public class GunController : MonoBehaviour
     public GameObject explosionPrefab;
     public BarrelType[] guns;
     private GameObject _target;
-    private HealthManager healthManager;
-    public int spread;
-
-    public Camera shellCamera;
-    private ShellFollower follower;
-    public float shellSpeed;
-    public float loadingTime;
-    public float explosionScale = 10;
-    public Vector3 instantiateOffset;
-
-    private float _timeToTarget;
-
+    private HealthManager _healthManager;
+    private int spread = Settings.PlayerOffset;
+    private int damage = Settings.PlayerDamage;
+    private float loadingTime = Settings.PlayerLoadingTime;
+    private float shellSpeed = Settings.PlayerShellSpeed;
+    
+    private ShellFollower _follower;
+    private float explosionScale = 10;
+    // How far should the shell offset from the cannon.
+    private Vector3 _instantiateOffset;
+    
     // Start is called before the first frame update
     public void Start()
     {
-        follower = shellCamera.GetComponent<ShellFollower>();
-        healthManager = transform.GetComponent<HealthManager>();
+        _follower = GameObject.Find("ShellCamera").GetComponent<ShellFollower>();
+        _healthManager = transform.GetComponent<HealthManager>();
         _target = transform.Find("Target").gameObject;
-        instantiateOffset = new Vector3(0, -0.5f, 0);
+        _instantiateOffset = new Vector3(0, -0.5f, 0);
         for (int i = 0; i < guns.Length; i++)
         {
             guns[i].cannon = guns[i].gun.transform.GetChild(0).gameObject;
@@ -47,7 +46,9 @@ public class GunController : MonoBehaviour
             // update loading time
             guns[i] = UpdateLoadingTime(guns[i]); 
             // Shot if the gun has been loaded and left key of mouse was pressed
-            if (guns[i].loaded && Input.GetKey(KeyCode.Mouse0) && healthManager.getIsAlive())
+            if (guns[i].loaded && Input.GetKey(KeyCode.Mouse0) &&
+                // and the boat is alive
+                _healthManager.getIsAlive())
             {
                 FireShell(guns[i]);
                 CreateExplosion(guns[i].cannon.transform);
@@ -64,7 +65,7 @@ public class GunController : MonoBehaviour
 
     public void ActivateCamera(GameObject toFollow)
     {
-        follower.GetComponent<ShellFollower>().target = toFollow;
+        _follower.GetComponent<ShellFollower>().target = toFollow;
     }
     
     void FireShell(BarrelType gun)
@@ -77,8 +78,9 @@ public class GunController : MonoBehaviour
         
         // Create a projectile at the end of cannon
         GameObject shell = Instantiate(shellPrefab);
+        shell.GetComponent<ShellController>().damage = damage;
         shell.transform.SetParent(gun.cannon.transform);
-        shell.transform.localPosition = instantiateOffset;
+        shell.transform.localPosition = _instantiateOffset;
         shell.transform.localRotation = Quaternion.Euler(new Vector3(0, 90,0 ));
         // line up shell with tge cannon
         shell.transform.parent = null;
@@ -97,7 +99,7 @@ public class GunController : MonoBehaviour
         GameObject explosion = Instantiate(explosionPrefab);
         explosion.transform.SetParent(cannonTransform);
         explosion.transform.localScale = new Vector3(explosionScale,explosionScale,explosionScale);
-        explosion.transform.localPosition = instantiateOffset;
+        explosion.transform.localPosition = _instantiateOffset;
     }
 
     Vector3 CalculateVelocity(Vector3 target, Vector3 origin, float time)

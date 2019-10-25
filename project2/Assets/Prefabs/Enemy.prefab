@@ -1024,7 +1024,7 @@ MonoBehaviour:
   waterLevel: 0
   buoyancyThreshold: 2
   waterDensity: 1
-  downForce: 25
+  downForce: 50
   boatRigidBody: {fileID: 0}
 --- !u!114 &693560420482183262
 MonoBehaviour:
@@ -1038,9 +1038,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87475d4a400c2574195269db5880860d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 20000
-  health: 0
-  isAlive: 1
   OnSinkingStart:
     m_PersistentCalls:
       m_Calls:
@@ -1057,7 +1054,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  timer: -1
+  maxHealth: 5000
 --- !u!82 &245954386
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1183,13 +1180,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3170d2c57fe601347a747616c3bd3ca0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waterJetTransform: {fileID: 834850852}
-  powerFactor: 20000
-  maxPower: 100000
-  currentJetPower: 0
-  forceToAdd: {x: 0, y: 0, z: 0}
-  waterJetRotationSpeed: 0.5
-  WaterJetRotation_Y: 0
 --- !u!114 &578907096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1223,11 +1213,8 @@ MonoBehaviour:
     cannon: {fileID: 0}
     loaded: 0
     loadingTimeLeft: 0
-  shellSpeed: 2000
-  loadingTime: 5
   explosionScale: 10
   instantiateOffset: {x: 0, y: 0, z: 0}
-  spread: 100
 --- !u!114 &578907104
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -5,27 +5,25 @@ using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class MapGenerator : MonoBehaviour
-{
+{    
+    public ArrayList islands = new ArrayList(); 
     public float MapMinX = -1000;
     public float MapMaxX = 1000;
     public float MapMinZ = -1000;
     public float MapMaxZ = 1000;
     public GameObject[] IslandPrefab;
-    public GameObject IslandHolder;
+    public Material[] skybox;
     
-    public int time;
-    public int IslandCount = 5;
-    public Material[] skyboxs;
     // Start is called before the first frame update
     void Start()
     {
-        RenderSettings.skybox = skyboxs[time];
+        RenderSettings.skybox = skybox[Settings.Time];
         CreateIslands();
     }
 
     private void CreateIslands()
     {
-        for (int i = 0; i < IslandCount; i++)
+        for (int i = 0; i < Settings.IslandCount; i++)
         {
             float x = Random.Range(MapMinX, MapMaxX);
             float z = Random.Range(MapMinZ, MapMaxZ);
@@ -42,6 +40,8 @@ public class MapGenerator : MonoBehaviour
             // Change the scale of the island
             island.transform.localScale = Vector3.one * scale;
             island.transform.position = position;
+            islands.Add(island);
+            print(islands.Count);
         }
     }
     
