@@ -83,4 +83,9 @@ public class HealthManager : MonoBehaviour
     {
         return maxHealth;
     }
+
+    public void setMaxHealth(int newHealth)
+    {
+        maxHealth = newHealth;
+    }
 }
