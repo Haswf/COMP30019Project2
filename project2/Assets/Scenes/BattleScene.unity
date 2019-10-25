@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 984039097}
-  m_IndirectSpecularColor: {r: 0.12662907, g: 0.15674093, b: 0.20757163, a: 1}
+  m_IndirectSpecularColor: {r: 0.12672827, g: 0.15665017, b: 0.20747338, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -186,6 +186,28 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2495470378320092752}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &776398280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776398279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34905cbfa16a819458f7c235d8a3b865, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionEffect1: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664,
+    type: 3}
+  explosionEffect2: {fileID: 1947871717301538, guid: a990e3ac1318b834488c784d851f42a9,
+    type: 3}
+  explosionEffect3: {fileID: 1828176872806910, guid: 64891a0eb28db934898420d80ca07cb3,
+    type: 3}
+  explosionEffect4: {fileID: 1337198075554910, guid: 25c7aa9ad705fe143a4d71c1c8deb7d4,
+    type: 3}
+  explosionEffect5: {fileID: 1956197547661106, guid: f293a2dcc753a4a489fefe7f8f312d69,
+    type: 3}
 --- !u!1001 &897554487
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -201,7 +223,7 @@ PrefabInstance:
     - target: {fileID: 6838977575182572451, guid: 65004715bdd5f754e9725d88e23725c0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -69
       objectReference: {fileID: 0}
     - target: {fileID: 6838977575182572451, guid: 65004715bdd5f754e9725d88e23725c0,
         type: 3}
@@ -211,7 +233,7 @@ PrefabInstance:
     - target: {fileID: 6838977575182572451, guid: 65004715bdd5f754e9725d88e23725c0,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1000
+      value: 870
       objectReference: {fileID: 0}
     - target: {fileID: 6838977575182572451, guid: 65004715bdd5f754e9725d88e23725c0,
         type: 3}
@@ -547,6 +569,24 @@ MonoBehaviour:
   _directTowardsPoint: 0
   _pointPositionXZ: {x: 0, y: 0}
   _pointRadii: {x: 100, y: 200}
+--- !u!1 &1305680062 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8260674502319578628, guid: 73e807591096de246acb850f591edffa,
+    type: 3}
+  m_PrefabInstance: {fileID: 2495470378320092752}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1305680066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1305680062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a305ee82139a25d40a9421047fe05fe9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1587178567
 GameObject:
   m_ObjectHideFlags: 0
@@ -1176,17 +1216,17 @@ PrefabInstance:
     - target: {fileID: 8669817490682718305, guid: 73e807591096de246acb850f591edffa,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 58
       objectReference: {fileID: 0}
     - target: {fileID: 8669817490682718305, guid: 73e807591096de246acb850f591edffa,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 8669817490682718305, guid: 73e807591096de246acb850f591edffa,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -43
       objectReference: {fileID: 0}
     - target: {fileID: 8669817490682718305, guid: 73e807591096de246acb850f591edffa,
         type: 3}
@@ -1196,7 +1236,7 @@ PrefabInstance:
     - target: {fileID: 8669817490682718305, guid: 73e807591096de246acb850f591edffa,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7071068
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8669817490682718305, guid: 73e807591096de246acb850f591edffa,
         type: 3}
@@ -1206,7 +1246,7 @@ PrefabInstance:
     - target: {fileID: 8669817490682718305, guid: 73e807591096de246acb850f591edffa,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8669817490682718305, guid: 73e807591096de246acb850f591edffa,
         type: 3}
@@ -1221,7 +1261,7 @@ PrefabInstance:
     - target: {fileID: 8669817490682718305, guid: 73e807591096de246acb850f591edffa,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8669817490682718305, guid: 73e807591096de246acb850f591edffa,
         type: 3}
@@ -1232,5 +1272,30 @@ PrefabInstance:
       propertyPath: shellCamera
       value: 
       objectReference: {fileID: 1239368470}
+    - target: {fileID: 6910107056044469513, guid: 73e807591096de246acb850f591edffa,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 3393894751179522972, guid: 73e807591096de246acb850f591edffa,
+        type: 3}
+      propertyPath: OnSinkingStart.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 776398280}
+    - target: {fileID: 3393894751179522972, guid: 73e807591096de246acb850f591edffa,
+        type: 3}
+      propertyPath: OnSinkingStart.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Sink
+      objectReference: {fileID: 0}
+    - target: {fileID: 3393894751179522972, guid: 73e807591096de246acb850f591edffa,
+        type: 3}
+      propertyPath: OnSinkingStart.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3393894751179522972, guid: 73e807591096de246acb850f591edffa,
+        type: 3}
+      propertyPath: maxHealth
+      value: 1000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73e807591096de246acb850f591edffa, type: 3}

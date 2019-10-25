@@ -22,12 +22,9 @@ public class SinkEvent : MonoBehaviour
     }
     public void  Sink()
     {
-        GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
-        InvokeRepeating("Explode", 0.5f, 2.0f);
-        InvokeRepeating("BoatSinking", 0.5f, 0.1f);
-        
+        Explode();
     }
-
+    // instantiate explosion effect
     private void Explode()
     {
         Vector3 pos;
@@ -35,12 +32,5 @@ public class SinkEvent : MonoBehaviour
         Instantiate(explosionEffect[Random.Range(0, 4)], pos, transform.rotation);
     }
 
-    private void BoatSinking()
-    {
-        deltaTime += Time.deltaTime;
-        Quaternion rotation = Quaternion.Euler(-deltaTime *0.5f ,0,0);
-        if (transform.localRotation.x >= -89.0f) { 
-            transform.localRotation = rotation;
-        }
-    }
+
 }

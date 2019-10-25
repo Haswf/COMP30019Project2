@@ -10,6 +10,7 @@ public class GunController : MonoBehaviour
     public GameObject explosionPrefab;
     public BarrelType[] guns;
     private GameObject _target;
+    private HealthManager healthManager;
     public int spread;
 
     public Camera shellCamera;
@@ -25,6 +26,7 @@ public class GunController : MonoBehaviour
     public void Start()
     {
         follower = shellCamera.GetComponent<ShellFollower>();
+        healthManager = transform.GetComponent<HealthManager>();
         _target = transform.Find("Target").gameObject;
         instantiateOffset = new Vector3(0, -0.5f, 0);
         for (int i = 0; i < guns.Length; i++)
@@ -45,7 +47,7 @@ public class GunController : MonoBehaviour
             // update loading time
             guns[i] = UpdateLoadingTime(guns[i]); 
             // Shot if the gun has been loaded and left key of mouse was pressed
-            if (guns[i].loaded && Input.GetKey(KeyCode.Mouse0))
+            if (guns[i].loaded && Input.GetKey(KeyCode.Mouse0) && healthManager.getIsAlive())
             {
                 FireShell(guns[i]);
                 CreateExplosion(guns[i].cannon.transform);
