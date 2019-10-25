@@ -84,6 +84,7 @@ public class GunController : MonoBehaviour
         shell.transform.parent = null;
         // Assign instanceID of shooting boat to shell controller
         shell.GetComponent<ShellController>().shipID = transform.GetInstanceID();
+        shell.GetComponent<ShellController>().FiringBoat = this.gameObject;
         // Assign initial velocity of the shell based on target position and calculated flying time
         Rigidbody rb = shell.GetComponent<Rigidbody>();
         rb.velocity = CalculateVelocity(targetPosition,
@@ -133,6 +134,27 @@ public class GunController : MonoBehaviour
         
         return bal;
     }
+
+    public float getLoadingTime()
+    {
+        return loadingTime;
+    }
+
+    public void setLoadingTime(float newTime)
+    {
+        loadingTime = newTime;
+    }
+
+    public float getShellSpeed()
+    {
+        return shellSpeed;
+    }
+
+    public void setShellSpeed(float newSpeed)
+    {
+        shellSpeed = newSpeed;
+    }
+    
 }
 
 

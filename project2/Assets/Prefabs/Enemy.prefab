@@ -951,6 +951,7 @@ GameObject:
   - component: {fileID: 578907096}
   - component: {fileID: 578907104}
   - component: {fileID: 578907105}
+  - component: {fileID: 6443074312315997418}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Battleship
@@ -1040,7 +1041,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 20000
   health: 0
-  isAlive: 1
   OnSinkingStart:
     m_PersistentCalls:
       m_Calls:
@@ -1227,7 +1227,7 @@ MonoBehaviour:
   loadingTime: 5
   explosionScale: 10
   instantiateOffset: {x: 0, y: 0, z: 0}
-  spread: 100
+  spread: 0
 --- !u!114 &578907104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1265,6 +1265,18 @@ MonoBehaviour:
   radiusForSearchTarget: 2000
   stopDistence: 2000
   target: {fileID: 0}
+--- !u!114 &6443074312315997418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7544571739377265072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41a61ae89c92b9243b6143e0c4023c63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7874972653344399237
 GameObject:
   m_ObjectHideFlags: 0

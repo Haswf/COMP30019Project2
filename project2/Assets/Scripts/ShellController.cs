@@ -14,8 +14,8 @@ public class ShellController : MonoBehaviour
     public int waterLevel;
     // How many damage should this shell produce
     public int damage;
-
     public int shipID;
+    public GameObject FiringBoat;
     // Start is called before the first frame update
     void Start()
     {
@@ -48,7 +48,12 @@ public class ShellController : MonoBehaviour
             if (col.gameObject.CompareTag("Battleship"))
             {
                 // deduct health of battleship
-                col.gameObject.GetComponent<HealthManager>().TakeDamage(damage);
+                if (col.gameObject != FiringBoat)
+                {
+                    col.gameObject.GetComponent<HealthManager>().TakeDamage(damage);
+                    FiringBoat.GetComponent<Experience>().increaseExp(damage/10);
+                }
+                
             }
             Explode();
         }
