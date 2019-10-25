@@ -20,11 +20,12 @@ public class GunController : MonoBehaviour
     private float explosionScale = 10;
     // How far should the shell offset from the cannon.
     private Vector3 _instantiateOffset;
+    public Camera ShellCamera;
     
     // Start is called before the first frame update
     public void Start()
     {
-        _follower = GameObject.Find("ShellCamera").GetComponent<ShellFollower>();
+        _follower = ShellCamera.GetComponent<ShellFollower>();
         _healthManager = transform.GetComponent<HealthManager>();
         _target = transform.Find("Target").gameObject;
         _instantiateOffset = new Vector3(0, -0.5f, 0);

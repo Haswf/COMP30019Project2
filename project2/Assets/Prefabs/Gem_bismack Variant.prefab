@@ -696,7 +696,7 @@ MonoBehaviour:
   waterLevel: 0
   buoyancyThreshold: 2
   waterDensity: 1
-  downForce: 30
+  downForce: 50
   boatRigidBody: {fileID: 0}
 --- !u!114 &6910107056558568561
 MonoBehaviour:
@@ -710,13 +710,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48c185b25eda8944d8b98a65eb6ae5a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waterJetTransform: {fileID: 1154004538}
-  powerFactor: 20000
-  maxPower: 100000
   currentJetPower: 0
-  forceToAdd: {x: 0, y: 0, z: 0}
-  waterJetRotationSpeed: 2
-  WaterJetRotation_Y: 0
 --- !u!114 &3393894751179522972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -729,8 +723,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87475d4a400c2574195269db5880860d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 41700
-  health: 0
   OnSinkingStart:
     m_PersistentCalls:
       m_Calls:
@@ -747,7 +739,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  timer: -1
+  maxHealth: 41700
 --- !u!82 &2074251596
 AudioSource:
   m_ObjectHideFlags: 0
@@ -861,11 +853,11 @@ MonoBehaviour:
   explosionPrefab: {fileID: 1025285306637258, guid: d8f0099df63275647a8bcf646df1ca00,
     type: 3}
   guns:
-  - gun: {fileID: 251322227749814495}
+  - gun: {fileID: 8892472446224523766}
     cannon: {fileID: 0}
     loaded: 0
     loadingTimeLeft: 0
-  - gun: {fileID: 8892472446224523766}
+  - gun: {fileID: 251322227749814495}
     cannon: {fileID: 0}
     loaded: 0
     loadingTimeLeft: 0
@@ -877,12 +869,7 @@ MonoBehaviour:
     cannon: {fileID: 0}
     loaded: 0
     loadingTimeLeft: 0
-  spread: 0
-  shellCamera: {fileID: 0}
-  shellSpeed: 1000
-  loadingTime: 5
-  explosionScale: 10
-  instantiateOffset: {x: 0, y: 0, z: 0}
+  ShellCamera: {fileID: 0}
 --- !u!114 &2074251597
 MonoBehaviour:
   m_ObjectHideFlags: 0
