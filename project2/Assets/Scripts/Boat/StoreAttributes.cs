@@ -21,4 +21,26 @@ public class StoreAttributes : MonoBehaviour
     {
         
     }
+    
+    //remember when call these methods need to has skill points
+    public void levelUpHealth()
+    {
+        GetComponent<HealthManager>().setMaxHealth(yourHealth+1000);
+        yourHealth = GetComponent<HealthManager>().getMaxHealth();
+        
+    }
+
+    public void levelUpLoading()
+    {
+        GetComponent<GunController>().setLoadingTime(yourloadingTime*0.95f);
+        yourloadingTime = GetComponent<GunController>().getLoadingTime();
+    }
+
+    public void levelUpShellSpeed()
+    {
+        GetComponent<GunController>().setShellSpeed(yourShellSpeed*1.05f);
+        yourShellSpeed = GetComponent<GunController>().getShellSpeed();
+    }
+    
+
 }
