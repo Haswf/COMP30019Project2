@@ -1054,7 +1054,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  maxHealth: 20000
+  maxHealth: 10
 --- !u!82 &245954386
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1206,20 +1206,20 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7544571739377265072}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 34905cbfa16a819458f7c235d8a3b865, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionEffect1: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664,
+  explosionEffect1: {fileID: 1956197547661106, guid: f293a2dcc753a4a489fefe7f8f312d69,
     type: 3}
-  explosionEffect2: {fileID: 1947871717301538, guid: a990e3ac1318b834488c784d851f42a9,
+  explosionEffect2: {fileID: 1337198075554910, guid: 25c7aa9ad705fe143a4d71c1c8deb7d4,
     type: 3}
   explosionEffect3: {fileID: 1828176872806910, guid: 64891a0eb28db934898420d80ca07cb3,
     type: 3}
-  explosionEffect4: {fileID: 1337198075554910, guid: 25c7aa9ad705fe143a4d71c1c8deb7d4,
+  explosionEffect4: {fileID: 1947871717301538, guid: a990e3ac1318b834488c784d851f42a9,
     type: 3}
-  explosionEffect5: {fileID: 1956197547661106, guid: f293a2dcc753a4a489fefe7f8f312d69,
+  explosionEffect5: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664,
     type: 3}
 --- !u!114 &578907105
 MonoBehaviour:

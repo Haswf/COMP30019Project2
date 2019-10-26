@@ -23,6 +23,7 @@ public class AIController : MonoBehaviour
     void Start()
     {
         //stopDistence = Vector3.Distance(transform.position, target.transform.position);
+        target = GameObject.Find("Gem_bismack Variant");
 
     }
     // Update is called once per frame

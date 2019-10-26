@@ -716,7 +716,6 @@ GameObject:
   - component: {fileID: 2074251596}
   - component: {fileID: 2074251587}
   - component: {fileID: 776398280}
-  - component: {fileID: 7957991666771318125}
   - component: {fileID: 8052648715293161177}
   m_Layer: 0
   m_Name: Gem_bismack Variant
@@ -757,8 +756,8 @@ Rigidbody:
   m_GameObject: {fileID: 5623369526437108338}
   serializedVersion: 2
   m_Mass: 100000
-  m_Drag: 0.5
-  m_AngularDrag: 0
+  m_Drag: 5
+  m_AngularDrag: 1
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -793,7 +792,7 @@ MonoBehaviour:
   buoyancyThreshold: 2
   waterDensity: 1
   downForce: 50
-  boatRigidBody: {fileID: 0}
+  boatRigidBody: {fileID: 6910107056044469513}
 --- !u!114 &6910107056558568561
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -988,21 +987,6 @@ MonoBehaviour:
     type: 3}
   explosionEffect5: {fileID: 1956197547661106, guid: f293a2dcc753a4a489fefe7f8f312d69,
     type: 3}
---- !u!114 &7957991666771318125
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5623369526437108338}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70e67ef8b2ae96644bc180fd2330c21f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  yourHealth: 0
-  yourShellSpeed: 0
-  yourloadingTime: 0
 --- !u!114 &8052648715293161177
 MonoBehaviour:
   m_ObjectHideFlags: 0

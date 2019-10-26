@@ -23,6 +23,7 @@ public class CameraLock : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        target = GameObject.Find("Gem_bismack Variant");
         _battleshipCamera = GetComponent<Camera>();
         // make cursor invisible
         Cursor.visible = false;

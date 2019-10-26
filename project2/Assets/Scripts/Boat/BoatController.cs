@@ -43,7 +43,7 @@ public class BoatController : MonoBehaviour
         //Forward / reverse
         if (Input.GetKey(KeyCode.W))
         {
-            if (currentJetPower < maxPower)
+            if (currentSpeed < _maxSpeed)
             {
                 currentJetPower += 1f * powerFactor;
             }

@@ -31,4 +31,6 @@ public class Settings : MonoBehaviour
     public static int EnemyMaxPower = 100000;
     public static int EnemyPowerFactor = 20000;
     public static int EnemyMaxSpeed = 20;
+
+    public static int totalEnemy = 2;
 }

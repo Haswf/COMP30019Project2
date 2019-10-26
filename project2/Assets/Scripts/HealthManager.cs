@@ -13,10 +13,12 @@ public class HealthManager : MonoBehaviour
     private float timer = -1;
     private float deltaTime = 0;
     private int trigger = 0;
+    private int enemyNumber;
     // Start is called before the first frame update
     void Start()
     {
         health = maxHealth;
+        enemyNumber = Settings.EnemyCount;
     }
 
     public void TakeDamage(int damage)
@@ -64,7 +66,31 @@ public class HealthManager : MonoBehaviour
             }
             else if(timer >= 30){
                 // end the game
-                SceneManager.LoadScene(2);
+                GameObject[] battleShips = GameObject.FindGameObjectsWithTag("Battleship");
+                int count = 0;
+                foreach(GameObject battleship in battleShips)
+                {
+                    if(battleship.name.Equals("Gem_bismack Variant"))
+                    {
+                        if (!battleship.GetComponent<HealthManager>().getIsAlive())
+                        {
+                            SceneManager.LoadScene(2);
+                        }
+                    }
+                    else
+                    {
+                        if (!battleship.GetComponent<HealthManager>().getIsAlive())
+                        {
+                            count ++;
+                            Debug.Log("you have these many ships sinking !!!!!!!!!!!!!!!!!!!!!         " + count);
+                        }
+                    }
+                }
+                if(count == Settings.totalEnemy)
+                {
+                    SceneManager.LoadScene(2);
+                }
+                
             }
             timer += Time.deltaTime;
         }

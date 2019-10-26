@@ -42,7 +42,6 @@ public class AIBoatController : MonoBehaviour
         //Forward / reverse
         if (aIController.GetInputMovement() == 'W')
         {
-            Debug.Log("currentSpeed = " + currentSpeed + "         currentjetpower = " + currentJetPower);
             if (currentSpeed < Settings.EnemyMaxSpeed )
             {
                 
