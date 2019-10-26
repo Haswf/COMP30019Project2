@@ -121,7 +121,7 @@ public class BoatController : MonoBehaviour
     {
         if (healthManager.getIsAlive())
         {
-            if (boatRB.velocity.magnitude < Settings.EnemyMaxSpeed)
+            if (boatRB.velocity.magnitude < Settings.PlayerMaxSpeed)
             {
                 UpdateWaterJet();
             }
@@ -130,6 +130,7 @@ public class BoatController : MonoBehaviour
         {
              GetComponent<Rigidbody>().velocity = Vector3.zero;
         }
+        CalculateSpeed();
     }
 
     //Calculate the current speed in m/s

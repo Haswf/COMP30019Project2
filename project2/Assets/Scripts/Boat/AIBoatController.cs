@@ -12,6 +12,7 @@ public class AIBoatController : MonoBehaviour
 
     //The boat's current engine power is public for debugging
     private float currentJetPower;
+    private char previousInput = 'N';
     private Transform waterJetTransform;
     private Vector3 forceToAdd;
     private float waterJetRotationSpeed = 0.5f;
@@ -21,13 +22,11 @@ public class AIBoatController : MonoBehaviour
     private Rigidbody boatRB;
     private float WaterJetRotation_Y;
     private HealthManager healthManager;
-    AIBoatController aiboatController;
     AIController aIController;
     void Start()
     {
         waterJetTransform = transform.Find("WaterJet").gameObject.transform;
         boatRB = GetComponent<Rigidbody>();
-        aiboatController = GetComponent<AIBoatController>();
         aIController = GetComponent<AIController>();
         healthManager = GetComponent<HealthManager>();
     }
@@ -43,14 +42,17 @@ public class AIBoatController : MonoBehaviour
         //Forward / reverse
         if (aIController.GetInputMovement() == 'W')
         {
-            if (aiboatController.CurrentSpeed < 50f && currentJetPower < maxPower)
+            Debug.Log("currentSpeed = " + currentSpeed + "         currentjetpower = " + currentJetPower);
+            if (currentSpeed < Settings.EnemyMaxSpeed )
             {
-                currentJetPower += 1f * powerFactor;
+                
+                currentJetPower += 0.1f * powerFactor;
+                
             }
         }
         else if (aIController.GetInputMovement() == 'S')
         {
-            if (aiboatController.CurrentSpeed < 50f && currentJetPower > -maxPower * 0.5)
+            if (currentSpeed < Settings.EnemyMaxSpeed && currentJetPower > -maxPower * 0.5)
             {
                 currentJetPower -= 1f * powerFactor;
             }
@@ -59,12 +61,15 @@ public class AIBoatController : MonoBehaviour
         //Steer left
         if (aIController.GetInputRotation() == 'D')
         {
-            WaterJetRotation_Y = waterJetTransform.localEulerAngles.y + waterJetRotationSpeed;
-
-            if (WaterJetRotation_Y > 10f && WaterJetRotation_Y < 290f)
+            GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+            GetComponent<Rigidbody>().constraints =
+                RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+            WaterJetRotation_Y = waterJetTransform.localEulerAngles.y - waterJetRotationSpeed;
+            if (WaterJetRotation_Y < 350f && WaterJetRotation_Y > 110f)
             {
-                WaterJetRotation_Y = 10f;
+                WaterJetRotation_Y = 350f;
             }
+
 
             Vector3 newRotation = new Vector3(0f, WaterJetRotation_Y, 0f);
             waterJetTransform.localEulerAngles = newRotation;
@@ -73,26 +78,32 @@ public class AIBoatController : MonoBehaviour
         //Steer right
         else if (aIController.GetInputRotation() == 'A')
         {
-            WaterJetRotation_Y = waterJetTransform.localEulerAngles.y - waterJetRotationSpeed;
+            GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+            GetComponent<Rigidbody>().constraints =
+                RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+            WaterJetRotation_Y = waterJetTransform.localEulerAngles.y + waterJetRotationSpeed;
 
-            if (WaterJetRotation_Y < 350f && WaterJetRotation_Y > 110f)
+            if (WaterJetRotation_Y > 10f && WaterJetRotation_Y < 290f)
             {
-                WaterJetRotation_Y = 350f;
+                WaterJetRotation_Y = 10f;
             }
+
 
             Vector3 newRotation = new Vector3(0f, WaterJetRotation_Y, 0f);
             waterJetTransform.localEulerAngles = newRotation;
+        }
+        if (aIController.GetInputRotation() == 'N')
+        {
+            WaterJetRotation_Y = 0;
+            waterJetTransform.localEulerAngles = new Vector3(0f, WaterJetRotation_Y, 0f);
         }
     }
 
     void UpdateWaterJet()
     {
-        //print(boatController.CurrentSpeed);
-
         forceToAdd = waterJetTransform.forward * currentJetPower;
         forceToAdd.y = 0;
         boatRB.AddForceAtPosition(forceToAdd, waterJetTransform.position, ForceMode.Impulse);
-
     }
 
     void FixedUpdate()
@@ -110,7 +121,6 @@ public class AIBoatController : MonoBehaviour
         }
 
         CalculateSpeed();
-        //Debug.Log(currentSpeed);
     }
 
     //Calculate the current speed in m/s
