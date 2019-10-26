@@ -40,20 +40,16 @@ public class ShellController : MonoBehaviour
         }
     }
 
-    public void OnCollisionEnter(Collision col)
+    public void OnTriggerEnter(Collider other)
     {    
-        // Avoid shell from collision with its launcher
-        if (col.gameObject.GetInstanceID() != shipID && !col.gameObject.GetComponent<ShellController>())
+        // Avoid projectiles from collision with other projectiles
+        if (!other.gameObject.CompareTag("Projectile") && other.gameObject != FiringBoat)
         {
-            if (col.gameObject.CompareTag("Battleship"))
+            if (other.gameObject.CompareTag("Battleship"))
             {
                 // deduct health of battleship
-                if (col.gameObject != FiringBoat)
-                {
-                    col.gameObject.GetComponent<HealthManager>().TakeDamage(damage);
-                    FiringBoat.GetComponent<Experience>().increaseExp(damage/10);
-                }
-                
+                other.gameObject.GetComponent<HealthManager>().TakeDamage(damage);
+                FiringBoat.GetComponent<Experience>().increaseExp(damage/10);
             }
             Explode();
         }

@@ -69,7 +69,7 @@ public class AIGunController : MonoBehaviour
         Vector3 cannonPosition = gun.cannon.transform.position;
         // Position of current target
 
-        Vector3 targetPosition = _target.transform.position + new Vector3(0, 5, 0);
+        Vector3 targetPosition = _target.transform.position + new Vector3(0, 10, 0);
         // Add a random offset to target to simulate air drag.
         targetPosition += new Vector3(UnityEngine.Random.Range(-spread, spread), 0, UnityEngine.Random.Range(-spread, spread));
 
