@@ -22,10 +22,5 @@ public class ShowExp : MonoBehaviour
     void Update()
     {
         _expText.text = String.Concat("Level: ",Ex.getlevel(),"\n","Exp: ", Ex.getExp(), "/", Ex.getMaxExp());
-
-        StreamWriter sw = new StreamWriter("score.txt");
-        sw.WriteLine(_expText.text);
-        sw.Close();
-
     }
 }
