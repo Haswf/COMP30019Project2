@@ -10,7 +10,7 @@ EditorBuildSettings:
     guid: 87a047ebb314b44348f884737a0ce4f3
   - enabled: 1
     path: Assets/Scenes/BattleScene.unity
-    guid: 21395a1af6f566b459cf2f256020dc81
+    guid: c37972b1438a8184fab6503de7a70600
   - enabled: 1
     path: Assets/Scenes/GameOverScene.unity
     guid: 232b8d22647e748988fc43fde7c2ce14
