@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class Experience : MonoBehaviour
 {
-    private int level = 1;
-    private int Exp;
-    private int skillPoints = 0;
-    private int maxExp = 500;
+    private int level = Player.PlayerLevel;
+    private int Exp = Player.PlayerExp;
+    private int skillPoints = Player.PlayerSkillPoints;
+    private int maxExp;
     
     // Start is called before the first frame update
     void Start()
     {
-        Exp = 0;
+        maxExp = 500 + level * 100 -100;
     }
 
     // Update is called once per frame
@@ -25,6 +25,14 @@ public class Experience : MonoBehaviour
             setMaxExp(getMaxExp()+100);
             setLevel(getlevel()+1);
             setSkillPoints(getSkillPoints()+1);
+        }
+
+        if (GetComponent<HealthManager>().getHealth() <= 0)
+        {
+            Player.PlayerExp = Exp;
+            Player.PlayerLevel = level;
+            Player.PlayerSkillPoints = skillPoints;
+            Player.NowMaxExp = maxExp;
         }
     }
 

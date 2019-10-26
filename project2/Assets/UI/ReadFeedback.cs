@@ -9,28 +9,25 @@ public class ReadFeedback : MonoBehaviour
 {
     // Start is called before the first frame update
     //private GameObject _player;
+    
+    private int exp = Player.PlayerExp;
+    private int level= Player.PlayerLevel;
+    private int maxExp= Player.NowMaxExp;
     private Text _feedbackText;
     int line = 0;
 
     void Start()
     {
-       //_player = transform.parent.GetComponent<BoatAccessor>().player;
         _feedbackText = GetComponent<Text>();
+        //_player = transform.parent.GetComponent<BoatAccessor>().player;
+
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        StreamReader sr = File.OpenText("score.txt");
-        String s = "";
-        while ((s = sr.ReadLine()) != null && line <2)
-        {
-            _feedbackText.text += s;
-            _feedbackText.text += "\n";
-            line += 1;
-        }
-    
+      _feedbackText.text = String.Concat("Level: ",level,"\n","Exp: ", exp, "/", maxExp,"\n","Skill points: ", Player.PlayerSkillPoints);
 
 
     }

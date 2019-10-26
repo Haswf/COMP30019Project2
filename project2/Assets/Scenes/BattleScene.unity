@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 984039097}
-  m_IndirectSpecularColor: {r: 0.12662907, g: 0.15674093, b: 0.20757163, a: 1}
+  m_IndirectSpecularColor: {r: 0.12672827, g: 0.15665016, b: 0.20747338, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -338,7 +338,8 @@ PrefabInstance:
       propertyPath: ShellCamera
       value: 
       objectReference: {fileID: 1239368470}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7957991666771318125, guid: e395a3c6627dce3428681693972421af, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e395a3c6627dce3428681693972421af, type: 3}
 --- !u!1 &1102358449
 GameObject:
@@ -1062,5 +1063,46 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1833619605}
+    - target: {fileID: 1970494806792529296, guid: b6c0f1ddb719c5a49b6620b5503b9ea4,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 929524660, guid: b6c0f1ddb719c5a49b6620b5503b9ea4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -353.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 929524660, guid: b6c0f1ddb719c5a49b6620b5503b9ea4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -113.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 929524660, guid: b6c0f1ddb719c5a49b6620b5503b9ea4, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 107.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 929524660, guid: b6c0f1ddb719c5a49b6620b5503b9ea4, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 198
+      objectReference: {fileID: 0}
+    - target: {fileID: 929524662, guid: b6c0f1ddb719c5a49b6620b5503b9ea4, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 929524662, guid: b6c0f1ddb719c5a49b6620b5503b9ea4, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 929524662, guid: b6c0f1ddb719c5a49b6620b5503b9ea4, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 929524662, guid: b6c0f1ddb719c5a49b6620b5503b9ea4, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 929524662, guid: b6c0f1ddb719c5a49b6620b5503b9ea4, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6c0f1ddb719c5a49b6620b5503b9ea4, type: 3}
