@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 984039097}
-  m_IndirectSpecularColor: {r: 0.12672827, g: 0.15665017, b: 0.20747338, a: 1}
+  m_IndirectSpecularColor: {r: 0.12672827, g: 0.15665016, b: 0.20747338, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -760,6 +760,20 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1833619605}
+    - target: {fileID: 8744914114187452107, guid: 12b95bcab8b8e624c9c0072d31f0871c,
+        type: 3}
+      propertyPath: m_Drag
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8744914114187452107, guid: 12b95bcab8b8e624c9c0072d31f0871c,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 578907096, guid: 12b95bcab8b8e624c9c0072d31f0871c, type: 3}
+      propertyPath: firingDistance
+      value: 2000
+      objectReference: {fileID: 0}
     - target: {fileID: 578907104, guid: 12b95bcab8b8e624c9c0072d31f0871c, type: 3}
       propertyPath: explosionEffect1
       value: 
@@ -785,20 +799,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1828176872806910, guid: 64891a0eb28db934898420d80ca07cb3,
         type: 3}
-    - target: {fileID: 8744914114187452107, guid: 12b95bcab8b8e624c9c0072d31f0871c,
-        type: 3}
-      propertyPath: m_Drag
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8744914114187452107, guid: 12b95bcab8b8e624c9c0072d31f0871c,
-        type: 3}
-      propertyPath: m_AngularDrag
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 578907096, guid: 12b95bcab8b8e624c9c0072d31f0871c, type: 3}
-      propertyPath: firingDistance
-      value: 2000
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12b95bcab8b8e624c9c0072d31f0871c, type: 3}
 --- !u!1 &2121255496
@@ -1106,6 +1106,51 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1833619605}
+    - target: {fileID: 1970494806792529296, guid: b6c0f1ddb719c5a49b6620b5503b9ea4,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 109.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 929524660, guid: b6c0f1ddb719c5a49b6620b5503b9ea4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -87.465
+      objectReference: {fileID: 0}
+    - target: {fileID: 929524660, guid: b6c0f1ddb719c5a49b6620b5503b9ea4, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 74.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 929524660, guid: b6c0f1ddb719c5a49b6620b5503b9ea4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -475.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 929524660, guid: b6c0f1ddb719c5a49b6620b5503b9ea4, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 189.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 929524662, guid: b6c0f1ddb719c5a49b6620b5503b9ea4, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 929524662, guid: b6c0f1ddb719c5a49b6620b5503b9ea4, type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 929524662, guid: b6c0f1ddb719c5a49b6620b5503b9ea4, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 929524662, guid: b6c0f1ddb719c5a49b6620b5503b9ea4, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 929524662, guid: b6c0f1ddb719c5a49b6620b5503b9ea4, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 929524662, guid: b6c0f1ddb719c5a49b6620b5503b9ea4, type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3100494638679095724, guid: b6c0f1ddb719c5a49b6620b5503b9ea4,
         type: 3}
       propertyPath: m_LocalPosition.z
