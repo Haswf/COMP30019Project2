@@ -15,7 +15,7 @@ public class GunController : MonoBehaviour
     private int damage = Settings.PlayerDamage;
     private float loadingTime = Settings.PlayerLoadingTime;
     private float shellSpeed = Settings.PlayerShellSpeed;
-    
+    private float _loadingTimeLeft;
     private ShellFollower _follower;
     private float explosionScale = 10;
     // How far should the shell offset from the cannon.
@@ -29,6 +29,7 @@ public class GunController : MonoBehaviour
         _healthManager = transform.GetComponent<HealthManager>();
         _target = transform.Find("Target").gameObject;
         _instantiateOffset = new Vector3(0, -0.5f, 0);
+        _loadingTimeLeft = loadingTime;
         for (int i = 0; i < guns.Length; i++)
         {
             guns[i].cannon = guns[i].gun.transform.GetChild(0).gameObject;
@@ -38,28 +39,32 @@ public class GunController : MonoBehaviour
 
     // Update is called once per frame
     public void Update()
-    {    
-        for(int i =0;i < guns.Length; i++) {
+    {
+        for (int i = 0; i < guns.Length; i++)
+        {
             // Make gun looks at target
             guns[i].gun.transform.LookAt(_target.transform);
             // Rotate gun by 90 degrees with respect to x axis to fix model rotation
             guns[i].gun.transform.rotation *= Quaternion.Euler(-90, 0, 0);
             // update loading time
-            guns[i] = UpdateLoadingTime(guns[i]); 
+            UpdateLoadingTime();
             // Shot if the gun has been loaded and left key of mouse was pressed
-            if (guns[i].loaded && Input.GetKey(KeyCode.Mouse0) &&
-                // and the boat is alive
-                _healthManager.getIsAlive())
+        }
+        
+        if (_loadingTimeLeft < 0 && Input.GetKey(KeyCode.Mouse0) && _healthManager.getIsAlive())
+        {
+            for (int i = 0; i < guns.Length; i++)
             {
                 FireShell(guns[i]);
                 CreateExplosion(guns[i].cannon.transform);
                 // reset loading time
-                guns[i].loadingTimeLeft = loadingTime;
             }
+            // Reset loading time
+            _loadingTimeLeft = loadingTime;
         }
     }
 
-    // Calculate time taken for shell to hit target
+// Calculate time taken for shell to hit target
     private float CalculateFlyingTime(Vector3 gunPosition, Vector3 targetPosition) {
         return new Vector2(gunPosition.x - targetPosition.x, gunPosition.z - targetPosition.z).magnitude / shellSpeed;
     }
@@ -124,18 +129,8 @@ public class GunController : MonoBehaviour
 
         return result;
     }
-    private BarrelType UpdateLoadingTime(BarrelType bal){
-        if (bal.loadingTimeLeft > 0){
-            bal.loadingTimeLeft -= Time.deltaTime;
-            bal.loaded = false;
-        }
-        
-        else
-        {
-            bal.loaded = true;
-        } 
-        
-        return bal;
+    private void UpdateLoadingTime(){
+        _loadingTimeLeft -= Time.deltaTime;
     }
 
     public float getLoadingTime()
@@ -157,7 +152,11 @@ public class GunController : MonoBehaviour
     {
         shellSpeed = newSpeed;
     }
-    
+
+    public float getLoadingTimeLeft()
+    {
+        return _loadingTimeLeft;
+    }
 }
 
 

@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class LoadingTimeIndicator : MonoBehaviour
 {
-    public GameObject _playerBoat;
+    private GameObject _playerBoat;
     private GunController _gunController;
     private SimpleHealthBar _loadingBar;
     // Start is called before the first frame update
@@ -21,6 +21,6 @@ public class LoadingTimeIndicator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _loadingBar.UpdateBar(_gunController.guns[0].loadingTimeLeft, Settings.PlayerLoadingTime);
+        _loadingBar.UpdateBar(_gunController.getLoadingTimeLeft(), Settings.PlayerLoadingTime);
     }
 }
