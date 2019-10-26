@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 984039097}
-  m_IndirectSpecularColor: {r: 0.12662907, g: 0.15674093, b: 0.20757163, a: 1}
+  m_IndirectSpecularColor: {r: 0.12672827, g: 0.15665017, b: 0.20747338, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -699,7 +699,7 @@ PrefabInstance:
     - target: {fileID: 6838977575182572451, guid: 12b95bcab8b8e624c9c0072d31f0871c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5000
+      value: 1030
       objectReference: {fileID: 0}
     - target: {fileID: 6838977575182572451, guid: 12b95bcab8b8e624c9c0072d31f0871c,
         type: 3}
@@ -709,7 +709,7 @@ PrefabInstance:
     - target: {fileID: 6838977575182572451, guid: 12b95bcab8b8e624c9c0072d31f0871c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -391.2
+      value: -535
       objectReference: {fileID: 0}
     - target: {fileID: 6838977575182572451, guid: 12b95bcab8b8e624c9c0072d31f0871c,
         type: 3}
@@ -755,6 +755,31 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1833619605}
+    - target: {fileID: 578907104, guid: 12b95bcab8b8e624c9c0072d31f0871c, type: 3}
+      propertyPath: explosionEffect1
+      value: 
+      objectReference: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664,
+        type: 3}
+    - target: {fileID: 578907104, guid: 12b95bcab8b8e624c9c0072d31f0871c, type: 3}
+      propertyPath: explosionEffect3
+      value: 
+      objectReference: {fileID: 1947871717301538, guid: a990e3ac1318b834488c784d851f42a9,
+        type: 3}
+    - target: {fileID: 578907104, guid: 12b95bcab8b8e624c9c0072d31f0871c, type: 3}
+      propertyPath: explosionEffect4
+      value: 
+      objectReference: {fileID: 1337198075554910, guid: 25c7aa9ad705fe143a4d71c1c8deb7d4,
+        type: 3}
+    - target: {fileID: 578907104, guid: 12b95bcab8b8e624c9c0072d31f0871c, type: 3}
+      propertyPath: explosionEffect5
+      value: 
+      objectReference: {fileID: 1956197547661106, guid: f293a2dcc753a4a489fefe7f8f312d69,
+        type: 3}
+    - target: {fileID: 578907104, guid: 12b95bcab8b8e624c9c0072d31f0871c, type: 3}
+      propertyPath: explosionEffect2
+      value: 
+      objectReference: {fileID: 1828176872806910, guid: 64891a0eb28db934898420d80ca07cb3,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12b95bcab8b8e624c9c0072d31f0871c, type: 3}
 --- !u!1 &2121255496

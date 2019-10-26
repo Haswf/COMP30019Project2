@@ -20,7 +20,7 @@ public class AIBoatController : MonoBehaviour
     private float thrustFromWaterJet = 0f;
     private Rigidbody boatRB;
     private float WaterJetRotation_Y;
-
+    private HealthManager healthManager;
     AIBoatController aiboatController;
     AIController aIController;
     void Start()
@@ -29,6 +29,7 @@ public class AIBoatController : MonoBehaviour
         boatRB = GetComponent<Rigidbody>();
         aiboatController = GetComponent<AIBoatController>();
         aIController = GetComponent<AIController>();
+        healthManager = GetComponent<HealthManager>();
     }
 
 
@@ -90,14 +91,24 @@ public class AIBoatController : MonoBehaviour
 
         forceToAdd = waterJetTransform.forward * currentJetPower;
         forceToAdd.y = 0;
-
-        boatRB.AddForceAtPosition(forceToAdd, waterJetTransform.position);
+        boatRB.AddForceAtPosition(forceToAdd, waterJetTransform.position, ForceMode.Impulse);
 
     }
 
     void FixedUpdate()
     {
-        UpdateWaterJet();
+        if (healthManager.getIsAlive())
+        {
+            if (boatRB.velocity.magnitude < Settings.EnemyMaxSpeed)
+            {
+                UpdateWaterJet();
+            }
+        }
+        else
+        {
+            boatRB.velocity = Vector3.zero;
+        }
+
         CalculateSpeed();
         //Debug.Log(currentSpeed);
     }

@@ -22,12 +22,13 @@ public class BoatController : MonoBehaviour
     private float thrustFromWaterJet = 0f;
     private Rigidbody boatRB;
     private float WaterJetRotation_Y;
-    
+    private HealthManager healthManager;
 
     void Start()
     {
         boatRB = GetComponent<Rigidbody>();
         waterJetTransform = transform.Find("WaterJet").gameObject.transform;
+        healthManager = GetComponent<HealthManager>();
     }
 
 
@@ -115,15 +116,20 @@ public class BoatController : MonoBehaviour
         boatRB.AddForceAtPosition(forceToAdd, waterJetTransform.position, ForceMode.Impulse);
 
     }
-    
+
     void FixedUpdate()
     {
-        if (boatRB.velocity.magnitude < Settings.PlayerMaxSpeed)
+        if (healthManager.getIsAlive())
         {
-            UpdateWaterJet();
+            if (boatRB.velocity.magnitude < Settings.EnemyMaxSpeed)
+            {
+                UpdateWaterJet();
+            }
         }
-        CalculateSpeed();
-        //Debug.Log(currentSpeed);
+        else
+        {
+             GetComponent<Rigidbody>().velocity = Vector3.zero;
+        }
     }
 
     //Calculate the current speed in m/s

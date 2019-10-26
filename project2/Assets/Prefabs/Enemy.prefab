@@ -1211,15 +1211,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34905cbfa16a819458f7c235d8a3b865, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionEffect1: {fileID: 1828176872806910, guid: 64891a0eb28db934898420d80ca07cb3,
+  explosionEffect1: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664,
     type: 3}
   explosionEffect2: {fileID: 1947871717301538, guid: a990e3ac1318b834488c784d851f42a9,
     type: 3}
-  explosionEffect3: {fileID: 1337198075554910, guid: 25c7aa9ad705fe143a4d71c1c8deb7d4,
+  explosionEffect3: {fileID: 1828176872806910, guid: 64891a0eb28db934898420d80ca07cb3,
     type: 3}
-  explosionEffect4: {fileID: 1956197547661106, guid: f293a2dcc753a4a489fefe7f8f312d69,
+  explosionEffect4: {fileID: 1337198075554910, guid: 25c7aa9ad705fe143a4d71c1c8deb7d4,
     type: 3}
-  explosionEffect5: {fileID: 1344314377593938, guid: 9e03786a9517b604d8e930182607a128,
+  explosionEffect5: {fileID: 1956197547661106, guid: f293a2dcc753a4a489fefe7f8f312d69,
     type: 3}
 --- !u!114 &578907105
 MonoBehaviour:

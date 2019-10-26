@@ -42,7 +42,7 @@ public class HealthManager : MonoBehaviour
 
         if (!isAlive)
         {  // trigger sinking animation if health < 0
-
+            transform.Translate(new Vector3(0, 0, 0));
             deltaTime += Time.deltaTime;
             Quaternion rotation = Quaternion.Euler(-deltaTime * 1f, transform.rotation.y, transform.rotation.z);
             
