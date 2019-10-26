@@ -14,18 +14,18 @@ public class Settings : MonoBehaviour
     
     // Player settings
     public static int PlayerOffset = 100;
-    public static float PlayerLoadingTime = 0.5f;
+    public static float PlayerLoadingTime = 5f;
     public static int PlayerDamage = 1000;
     public static int PlayerShellSpeed = 1000;
-    public static int PlayerMaxPower = 100000;
-    public static int PlayerPowerFactor = 20000;
+    public static int PlayerMaxPower = 50000;
+    public static int PlayerPowerFactor = 1000;
     public static int PlayerMaxSpeed = 30;
     public static int PlayerMaxHealth = 20000;
 
     // Enemy Settings
     public static int EnemyCount = 0;
     public static int EnemyOffset = 100;
-    public static float EnemyLoadingTime = 0.5f;    
+    public static float EnemyLoadingTime = 5f;    
     public static int EnemyDamage = 1000;
     public static int EnemyShellSpeed = 1000;
     public static int EnemyMaxPower = 100000;

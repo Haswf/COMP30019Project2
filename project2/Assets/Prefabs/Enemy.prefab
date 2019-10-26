@@ -946,7 +946,6 @@ GameObject:
   - component: {fileID: 8744914114492337885}
   - component: {fileID: 693560420482183262}
   - component: {fileID: 245954386}
-  - component: {fileID: 245954387}
   - component: {fileID: 578907095}
   - component: {fileID: 578907096}
   - component: {fileID: 578907104}
@@ -1063,11 +1062,11 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7544571739377265072}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b0380b57774bb404a81b85b1eed83249, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: d9a28606101c80444bb985b6bbc341ab, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -1152,23 +1151,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &245954387
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7544571739377265072}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f81b5a7891af48b4fa3ff03edf7ac4e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  generalQuarter: {fileID: 8300000, guid: b0380b57774bb404a81b85b1eed83249, type: 3}
-  engineSounds:
-  - {fileID: 8300000, guid: 8f45d99fe3c248a4fbff01ef7829f746, type: 3}
-  - {fileID: 8300000, guid: 251798a0bf2b2974d84f82812458840c, type: 3}
-  - {fileID: 8300000, guid: 733567c2de0014a41b3506980544f847, type: 3}
 --- !u!114 &578907095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1216,6 +1198,7 @@ MonoBehaviour:
     loadingTimeLeft: 0
   explosionScale: 10
   instantiateOffset: {x: 0, y: 0, z: 0}
+  firingDistance: 4000
 --- !u!114 &578907104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1250,8 +1233,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15553044e13d74046984c11019a71111, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radiusForSearchTarget: 2000
-  stopDistence: 2000
+  radiusForSearchTarget: 10000
+  stopDistence: 3000
   target: {fileID: 0}
 --- !u!114 &6443074312315997418
 MonoBehaviour:

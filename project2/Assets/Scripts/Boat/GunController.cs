@@ -9,6 +9,9 @@ public class GunController : MonoBehaviour
     public GameObject shellPrefab;
     public GameObject explosionPrefab;
     public BarrelType[] guns;
+    public Camera ShellCamera;
+
+    private AudioSource _fireSound;
     private GameObject _target;
     private HealthManager _healthManager;
     private int spread = Settings.PlayerOffset;
@@ -20,7 +23,6 @@ public class GunController : MonoBehaviour
     private float explosionScale = 10;
     // How far should the shell offset from the cannon.
     private Vector3 _instantiateOffset;
-    public Camera ShellCamera;
     
     // Start is called before the first frame update
     public void Start()
@@ -30,6 +32,7 @@ public class GunController : MonoBehaviour
         _target = transform.Find("Target").gameObject;
         _instantiateOffset = new Vector3(0, -0.5f, 0);
         _loadingTimeLeft = loadingTime;
+        _fireSound = GetComponent<AudioSource>();
         for (int i = 0; i < guns.Length; i++)
         {
             guns[i].cannon = guns[i].gun.transform.GetChild(0).gameObject;
@@ -52,7 +55,8 @@ public class GunController : MonoBehaviour
         }
         
         if (_loadingTimeLeft < 0 && Input.GetKey(KeyCode.Mouse0) && _healthManager.getIsAlive())
-        {
+        {    
+            _fireSound.Play();
             for (int i = 0; i < guns.Length; i++)
             {
                 FireShell(guns[i]);
@@ -91,7 +95,6 @@ public class GunController : MonoBehaviour
         // line up shell with tge cannon
         shell.transform.parent = null;
         // Assign instanceID of shooting boat to shell controller
-        shell.GetComponent<ShellController>().shipID = transform.GetInstanceID();
         shell.GetComponent<ShellController>().FiringBoat = gameObject;
         // Assign initial velocity of the shell based on target position and calculated flying time
         Rigidbody rb = shell.GetComponent<Rigidbody>();

@@ -3,26 +3,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class AIGunController : MonoBehaviour
 {
 
     public GameObject shellPrefab;
     public GameObject explosionPrefab;
     public BarrelType[] guns;
+    public float explosionScale = 10;
+    public Vector3 instantiateOffset;
+    public float firingDistance = 2000;
+    
     private GameObject _target;
     private HealthManager _healthManager;
     private float shellSpeed = Settings.EnemyShellSpeed;
     private float loadingTime= Settings.EnemyLoadingTime;
     private int spread = Settings.EnemyOffset;
-    
-    public float explosionScale = 10;
-    public Vector3 instantiateOffset;
-    private float firingDistance = 2000;
+    private AudioSource _fireSound;
+  
     // Start is called before the first frame update
     public void Start()
     {
         _healthManager = transform.GetComponent<HealthManager>();
         instantiateOffset = new Vector3(0, -0.5f, 0);
+        _fireSound = GetComponent<AudioSource>();
         for (int i = 0; i < guns.Length; i++)
         {
             guns[i].cannon = guns[i].gun.transform.GetChild(0).gameObject;
@@ -43,16 +47,20 @@ public class AIGunController : MonoBehaviour
             guns[i].gun.transform.rotation *= Quaternion.Euler(-90, 0, 0);
             // update loading time
             guns[i] = UpdateLoadingTime(guns[i]);
-
-            
-            float dist = Vector3.Distance(_target.transform.position, transform.position);
-            // Shot if the gun has been loaded and left key of mouse was pressed
-            if (guns[i].loaded && dist < firingDistance && _healthManager.getIsAlive())
+        }
+        float dist = Vector3.Distance(_target.transform.position, transform.position);
+        if (guns[0].loaded && dist < firingDistance && _healthManager.getIsAlive())
+        {    
+            _fireSound.Play();
+            for (int i = 0; i < guns.Length; i++)
             {
-                FireShell(guns[i], _target);
-                CreateExplosion(guns[i].cannon.transform);
-                // reset loading time
-                guns[i].loadingTimeLeft = loadingTime;
+                // Shot if the gun has been loaded and left key of mouse was pressed
+                {
+                    FireShell(guns[i], _target);
+                    CreateExplosion(guns[i].cannon.transform);
+                    // reset loading time
+                    guns[i].loadingTimeLeft = loadingTime;
+                }
             }
         }
     }
@@ -84,8 +92,7 @@ public class AIGunController : MonoBehaviour
         // line up shell with tge cannon
         shell.transform.parent = null;
         // Assign instanceID of shooting boat to shell controller
-        shell.GetComponent<ShellController>().shipID = transform.GetInstanceID();
-        shell.GetComponent<ShellController>().FiringBoat = this.gameObject;
+        shell.GetComponent<ShellController>().FiringBoat = gameObject;
         // Assign initial velocity of the shell based on target position and calculated flying time
         Rigidbody rb = shell.GetComponent<Rigidbody>();
         rb.velocity = CalculateVelocity(targetPosition,

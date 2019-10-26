@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class ShellController : MonoBehaviour
 
 {    
@@ -14,7 +15,6 @@ public class ShellController : MonoBehaviour
     public int waterLevel;
     // How many damage should this shell produce
     public int damage;
-    public int shipID;
     public GameObject FiringBoat;
     // Start is called before the first frame update
     void Start()

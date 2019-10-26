@@ -112,14 +112,16 @@ public class BoatController : MonoBehaviour
 
         forceToAdd = waterJetTransform.forward * currentJetPower;
         forceToAdd.y = 0;
-        
-        boatRB.AddForceAtPosition(forceToAdd, waterJetTransform.position);
+        boatRB.AddForceAtPosition(forceToAdd, waterJetTransform.position, ForceMode.Impulse);
 
     }
     
     void FixedUpdate()
-    {    
-        UpdateWaterJet();
+    {
+        if (boatRB.velocity.magnitude < Settings.PlayerMaxSpeed)
+        {
+            UpdateWaterJet();
+        }
         CalculateSpeed();
         //Debug.Log(currentSpeed);
     }
