@@ -16,7 +16,7 @@ public class GunController : MonoBehaviour
     private HealthManager _healthManager;
     private int spread = Settings.PlayerOffset;
     private int damage = Settings.PlayerDamage;
-    private float loadingTime = Settings.PlayerLoadingTime;
+    private float loadingTime;
     private float shellSpeed = Settings.PlayerShellSpeed;
     private float _loadingTimeLeft;
     private ShellFollower _follower;
@@ -27,6 +27,8 @@ public class GunController : MonoBehaviour
     // Start is called before the first frame update
     public void Start()
     {
+        loadingTime = Settings.PlayerLoadingTime;
+        Debug.Log("loading time !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! = " + loadingTime);
         _follower = ShellCamera.GetComponent<ShellFollower>();
         _healthManager = transform.GetComponent<HealthManager>();
         _target = transform.Find("Target").gameObject;

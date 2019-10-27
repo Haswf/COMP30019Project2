@@ -27,7 +27,7 @@ public class Upgrade_attribute : MonoBehaviour
     {
         if (Player.PlayerSkillPoints > 0)
         {
-            Settings.PlayerMaxHealth = playerHealth + 1000;
+            Settings.PlayerMaxHealth = playerHealth + 5000;
             playerHealth = Settings.PlayerMaxHealth;
             Player.PlayerSkillPoints -= 1;
         }
@@ -42,9 +42,17 @@ public class Upgrade_attribute : MonoBehaviour
     {
         if (Player.PlayerSkillPoints > 0)
         {
-            Settings.PlayerLoadingTime = playerloadingTime * 0.95f;
-            playerloadingTime = Settings.PlayerLoadingTime;
-            Player.PlayerSkillPoints -= 1;
+            if(Settings.PlayerLoadingTime > 1)
+            {
+                Settings.PlayerLoadingTime -= 0.5f;
+                playerloadingTime = Settings.PlayerLoadingTime;
+                Player.PlayerSkillPoints -= 1;
+            }
+            else
+            {
+                responseText.text = "Sorry Captain, you have upgraded to the max level";
+            }
+
         }
         else
         {
@@ -57,7 +65,7 @@ public class Upgrade_attribute : MonoBehaviour
     {
         if (Player.PlayerSkillPoints > 0)
         {
-            Settings.PlayerDamage = playerDamage + 100;
+            Settings.PlayerDamage = playerDamage + 500;
             playerDamage = Settings.PlayerDamage;
             Player.PlayerSkillPoints -= 1;
         }

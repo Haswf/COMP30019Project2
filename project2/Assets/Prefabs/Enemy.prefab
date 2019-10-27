@@ -1054,7 +1054,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  maxHealth: 10
+  maxHealth: 7000
 --- !u!82 &245954386
 AudioSource:
   m_ObjectHideFlags: 0

@@ -20,7 +20,7 @@ public class Settings : MonoBehaviour
     public static int PlayerMaxPower = 50000;
     public static int PlayerPowerFactor = 1000;
     public static int PlayerMaxSpeed = 50;
-    public static int PlayerMaxHealth = 20000;
+    public static int PlayerMaxHealth = 40000;
 
     // Enemy Settings
     public static int EnemyCount = 0;

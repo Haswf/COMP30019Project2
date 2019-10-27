@@ -18,6 +18,10 @@ public class HealthManager : MonoBehaviour
     void Start()
     {
         health = maxHealth;
+        if(transform.name.Equals("Gem_bismack Variant")){
+            health = Settings.PlayerMaxHealth;
+            maxHealth = Settings.PlayerMaxHealth;
+        }
         enemyNumber = Settings.EnemyCount;
     }
 
