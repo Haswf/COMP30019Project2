@@ -5,7 +5,7 @@ using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class HealthManager : MonoBehaviour
-{    
+{
     public UnityEvent OnSinkingStart; // UnityEvent to trigger sinking animation 
     public int maxHealth;
     private int health;
@@ -47,13 +47,14 @@ public class HealthManager : MonoBehaviour
             transform.Translate(new Vector3(0, 0, 0));
             deltaTime += Time.deltaTime;
             Quaternion rotation = Quaternion.Euler(-deltaTime * 1f, transform.rotation.y, transform.rotation.z);
-            
+
             if (transform.localRotation.x >= -89.0f)
             {
                 transform.localRotation = rotation;
                 transform.position -= new Vector3(0, 0.01f, 0);
-                
-                if(deltaTime > trigger) {
+
+                if (deltaTime > trigger)
+                {
                     // create explosion every one second
                     OnSinkingStart.Invoke();
                     trigger += 1;
@@ -61,16 +62,17 @@ public class HealthManager : MonoBehaviour
             }
             if (timer < 0)
             {
-              
+
                 timer = 0;
             }
-            else if(timer >= 30){
+            else if (timer >= 30)
+            {
                 // end the game
                 GameObject[] battleShips = GameObject.FindGameObjectsWithTag("Battleship");
                 int count = 0;
-                foreach(GameObject battleship in battleShips)
+                foreach (GameObject battleship in battleShips)
                 {
-                    if(battleship.name.Equals("Gem_bismack Variant"))
+                    if (battleship.name.Equals("Gem_bismack Variant"))
                     {
                         if (!battleship.GetComponent<HealthManager>().getIsAlive())
                         {
@@ -81,16 +83,17 @@ public class HealthManager : MonoBehaviour
                     {
                         if (!battleship.GetComponent<HealthManager>().getIsAlive())
                         {
-                            count ++;
-                            Debug.Log("you have these many ships sinking !!!!!!!!!!!!!!!!!!!!!         " + count);
+                            count++;
+
                         }
                     }
                 }
-                if(count == Settings.totalEnemy)
+                if (count == Settings.totalEnemy)
                 {
+                    Settings.totalEnemy++;
                     SceneManager.LoadScene(2);
                 }
-                
+
             }
             timer += Time.deltaTime;
         }
