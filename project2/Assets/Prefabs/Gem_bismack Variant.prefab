@@ -791,7 +791,7 @@ MonoBehaviour:
   waterLevel: 0
   buoyancyThreshold: 2
   waterDensity: 1
-  downForce: 50
+  downForce: 75
   boatRigidBody: {fileID: 6910107056044469513}
 --- !u!114 &6910107056558568561
 MonoBehaviour:
