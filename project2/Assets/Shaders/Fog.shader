@@ -45,20 +45,25 @@
 					{
 						v2f o;
 						o.pos = UnityObjectToClipPos(v.vertex);
+						// TRANSFORM_TEX is used to make sure texture scale and offset is applied correctly
+						// this is from UnityCG.cginc
 						o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
 						o.uv2 = v.texcoord;
 						o.vertColor = v.color;
 						return o;
 					}
-
+					// sampler2D is bound to a texture unit.
 					sampler2D _Mask;
 					float _Velocity;
 					fixed4 _Color;
-
+					// returns a type of fixed4 (low precision RGBA color)
 					fixed4 frag(v2f i) : SV_Target
 					{
+						// makes uv move and return the new uv
 						float2 uv = i.uv + _Velocity * _Time.x;
-						fixed4 col = tex2D(_MainTex, uv) * _Color * i.vertCol;
+						// tex2D returns a 4 values(rgba) color from the texture
+						fixed4 col = tex2D(_MainTex, uv) * _Color * i.vertColor;
+						
 						col.a *= tex2D(_Mask, i.uv2).r;
 						col.a *= 1 - ((i.pos.z / i.pos.w));
 						return col;
